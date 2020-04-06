@@ -6,7 +6,7 @@ public class AccountServices
 	
 	public void manageEmail()
 	{
-		// code
+		int x = 1;
 	}
 	
 	public void managePhone()
