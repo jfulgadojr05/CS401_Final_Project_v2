@@ -12,27 +12,27 @@ public class FriendsList{
 		// code
 	}
 	
-	public deleteFriend(User myUser)
+	public void deleteFriend(User myUser)
 	{
 		// code
 	}
 	
-	public messageFriend(User myUser)
+	public void messageFriend(User myUser)
 	{
 		// code
 	}
 	
-	public blockFriend(User myUser) 
+	public void blockFriend(User myUser)
 	{
 		// code
 	}
 	
 	public int getListSize()
 	{
-		// code
+		return 0;
 	}
 	
-	public void setListSize(int)
+	public void setListSize(int test)
 	{
 		// code
 	}
