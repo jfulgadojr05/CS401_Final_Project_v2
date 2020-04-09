@@ -1,6 +1,8 @@
 package app;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -35,7 +37,12 @@ public class Client extends Application {
 
         Button store = new Button("Store");
         GridPane.setConstraints(store, 0, 0);
-
+        store.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                goToStore();
+            }
+        });
 
         Button collection = new Button("Collection");
         GridPane.setConstraints(collection, 1, 0);
@@ -57,6 +64,7 @@ public class Client extends Application {
     }
 
     void goToStore(){
+        Store newStore = new Store();
 
     };
 
