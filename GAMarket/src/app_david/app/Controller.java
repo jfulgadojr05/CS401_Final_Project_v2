@@ -1,4 +1,4 @@
-package sample.GAMarket.src.app;
+package app;
 
 
 public class Controller{

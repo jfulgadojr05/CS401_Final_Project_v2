@@ -1,14 +1,13 @@
-// any needed imports go here... 
-
+package app;// any needed imports go here...
 
 public class User{
 	
 	private String userName;
-	private int userId; 
+	private int userId;
 	private String picturePath;
 	private String paymentInfo;
 	private String About;
-	private Game Collection Id[];
+//	private Game Collection Id[];
 	
 	// attributes for Admin
 	public int adminId;
@@ -16,23 +15,25 @@ public class User{
 	
 	// attributes for devUser
 	private boolean isDevUser; 
-	private collectionId;
+	private int collectionId;
 	private float income; 
-	private Game Collection developedGames[];
+//	private Game Collection developedGames[];
 	
 	// methods
 	public String getUsername() 
 	{
+		return "Testing";
 		// code
 	}
 	
-	public Game Collection getCollection()
-	{
-		// code
-	}
+//	public Game Collection void getCollection()
+//	{
+//		// code
+//	}
 	
 	public String getPicture()
 	{
+		return "test";
 		// code
 	}
 	
@@ -47,7 +48,7 @@ public class User{
 		// code
 	}
 	
-	public void deleteThread(Thread myThread)
+	public void deleteThread(java.lang.Thread myThread)
 	{
 		// code
 	}
@@ -58,19 +59,23 @@ public class User{
 	}
 	
 	// methods for devUser
-	public Message postGames(gameData) 
+	public Message postGames(String gameData)
 	{
-		// code
+		Message test= new Message("Jerome", "Good bye");
+		return test;
 	}
 	
 	public Message editTheirGames(String gameData)
 	{
+		Message test= new Message("Jerome", "Good bye");
+		return test;
 		// code
 	}
 	
 	public Message deleteTheirGames(int gameId) 
 	{
-		// code
+		Message test= new Message("Jerome", "Good bye");
+		return test;
 	}
 	
 	public void deleteLocalDevGameThreads()
