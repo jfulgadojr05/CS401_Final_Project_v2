@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56e575d7-5389-4935-b072-c1dccbbc2083" name="Default Changelist" comment="Added admin and devUser class skeletons (both extends User class)">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/devUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="56e575d7-5389-4935-b072-c1dccbbc2083" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS401_GAMarket_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS401_GAMarket_Final.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/AccountServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/AccountServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/FriendsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/FriendsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Thread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/clientGUI.css" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/clientGUI.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/devUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/devUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +57,14 @@
       <option name="presentableId" value="Default" />
       <updated>1586213122399</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
+      <created>1586499690575</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586499690575</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -83,10 +76,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
-    <state x="411" y="119" key="CommitChangelistDialog2" timestamp="1586499655299">
+    <state x="411" y="119" key="CommitChangelistDialog2" timestamp="1586504656672">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586499655299" />
+    <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
     <state x="666" y="266" key="FileChooserDialogImpl" timestamp="1586498875269">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

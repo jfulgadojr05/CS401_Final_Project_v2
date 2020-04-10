@@ -7,7 +7,7 @@ public class User{
 	private String picturePath;
 	private String paymentInfo;
 	private String About;
-	// private GameCollection Id[];
+	// private GameCollection Id[]; // need GameCollection class
 	
 	// attributes for Admin
 	private boolean isAdmin;
@@ -17,18 +17,18 @@ public class User{
 
 	
 	// methods
-	public String getUsername() 
+	public String getUsername() // retrieves user's username
 	{
 		// code
 		return this.userName;
 	}
 	
-//	public GameCollection getCollection()
+//	public GameCollection getCollection() // need GameCollection class; retrieves list of user's owned games
 //	{
 //		// code
 //	}
 	
-	public String getPicture()
+	public String getPicture() // retrieves file path of user's profile picture and displays the picture
 	{
 		// code
 		return this.picturePath;
