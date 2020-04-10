@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="56e575d7-5389-4935-b072-c1dccbbc2083" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/devUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/devUser.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="ProjectId" id="1aBdrqOc1ZotxNuryj1GFqFxOfG" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.16113281" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src\app\sample\GAMarket\src\app" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0387a8b9-1126-4da1-b076-80a23de03786" name="Default Changelist" comment="" />
+      <created>1586213122399</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586213122399</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
+      <created>1586499690575</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586499690575</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added admin and devUser class skeletons (both extends User class)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added admin and devUser class skeletons (both extends User class)" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586498824781">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1586558666380">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586558666380" />
+    <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
+    <state x="666" y="266" key="FileChooserDialogImpl" timestamp="1586498875269">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="666" y="266" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498875269" />
+    <state x="440" y="99" key="SettingsEditor" timestamp="1586498877709">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="440" y="99" key="SettingsEditor/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498877709" />
+    <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586557860909">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586557860909" />
+    <state x="541" y="144" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586557873531">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="541" y="144" key="git4idea.branch.GitSmartOperationDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586557873531" />
+    <state x="561" y="222" key="git4idea.merge.GitMergeDialog" timestamp="1586558645195">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="561" y="222" key="git4idea.merge.GitMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586558645195" />
+  </component>
+</project>
