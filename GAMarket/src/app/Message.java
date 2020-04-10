@@ -1,71 +1,48 @@
-package app;
+package GAMarket;
+
 import java.util.*;
 import java.text.SimpleDateFormat;
 
 public class Message {
+    
+    private Date timeStamp;
+    private String text;
 
-    private Date timestamp;
-    private String author;
-    private String messageText;
-    private boolean modified;
-    private Date lastEditTimeStamp; 
-
-     /**
-      * Message object used in threads to display messages
-      * @param msgAuthor string name of author
-      * @param msg String of what the message 
-      */
-    public Message(String msgAuthor, String msg) 
-	{
-		this.timestamp = new Date();
-		this.author = msgAuthor;
-        this.messageText = msg;
-        this.modified = false;
-        this.lastEditTimeStamp = null;
-	}
-    /** return String representation of Message Object */
-    public String toString () {
-        return null; //TODO finish this
+    // constructors
+    public Message() {
+        timeStamp = new Date();
+        text = " ";
     }
 
-    /** return string of time message was created*/
-    public String getTimestamp () {
-        return formatDate(this.timestamp);
+    public Message(Date timeStamp, String msg) {
+		this.timeStamp = new Date();
+        this.text = msg;
     }
 
-    /** return author of the message as a string */
-    public String getAuthor () {
-        return this.author;
+    // getters & setters
+    public Date getTimeStamp() {
+        return timeStamp;
+    }
+
+    public void setTimeStamp(Date timeStamp) {
+        this.timeStamp = timeStamp;
     }
     
-    /** return whether message has been modified */
-    public boolean isModifed () {
-        return this.modified;    
+    public String getText() {
+        return text;
     }
 
-    /** return text of message as a String*/
-    public String getMessgeTxt () {
-        return this.messageText;
-    }
-    /** change the value of message text
-     *  up date modified satutus and modified timeStamp
-     */
-    public void editMessageText(String editedMessage){
-        this.modified = true;
-        this.lastEditTimeStamp = new Date();
-        this.messageText = editedMessage;
-        return ;
-    }
-    /** return date value of last edit */
-    public String getLastEditTimestamp(){
-        return formatDate(this.lastEditTimeStamp); 
+    public void setText(String text) {
+        this.text = text;
     }
 
-    /** return date in a formated string of the form
-     *  dd/MM/yy HH:mm a ex 2/25/20 1:59pm
-     */
-    private String formatDate(Date d){
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm a");
-        return formatter.format(d);
+    // all other methods
+
+/*  createMessage function  
+        shown in thread
+            create text
+            set timestamp with current time of submission
+             */
+    public void createMessage() {
     }
 }
