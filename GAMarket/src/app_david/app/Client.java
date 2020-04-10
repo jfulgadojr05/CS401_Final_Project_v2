@@ -25,7 +25,7 @@ public class Client extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) {
         //client gui
         window = primaryStage;
         window.setTitle("GAMarket");
@@ -35,14 +35,13 @@ public class Client extends Application {
         grid.setVgap(8);
         grid.setHgap(10);
 
+        // Run the store command
+        // Store will provide the following features: purchase game, filter games,
+        // search for games, go to gaming profile,
+        // will load based off a text file that will store temp store data
         Button store = new Button("Store");
         GridPane.setConstraints(store, 0, 0);
-        store.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                goToStore();
-            }
-        });
+        store.setOnAction(actionEvent -> goToStore());
 
         Button collection = new Button("Collection");
         GridPane.setConstraints(collection, 1, 0);
@@ -65,7 +64,6 @@ public class Client extends Application {
 
     void goToStore(){
         Store newStore = new Store();
-
-    };
+    }
 
 }
