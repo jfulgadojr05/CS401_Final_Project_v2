@@ -30,6 +30,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1aBdrqOc1ZotxNuryj1GFqFxOfG" />
   <component name="PropertiesComponent">
@@ -88,5 +89,13 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="440" y="99" key="SettingsEditor/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498877709" />
+    <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586557860909">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586557860909" />
+    <state x="541" y="144" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586557873531">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="541" y="144" key="git4idea.branch.GitSmartOperationDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586557873531" />
   </component>
 </project>
