@@ -1,12 +1,15 @@
-package sample.GAMarket.src.app;
+package app;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javax.swing.*;
 
 
 import javafx.scene.control.TextField;
@@ -22,7 +25,7 @@ public class Client extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) {
         //client gui
         window = primaryStage;
         window.setTitle("GAMarket");
@@ -32,9 +35,13 @@ public class Client extends Application {
         grid.setVgap(8);
         grid.setHgap(10);
 
+        // Run the store command
+        // Store will provide the following features: purchase game, filter games,
+        // search for games, go to gaming profile,
+        // will load based off a text file that will store temp store data
         Button store = new Button("Store");
         GridPane.setConstraints(store, 0, 0);
-
+        store.setOnAction(actionEvent -> goToStore());
 
         Button collection = new Button("Collection");
         GridPane.setConstraints(collection, 1, 0);
@@ -56,7 +63,7 @@ public class Client extends Application {
     }
 
     void goToStore(){
-
-    };
+        Store newStore = new Store();
+    }
 
 }

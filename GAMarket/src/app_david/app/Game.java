@@ -3,7 +3,7 @@ package app;
 public class Game {
     private String name;
     private Thread discussions[];
-    private Message reviews[];
+    private app.Message reviews[];
     private int id;
     private String genre;
     private String gamePath;
