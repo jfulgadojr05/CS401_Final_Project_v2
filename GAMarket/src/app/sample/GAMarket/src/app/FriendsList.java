@@ -1,4 +1,4 @@
-// any needed imports go here...
+package sample.GAMarket.src.app;// any needed imports go here...
 
 public class FriendsList{
 	
@@ -12,17 +12,17 @@ public class FriendsList{
 		// code
 	}
 	
-	public deleteFriend(User myUser)
+	public void deleteFriend(User myUser)
 	{
 		// code
 	}
 	
-	public messageFriend(User myUser)
+	public void messageFriend(User myUser)
 	{
 		// code
 	}
 	
-	public blockFriend(User myUser) 
+	public void blockFriend(User myUser)
 	{
 		// code
 	}
@@ -30,11 +30,13 @@ public class FriendsList{
 	public int getListSize()
 	{
 		// code
+		return fListSize;
 	}
 	
-	public void setListSize(int)
+	public void setListSize(int listSize)
 	{
 		// code
+		this.fListSize = listSize;
 	}
 	
 }

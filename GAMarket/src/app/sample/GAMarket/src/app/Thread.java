@@ -1,4 +1,4 @@
-package app;
+package sample.GAMarket.src.app;
 
 public class Thread {
     private String topic;

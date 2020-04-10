@@ -1,4 +1,4 @@
-// any needed imports go here....
+package sample.GAMarket.src.app;// any needed imports go here....
 
 public class AccountServices 
 {
@@ -29,7 +29,7 @@ public class AccountServices
 		// code
 	}
 	
-	public void accountAuthenticator
+	public void accountAuthenticator()
 	{
 		// code
 	}

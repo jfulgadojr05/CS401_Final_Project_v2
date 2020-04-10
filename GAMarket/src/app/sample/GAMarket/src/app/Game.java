@@ -1,8 +1,8 @@
-package app;
+package sample.GAMarket.src.app;
 
 public class Game {
     private String name;
-    private Thread discussions[];
+    private java.lang.Thread discussions[];
     private Message reviews[];
     private int id;
     private String genre;
@@ -13,7 +13,7 @@ public class Game {
     private float averageRating; // TODO make not of change in uml
 
     //TODO WRITE DOC
-    public Thread createNewThread (String topic, String originalPost) {
+    public java.lang.Thread createNewThread (String topic, String originalPost) {
         return null; // TODO finish this
     }
     
