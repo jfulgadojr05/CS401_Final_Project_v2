@@ -58,6 +58,47 @@ public class Game {
         this.imgPath = imgPath;
     }
 
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public Thread[] getDiscussions() {
+        return discussions;
+    }
+
+    public Message[] getReviews() {
+        return reviews;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public String getGamePath() {
+        return gamePath;
+    }
+
+    public String getMetaTags() {
+        return metaTags;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public String getDeveloperName() {
+        return developerName;
+    }
+
+    public float getAverageRating() {
+        return averageRating;
+    }
+
     //TODO WRITE DOC
     public void reviewGame () {
     }
