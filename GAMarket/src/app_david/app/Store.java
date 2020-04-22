@@ -18,10 +18,19 @@ public class Store {
         feed = new Game[7];
     }
 
+    // Getters
+    public Game[] getFeed() {
+        return feed;
+    }
+
+    public int getNumGames() {
+        return numGames;
+    }
+
+
     public void purchaseGame(String title){
         // Store function will let a user purchase a game
         // from a gamecollection object
-        GameCollection test = new GameCollection();
     }
 
     public Game searchGames(String name) {
@@ -38,7 +47,7 @@ public class Store {
     }
 
     public void loadGameData(String filename){
-
+        System.out.println(filename);
     }
 
 }

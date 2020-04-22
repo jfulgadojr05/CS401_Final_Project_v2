@@ -64,6 +64,16 @@ public class Client extends Application {
 
     void goToStore(){
         Store newStore = new Store();
+        StoreInterface gameStoreInterface;
+        newStore.loadGameData("Testing");
+
+        gameStoreInterface = new StoreGUI(newStore);
+        gameStoreInterface.showGameMenu();
+
+
+
+
+
     }
 
 }
