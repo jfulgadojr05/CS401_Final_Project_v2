@@ -33,9 +33,15 @@ public class StoreGUI implements StoreInterface {
         JPanel menuPanel = new JPanel();
         JLabel gameItemLabel = new JLabel("List of Games");
         filterGameButton = new JButton("Filter Games");
+
         searchGameButton = new JButton("Search Games");
         returnButton = new JButton("Return To Menu");
-
+        ActionListener filterListener = (ActionEvent filterEvent) -> doFilterGame();
+        filterGameButton.addActionListener(filterListener);
+        ActionListener searchListener = (ActionEvent searchEvent) -> doSearchGame();
+        searchGameButton.addActionListener(searchListener);
+        ActionListener returnListener = (ActionEvent returnEvent) -> doClose();
+        returnButton.addActionListener(returnListener);
         DefaultListModel<String> storeModel = new DefaultListModel<>();
         storeModel.addElement("Item 1");
         storeModel.addElement("Item 2");
@@ -63,36 +69,10 @@ public class StoreGUI implements StoreInterface {
         storeContent.add(menuPanel, BorderLayout.CENTER);
         storeContent.add(buttonPanel, BorderLayout.PAGE_END);
 
-//        storeFrame.add(storeContent);
+        storeFrame.setLocationRelativeTo(null);
+        storeFrame.pack();
         storeFrame.setSize(400,300);
         storeFrame.setVisible(true);
-
-
-//        int choice;
-//
-//        do {
-//
-//            choice = JOptionPane.showOptionDialog(null,
-//                    "",
-//                            "Store Menu",
-//                            JOptionPane.YES_NO_CANCEL_OPTION,
-//                            JOptionPane.QUESTION_MESSAGE,
-//                            null,
-//                            commands,
-//                            commands[commands.length - 1]);
-//
-//                    switch (choice) {
-//                        case 0: doPurchaseGame(); break;
-//                        case 1: doFilterGame(); break;
-//                        case 2: doSearchGame(); break;
-//                        case 3: doGoToProfile(); break;
-//                        case 4: doClose(); break;
-//                        default:  // do nothing
-//            }
-//
-//        } while (choice != commands.length-1);
-//        System.exit(0);
-
 
     }
 
