@@ -11,7 +11,11 @@ public class StoreGUI implements StoreInterface {
 
     static JFrame storeFrame;
 
+    static JPanel storePanel;
+
     static JList<String> storeMenuItems;
+
+    static JButton filterGameButton, searchGameButton, returnButton;
 
     public StoreGUI(Store gameStore) {
         this.gameStore = gameStore;
@@ -26,6 +30,11 @@ public class StoreGUI implements StoreInterface {
         };
 
         storeFrame = new JFrame("Game Store Menu");
+        storePanel = new JPanel();
+
+        filterGameButton = new JButton("Filter Games");
+        searchGameButton = new JButton("Search Games");
+        returnButton = new JButton("Return To Menu");
 
         DefaultListModel<String> storeModel = new DefaultListModel<>();
         storeModel.addElement("Item 1");
@@ -33,7 +42,16 @@ public class StoreGUI implements StoreInterface {
         storeModel.addElement("Item 3");
 
         storeMenuItems = new JList<>(storeModel);
-        storeFrame.add(storeMenuItems);
+        storePanel.add(filterGameButton);
+        storePanel.add(searchGameButton);
+        storePanel.add(returnButton);
+        storePanel.add(storeMenuItems);
+
+
+        storeFrame.add(storePanel);
+
+
+
 
         storeFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         storeFrame.setTitle("Store Tab");
