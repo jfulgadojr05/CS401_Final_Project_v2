@@ -108,9 +108,8 @@ public class Game {
     }
 
     //TODO WRITE DOC
-    public GAMarket.Message[] getAllReviews() {
+    public void getAllReviews() {
 
-        return null; // TODO finish this
     }
 
     //TODO WRITE DOC

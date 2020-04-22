@@ -36,8 +36,7 @@ public class Store {
     public Game searchGames(String name) {
         // Utilize this function to search for a game
         // with a text box and a macro to pull up the correct games
-        Game test = new Game();
-        return test;
+        return null;
     }
 
     public void gotoGameProfile() {
@@ -47,7 +46,7 @@ public class Store {
     }
 
     public void loadGameData(String filename){
-        System.out.println(filename);
+
     }
 
 }

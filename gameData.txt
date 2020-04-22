@@ -1,0 +1,3 @@
+1001,Super Mario Odyssey,E,temp image path,test meta tag,test game path
+1002,Tetris 99,E10,temp image path,test meta tag,test game path
+1003,Overcooked 2,E,temp image path,test meta tag,test game path
