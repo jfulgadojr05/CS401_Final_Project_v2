@@ -7,8 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import javax.swing.*;
-
 public class Client extends Application {
     private Stage window;
 
