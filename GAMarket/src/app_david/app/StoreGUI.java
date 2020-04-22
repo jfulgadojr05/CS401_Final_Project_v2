@@ -1,13 +1,17 @@
 package app;
 
 import javax.swing.*;
-
 import java.awt.*;
+import java.awt.event.*;
 
 
-public class StoreGUI implements StoreInterface{
+public class StoreGUI implements StoreInterface {
 
     private Store gameStore;
+
+    static JFrame storeFrame;
+
+    static JList<String> storeMenuItems;
 
     public StoreGUI(Store gameStore) {
         this.gameStore = gameStore;
@@ -21,29 +25,48 @@ public class StoreGUI implements StoreInterface{
                 "Return to Store",
         };
 
-        int choice;
+        storeFrame = new JFrame("Game Store Menu");
 
-        do {
-            choice = JOptionPane.showOptionDialog(null,
-                    "",
-                    "Store Menu",
-                    JOptionPane.YES_NO_CANCEL_OPTION,
-                    JOptionPane.QUESTION_MESSAGE,
-                    null,
-                    commands,
-                    commands[commands.length - 1]);
+        DefaultListModel<String> storeModel = new DefaultListModel<>();
+        storeModel.addElement("Item 1");
+        storeModel.addElement("Item 2");
+        storeModel.addElement("Item 3");
 
-            switch (choice) {
-                case 0: doPurchaseGame(); break;
-                case 1: doFilterGame(); break;
-                case 2: doSearchGame(); break;
-                case 3: doGoToProfile(); break;
-                case 4: doClose(); break;
-                default:  // do nothing
-            }
+        storeMenuItems = new JList<>(storeModel);
+        storeFrame.add(storeMenuItems);
 
-        } while (choice != commands.length-1);
-        System.exit(0);
+        storeFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        storeFrame.setTitle("Store Tab");
+        storeFrame.setSize(300,300);
+        storeFrame.setLocationRelativeTo(null);
+        storeFrame.setVisible(true);
+
+//        int choice;
+//
+//        do {
+//
+//            choice = JOptionPane.showOptionDialog(null,
+//                    "",
+//                            "Store Menu",
+//                            JOptionPane.YES_NO_CANCEL_OPTION,
+//                            JOptionPane.QUESTION_MESSAGE,
+//                            null,
+//                            commands,
+//                            commands[commands.length - 1]);
+//
+//                    switch (choice) {
+//                        case 0: doPurchaseGame(); break;
+//                        case 1: doFilterGame(); break;
+//                        case 2: doSearchGame(); break;
+//                        case 3: doGoToProfile(); break;
+//                        case 4: doClose(); break;
+//                        default:  // do nothing
+//            }
+//
+//        } while (choice != commands.length-1);
+//        System.exit(0);
+
+
     }
 
     public void doPurchaseGame(){
