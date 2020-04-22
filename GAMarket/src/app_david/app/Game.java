@@ -17,7 +17,7 @@ public class Game {
     
     //public initializeGame(gameName): file
 
-
+    // Setters
     public void setGameName (String gameName) {
         this.name = gameName;
     }
