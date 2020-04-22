@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56e575d7-5389-4935-b072-c1dccbbc2083" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/devUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/devUser.java" afterDir="false" />
-    </list>
+    <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="jerome_f_changes" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,6 +31,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.16113281" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -73,7 +69,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -97,6 +95,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="666" y="266" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498875269" />
+    <state x="152" y="74" key="MergeDialog" timestamp="1587592789373">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="152" y="74" key="MergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587592789373" />
+    <state x="512" y="147" key="MultipleFileMergeDialog" timestamp="1587592789385">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="512" y="147" key="MultipleFileMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587592789385" />
     <state x="440" y="99" key="SettingsEditor" timestamp="1586498877709">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -113,9 +119,9 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="144" key="git4idea.branch.GitSmartOperationDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586558907869" />
-    <state x="561" y="222" key="git4idea.merge.GitMergeDialog" timestamp="1586558645195">
+    <state x="561" y="222" key="git4idea.merge.GitMergeDialog" timestamp="1587592711045">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="561" y="222" key="git4idea.merge.GitMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586558645195" />
+    <state x="561" y="222" key="git4idea.merge.GitMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587592711045" />
   </component>
 </project>

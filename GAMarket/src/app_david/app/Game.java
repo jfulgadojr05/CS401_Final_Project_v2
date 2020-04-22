@@ -1,9 +1,11 @@
 package app;
 
+import GAMarket.Message;
+
 public class Game {
     private String name;
-    private Thread discussions[];
-    private app.Message reviews[];
+    private Thread[] discussions;
+    private GAMarket.Message[] reviews;
     private int id;
     private String genre;
     private String gamePath;
@@ -12,39 +14,107 @@ public class Game {
     private String developerName;
     private float averageRating; // TODO make not of change in uml
 
-    //TODO WRITE DOC
-    public Thread createNewThread (String topic, String originalPost) {
-        return null; // TODO finish this
-    }
     
     //public initializeGame(gameName): file
-    
-    //TODO WRITE DOC
-    public Message[] getAllReviews() {
-        return null; // TODO finish this
+
+    // Setters
+    public void setGameName (String gameName) {
+        this.name = gameName;
     }
 
-    //TODO WRITE DOC
-    public void setGameName () {
-        return ; // TODO finish this
+    public void setDeveloper (String developer) {
+        this.developerName = developer;
     }
 
-    //TODO WRITE DOC
-    public void setDeveloper () {
-        return ; // TODO finish this
+    public void setRating (float aRating) {
+        this.averageRating = aRating;
     }
 
-    //TODO WRITE DOC
-    public void setRating () {
-        return ; // TODO finish this
+    public void setDiscussions(Thread[] discussions) {
+        this.discussions = discussions;
     }
+
+    public void setReviews(Message[] reviews) {
+        this.reviews = reviews;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public void setGamePath(String gamePath) {
+        this.gamePath = gamePath;
+    }
+
+    public void setMetaTags(String metaTags) {
+        this.metaTags = metaTags;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public Thread[] getDiscussions() {
+        return discussions;
+    }
+
+    public Message[] getReviews() {
+        return reviews;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public String getGamePath() {
+        return gamePath;
+    }
+
+    public String getMetaTags() {
+        return metaTags;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public String getDeveloperName() {
+        return developerName;
+    }
+
+    public float getAverageRating() {
+        return averageRating;
+    }
+
     //TODO WRITE DOC
     public void reviewGame () {
-        return ; // TODO finish this
     }
 
     //TODO WRITE DOC
     public void createThread() {
-        return ; // TODO finish this
     }
+
+    //TODO WRITE DOC
+    public void getAllReviews() {
+
+    }
+
+    //TODO WRITE DOC
+    public Thread createNewThread (String topic, String originalPost){
+        return null; // TODO finish this
+    }
+
 }
