@@ -3,7 +3,7 @@ package app;
 public class Game {
     private String name;
     private Thread discussions[];
-    private app.Message reviews[];
+    private GAMarket.Message reviews[];
     private int id;
     private String genre;
     private String gamePath;
@@ -20,7 +20,7 @@ public class Game {
     //public initializeGame(gameName): file
     
     //TODO WRITE DOC
-    public Message[] getAllReviews() {
+    public GAMarket.Message[] getAllReviews() {
         return null; // TODO finish this
     }
 

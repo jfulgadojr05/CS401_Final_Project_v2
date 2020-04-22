@@ -1,4 +1,4 @@
-package GAMarket;
+package app;
 
 public class User {
 

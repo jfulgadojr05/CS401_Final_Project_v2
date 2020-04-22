@@ -1,4 +1,4 @@
-package GAMarket;
+package app;
 
 public class Thread {
 
@@ -6,16 +6,16 @@ public class Thread {
     private String topicName;    
     private Integer threadID;
     private Integer gameID;
-    private Post[] posts = new Post[maxPost];
+//    private Post[] posts = new Post[maxPost];
     private Integer postCounter;
-    private Post originalPost = new Post();
+//    private Post originalPost = new Post();
 
 
     public Thread() {
         topicName = " ";
-        posts = null;
+//        posts = null;
         postCounter = 0;
-        originalPost = null;
+//        originalPost = null;
         return ; 
     }
 
@@ -44,21 +44,21 @@ public class Thread {
         this.gameID = gameID;
     }
 
-    public Post[] getPosts() {
-        return posts;
-    }
+//    public Post[] getPosts() {
+//        return posts;
+//    }
 
-    public void setPosts(Post[] posts) {
-        this.posts = posts;
-    }
+//    public void setPosts(Post[] posts) {
+//        this.posts = posts;
+//    }
 
-    public Post getOriginalPost() {
-        return originalPost;
-    }
-
-    public void setOriginalPost(Post originalPost) {
-        this.originalPost = originalPost;
-    }
+//    public Post getOriginalPost() {
+//        return originalPost;
+//    }
+//
+//    public void setOriginalPost(Post originalPost) {
+//        this.originalPost = originalPost;
+//    }
     
     // all other methods below
 
@@ -122,6 +122,7 @@ public class Thread {
             else
                 return equal(2) */
     private int ComparedTo(String toSearch, Thread thread) {
+        return 0;
     }
 
 }
