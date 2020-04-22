@@ -1,0 +1,5 @@
+Christian: 	Give a brief introduction to your project: 30 secs
+Christian: 	Give the current state of the project: 30 secs
+Jerome: 	Show off and project docs or uml: 1 minute
+Taro: 		Show off prototypes and working code: 1 minute
+Jerome: 	Name remaining tasks: 30 secs
