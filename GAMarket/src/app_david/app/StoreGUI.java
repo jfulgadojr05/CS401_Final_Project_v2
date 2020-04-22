@@ -1,6 +1,7 @@
 package app;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -11,7 +12,6 @@ public class StoreGUI implements StoreInterface {
 
     static JFrame storeFrame;
 
-    static JPanel storePanel;
 
     static JList<String> storeMenuItems;
 
@@ -30,8 +30,8 @@ public class StoreGUI implements StoreInterface {
         };
 
         storeFrame = new JFrame("Game Store Menu");
-        storePanel = new JPanel();
-
+        JPanel menuPanel = new JPanel();
+        JLabel gameItemLabel = new JLabel("List of Games");
         filterGameButton = new JButton("Filter Games");
         searchGameButton = new JButton("Search Games");
         returnButton = new JButton("Return To Menu");
@@ -40,24 +40,33 @@ public class StoreGUI implements StoreInterface {
         storeModel.addElement("Item 1");
         storeModel.addElement("Item 2");
         storeModel.addElement("Item 3");
-
         storeMenuItems = new JList<>(storeModel);
-        storePanel.add(filterGameButton);
-        storePanel.add(searchGameButton);
-        storePanel.add(returnButton);
-        storePanel.add(storeMenuItems);
 
+        menuPanel.setLayout(new BoxLayout(menuPanel, BoxLayout.PAGE_AXIS));
 
-        storeFrame.add(storePanel);
+        menuPanel.add(gameItemLabel);
+        menuPanel.add(Box.createRigidArea(new Dimension(0,1)));
+        menuPanel.add(storeMenuItems);
+        menuPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.LINE_AXIS));
+        buttonPanel.setBorder(BorderFactory.createEmptyBorder(0,10,10,100));
+        buttonPanel.add(Box.createHorizontalGlue());
+        buttonPanel.add(filterGameButton);
+        buttonPanel.add(Box.createRigidArea(new Dimension(10,0)));
+        buttonPanel.add(searchGameButton);
+        buttonPanel.add(Box.createRigidArea(new Dimension(10,0)));
+        buttonPanel.add(returnButton);
 
+        Container storeContent = storeFrame.getContentPane();
+        storeContent.add(menuPanel, BorderLayout.CENTER);
+        storeContent.add(buttonPanel, BorderLayout.PAGE_END);
 
-
-        storeFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        storeFrame.setTitle("Store Tab");
-        storeFrame.setSize(300,300);
-        storeFrame.setLocationRelativeTo(null);
+//        storeFrame.add(storeContent);
+        storeFrame.setSize(400,300);
         storeFrame.setVisible(true);
+
 
 //        int choice;
 //
