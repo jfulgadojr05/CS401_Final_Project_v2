@@ -1,7 +1,4 @@
-package gui;
-
-import app.GameCollection;
-import app.Store;
+package app;
 
 import javax.swing.*;
 import java.awt.*;
@@ -94,7 +91,7 @@ public class GAManager extends JFrame {
         configPane.setLayout(new BoxLayout(configPane, BoxLayout.Y_AXIS));
 
         // tabs for gui.GAManager
-        config.addTab("Store", null, storePane, "Choose your games");
+        config.addTab("app.Store", null, storePane, "Choose your games");
         config.addTab("Library", null, libraryPane, "See your library");
         config.addTab("Forum", null, forumPane, "Talk about your favorite games");
 

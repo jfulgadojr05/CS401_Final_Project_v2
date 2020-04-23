@@ -1,7 +1,6 @@
 package app;
 
-import javax.swing.*;
-import java.awt.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,7 +13,6 @@ public class Store extends JPanel {
     static JList<String> storeMenuItems;
 
     static JButton filterGameButton, searchGameButton;
-    static JScrollPane storeMenuScroll;
 
 //    public StoreGUI(app.Store gameStore) {
 //        this.gameStore = gameStore;
@@ -37,14 +35,10 @@ public class Store extends JPanel {
         }
         storeMenuItems = new JList<>(storeModel);
 
-        storeMenuScroll = new JScrollPane(storeMenuItems);
-
-
         menuPanel.setLayout(new BorderLayout());
-        menuPanel.repaint();
         menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
         menuPanel.add(Box.createRigidArea(new Dimension(0,1)));
-        menuPanel.add(storeMenuScroll, BorderLayout.CENTER);
+        menuPanel.add(storeMenuItems, BorderLayout.LINE_START);
 //        menuPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
         JPanel buttonPanel = new JPanel();
