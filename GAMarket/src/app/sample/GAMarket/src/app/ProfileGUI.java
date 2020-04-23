@@ -10,5 +10,8 @@ public class ProfileGUI extends JFrame {
             frame.setSize(400,300);
 
 
+
+
+
     }
 }
