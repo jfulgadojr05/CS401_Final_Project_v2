@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GAMarketGUI/src/app/GameCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GAMarketGUI/src/app/GAManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarketGUI/src/app/GAManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GAMarketGUI/src/app/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarketGUI/src/app/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarketGUI/src/app/StoreGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarketGUI/src/app/StoreGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gameData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarketGUI/src/app/StoreGUI.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +98,7 @@
       <workItem from="1587595579361" duration="259000" />
       <workItem from="1587595876229" duration="513000" />
       <workItem from="1587596414659" duration="5514000" />
-      <workItem from="1587606529562" duration="7406000" />
+      <workItem from="1587606529562" duration="7740000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -151,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587613271936</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Created Load and Add function to game collection.">
+      <created>1587618240045</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587618240045</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +183,8 @@
     <MESSAGE value="Extend JPanel to StoreGUI" />
     <MESSAGE value="Repositioning GUI and added Game/Store/Message Class" />
     <MESSAGE value="Adding Store functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Store functions" />
+    <MESSAGE value="Created Load and Add function to game collection." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Load and Add function to game collection." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1737" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587596556783">
@@ -194,35 +200,35 @@
     </state>
     <state x="673" y="338" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587595215856" />
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1587613269614">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1587618237654">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587613269614" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618237654" />
     <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
     <state x="555" y="218" key="FileChooserDialogImpl" timestamp="1587613420724">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="555" y="218" key="FileChooserDialogImpl/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587613420724" />
     <state x="666" y="266" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498875269" />
-    <state width="1557" height="178" key="GridCell.Tab.0.bottom" timestamp="1587618140057">
+    <state width="1557" height="178" key="GridCell.Tab.0.bottom" timestamp="1587618305118">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618140057" />
+    <state width="1557" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618305118" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
-    <state width="1557" height="178" key="GridCell.Tab.0.center" timestamp="1587618140056">
+    <state width="1557" height="178" key="GridCell.Tab.0.center" timestamp="1587618305118">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618140056" />
+    <state width="1557" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618305118" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
-    <state width="1557" height="178" key="GridCell.Tab.0.left" timestamp="1587618140056">
+    <state width="1557" height="178" key="GridCell.Tab.0.left" timestamp="1587618305118">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618140056" />
+    <state width="1557" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618305118" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
-    <state width="1557" height="178" key="GridCell.Tab.0.right" timestamp="1587618140056">
+    <state width="1557" height="178" key="GridCell.Tab.0.right" timestamp="1587618305118">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618140056" />
+    <state width="1557" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618305118" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="276" key="GridCell.Tab.1.bottom" timestamp="1587613204358">
       <screen x="0" y="0" width="1600" height="860" />

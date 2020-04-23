@@ -16,7 +16,7 @@ public class GAManager extends JFrame {
     JMenuItem viewFriends;
     JMenuItem menuItem;
     JTabbedPane config;
-    StoreGUI storePane;
+    Store storePane;
     JLabel libraryPane;
     JLabel forumPane;
     JLabel friendsPane;
@@ -81,7 +81,7 @@ public class GAManager extends JFrame {
         storeGC = new GameCollection();
         storeGC.loadGameData("gameData.txt");
         // text inside of each tab
-        storePane = new StoreGUI(storeGC);
+        storePane = new Store(storeGC);
         libraryPane = new JLabel("Library stuff here");
         libraryPane.setLocation(300, 300); 
         forumPane = new JLabel("Forum stuff here");

@@ -1,51 +1,71 @@
 package app;
 
+
 import javax.swing.*;
-import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-// GUI for providing store commands for a store object
-public class Store {
+public class Store extends JPanel {
 
-    // member function which will store a feed of games
-    // for users to look at, get recommended features
-    private Game[] feed;
-    private int numGames;
+//    private Store gameStore;
 
-    // Default constructor
-    public Store() {
-        numGames = 0;
-        feed = new Game[7];
+//    static JFrame storeFrame;
+
+    static JList<String> storeMenuItems;
+
+    static JButton filterGameButton, searchGameButton;
+
+//    public StoreGUI(Store gameStore) {
+//        this.gameStore = gameStore;
+//    }
+
+
+    public Store(GameCollection storeCollection){
+
+        JPanel menuPanel = new JPanel();
+        JLabel gameItemLabel = new JLabel("List of Games");
+        filterGameButton = new JButton("Filter Games");
+        searchGameButton = new JButton("Search Games");
+        ActionListener filterListener = (ActionEvent filterEvent) -> doFilterGame();
+        filterGameButton.addActionListener(filterListener);
+        ActionListener searchListener = (ActionEvent searchEvent) -> doSearchGame();
+        searchGameButton.addActionListener(searchListener);
+        DefaultListModel<String> storeModel = new DefaultListModel<>();
+        for(int i = 0; i < storeCollection.getNumberOfGames(); i++){
+            storeModel.addElement(storeCollection.getGameArray()[i].getName());
+        }
+        storeMenuItems = new JList<>(storeModel);
+
+        menuPanel.setLayout(new BorderLayout());
+        menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
+        menuPanel.add(Box.createRigidArea(new Dimension(0,1)));
+        menuPanel.add(storeMenuItems, BorderLayout.LINE_START);
+//        menuPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new BorderLayout());
+        buttonPanel.add(Box.createHorizontalGlue());
+        buttonPanel.add(filterGameButton, BorderLayout.LINE_START);
+        buttonPanel.add(Box.createRigidArea(new Dimension(10,0)));
+        buttonPanel.add(searchGameButton, BorderLayout.LINE_END);
+        buttonPanel.add(Box.createRigidArea(new Dimension(10,0)));
+//        buttonPanel.setBorder(BorderFactory.createEmptyBorder(0,10,10,10));
+
+        this.setLayout(new BorderLayout());
+        this.add(menuPanel, BorderLayout.CENTER);
+        this.add(buttonPanel, BorderLayout.PAGE_START);
+        this.setVisible(true);
+
     }
 
-    // Getters
-    public Game[] getFeed() {
-        return feed;
+
+
+    public void doFilterGame(){
+        System.out.println("Filtering game...");
     }
-
-    public int getNumGames() {
-        return numGames;
-    }
-
-
-    public void purchaseGame(String title){
-        // Store function will let a user purchase a game
-        // from a gamecollection object
-    }
-
-    public Game searchGames(String name) {
-        // Utilize this function to search for a game
-        // with a text box and a macro to pull up the correct games
-        return null;
-    }
-
-    public void gotoGameProfile() {
-        // Enter a games profile, showing related games
-        // that the developer has also created and
-        // recommended game
+    public void doSearchGame(){
+        System.out.println("Searching game...");
     }
 
 
