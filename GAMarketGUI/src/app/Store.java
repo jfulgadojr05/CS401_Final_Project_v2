@@ -1,9 +1,5 @@
 package app;
 
-import javafx.application.*;
-import javafx.geometry.*;
-import javafx.scene.*;
-
 // GUI for providing store commands for a store object
 public class Store {
 

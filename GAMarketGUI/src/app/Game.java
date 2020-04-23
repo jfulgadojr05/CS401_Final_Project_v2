@@ -1,11 +1,9 @@
 package app;
 
-import GAMarket.Message;
-
 public class Game {
     private String name;
     private Thread[] discussions;
-    private GAMarket.Message[] reviews;
+    private Message[] reviews;
     private int id;
     private String genre;
     private String gamePath;

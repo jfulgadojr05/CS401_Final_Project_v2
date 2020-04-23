@@ -24,6 +24,7 @@ public class GAManager extends JFrame {
     JPanel configPane;
     JTextArea question;
     ActionListener openFriendsList;
+
 /*  GAManager constructor
         set title
         set size
@@ -77,8 +78,6 @@ public class GAManager extends JFrame {
 
         // text inside of each tab
         storePane = new StoreGUI();
-//        storePane.setVisible(true);
-//        storePane.setLocation(300, 300);
         libraryPane = new JLabel("Library stuff here");
         libraryPane.setLocation(300, 300); 
         forumPane = new JLabel("Forum stuff here");

@@ -2,8 +2,9 @@ package app;
 
 
 import javax.swing.*;
-import java.awt.event.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class StoreGUI extends JPanel {
 //    JPanel test;
@@ -27,7 +28,6 @@ public class StoreGUI extends JPanel {
         JPanel menuPanel = new JPanel();
         JLabel gameItemLabel = new JLabel("List of Games");
         filterGameButton = new JButton("Filter Games");
-
         searchGameButton = new JButton("Search Games");
         ActionListener filterListener = (ActionEvent filterEvent) -> doFilterGame();
         filterGameButton.addActionListener(filterListener);
@@ -39,48 +39,29 @@ public class StoreGUI extends JPanel {
         storeModel.addElement("Item 3");
         storeMenuItems = new JList<>(storeModel);
 
-
-        menuPanel.setLayout(new BoxLayout(menuPanel, BoxLayout.PAGE_AXIS));
-
-        menuPanel.add(gameItemLabel);
+        menuPanel.setLayout(new BorderLayout());
+        menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
         menuPanel.add(Box.createRigidArea(new Dimension(0,1)));
-        menuPanel.add(storeMenuItems);
-        menuPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+        menuPanel.add(storeMenuItems, BorderLayout.LINE_START);
+//        menuPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.LINE_AXIS));
-        buttonPanel.setBorder(BorderFactory.createEmptyBorder(0,10,10,100));
+        buttonPanel.setLayout(new BorderLayout());
         buttonPanel.add(Box.createHorizontalGlue());
-        buttonPanel.add(filterGameButton);
+        buttonPanel.add(filterGameButton, BorderLayout.LINE_START);
         buttonPanel.add(Box.createRigidArea(new Dimension(10,0)));
-        buttonPanel.add(searchGameButton);
+        buttonPanel.add(searchGameButton, BorderLayout.LINE_END);
         buttonPanel.add(Box.createRigidArea(new Dimension(10,0)));
-        buttonPanel.add(returnButton);
+//        buttonPanel.setBorder(BorderFactory.createEmptyBorder(0,10,10,10));
 
-//        Container storeContent = getContentPane();
-//        storeContent.add(menuPanel, BorderLayout.CENTER);
-//        storeContent.add(buttonPanel, BorderLayout.PAGE_END);
-//
-////        setLocationRelativeTo(null);
-////        pack();
-//        setSize(400,300);
-        this.add(menuPanel, BorderLayout.NORTH);
+        this.setLayout(new BorderLayout());
+        this.add(menuPanel, BorderLayout.CENTER);
+        this.add(buttonPanel, BorderLayout.PAGE_START);
         this.setVisible(true);
 
     }
 
 
-//    public void showGameMenu() {
-//        String[] commands = { "Purchase Game",
-//                "Filter Game",
-//                "Search Game",
-//                "Go To Game Profile",
-//                "Return to Store",
-//        };
-//
-////        storeFrame = new JFrame("Game Store Menu");
-//
-//    }
 
     public void doFilterGame(){
         System.out.println("Filtering game...");
