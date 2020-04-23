@@ -42,7 +42,7 @@ public class Store {
     }
 
     public void loadGameData(String filename){
-
+        System.out.println(filename);
     }
 
 }

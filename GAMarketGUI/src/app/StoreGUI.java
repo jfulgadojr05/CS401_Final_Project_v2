@@ -24,7 +24,9 @@ public class StoreGUI extends JPanel {
 //    }
 
 
-    public StoreGUI(){
+    public StoreGUI(Store gameStore){
+        gameStore = new Store();
+        gameStore.loadGameData("Testing...");
         JPanel menuPanel = new JPanel();
         JLabel gameItemLabel = new JLabel("List of Games");
         filterGameButton = new JButton("Filter Games");
