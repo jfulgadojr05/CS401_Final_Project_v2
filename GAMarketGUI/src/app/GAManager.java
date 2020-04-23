@@ -1,8 +1,8 @@
 package app;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.*;
 
 public class GAManager extends JFrame {
     /**
@@ -16,7 +16,7 @@ public class GAManager extends JFrame {
     JMenuItem viewFriends;
     JMenuItem menuItem;
     JTabbedPane config;
-    JLabel storePane;
+    StoreGUI storePane;
     JLabel libraryPane;
     JLabel forumPane;
     JLabel friendsPane;
@@ -76,8 +76,9 @@ public class GAManager extends JFrame {
         menuBar.add(settings);
 
         // text inside of each tab
-        storePane = new JLabel("Store stuff here");
-        storePane.setLocation(300, 300); 
+        storePane = new StoreGUI();
+        storePane.setVisible(true);
+//        storePane.setLocation(300, 300);
         libraryPane = new JLabel("Library stuff here");
         libraryPane.setLocation(300, 300); 
         forumPane = new JLabel("Forum stuff here");
@@ -85,11 +86,12 @@ public class GAManager extends JFrame {
         config = new JTabbedPane();
         configPane = new JPanel();
         configPane.setLayout(new BoxLayout(configPane, BoxLayout.Y_AXIS));
+
         // tabs for GAManager
         config.addTab("Store", null, storePane, "Choose your games");
         config.addTab("Library", null, libraryPane, "See your library");
         config.addTab("Forum", null, forumPane, "Talk about your favorite games");
-    
+
         setJMenuBar(menuBar);
         getContentPane().add(config, BorderLayout.CENTER);
         setLocationRelativeTo(null); 
