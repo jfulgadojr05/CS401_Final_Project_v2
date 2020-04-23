@@ -16,7 +16,7 @@ public class StoreGUI extends JPanel {
 
     static JList<String> storeMenuItems;
 
-    static JButton filterGameButton, searchGameButton, returnButton;
+    static JButton filterGameButton, searchGameButton;
 
 //    public StoreGUI(Store gameStore) {
 //        this.gameStore = gameStore;
@@ -29,13 +29,10 @@ public class StoreGUI extends JPanel {
         filterGameButton = new JButton("Filter Games");
 
         searchGameButton = new JButton("Search Games");
-        returnButton = new JButton("Return To Menu");
         ActionListener filterListener = (ActionEvent filterEvent) -> doFilterGame();
         filterGameButton.addActionListener(filterListener);
         ActionListener searchListener = (ActionEvent searchEvent) -> doSearchGame();
         searchGameButton.addActionListener(searchListener);
-        ActionListener returnListener = (ActionEvent returnEvent) -> doClose();
-        returnButton.addActionListener(returnListener);
         DefaultListModel<String> storeModel = new DefaultListModel<>();
         storeModel.addElement("Item 1");
         storeModel.addElement("Item 2");
@@ -67,8 +64,7 @@ public class StoreGUI extends JPanel {
 ////        setLocationRelativeTo(null);
 ////        pack();
 //        setSize(400,300);
-        this.add(menuPanel);
-        this.add(buttonPanel);
+        this.add(menuPanel, BorderLayout.NORTH);
         this.setVisible(true);
 
     }
@@ -86,20 +82,11 @@ public class StoreGUI extends JPanel {
 //
 //    }
 
-    public void doPurchaseGame(){
-        System.out.println("Purchasing game...");
-    }
     public void doFilterGame(){
         System.out.println("Filtering game...");
     }
     public void doSearchGame(){
         System.out.println("Searching game...");
-    }
-    public void doGoToProfile(){
-        System.out.println("Going to gamer profile...");
-    }
-    public void doClose(){
-        System.out.println("Closing Store Tab");
     }
 
 

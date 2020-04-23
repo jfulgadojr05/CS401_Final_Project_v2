@@ -77,7 +77,7 @@ public class GAManager extends JFrame {
 
         // text inside of each tab
         storePane = new StoreGUI();
-        storePane.setVisible(true);
+//        storePane.setVisible(true);
 //        storePane.setLocation(300, 300);
         libraryPane = new JLabel("Library stuff here");
         libraryPane.setLocation(300, 300); 
