@@ -7,13 +7,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class StoreGUI extends JPanel {
-//    JPanel test;
-
 
 //    private Store gameStore;
 
 //    static JFrame storeFrame;
-
 
     static JList<String> storeMenuItems;
 
@@ -24,9 +21,8 @@ public class StoreGUI extends JPanel {
 //    }
 
 
-    public StoreGUI(Store gameStore){
-        gameStore = new Store();
-        gameStore.loadGameData("Testing...");
+    public StoreGUI(GameCollection storeCollection){
+
         JPanel menuPanel = new JPanel();
         JLabel gameItemLabel = new JLabel("List of Games");
         filterGameButton = new JButton("Filter Games");
@@ -36,9 +32,9 @@ public class StoreGUI extends JPanel {
         ActionListener searchListener = (ActionEvent searchEvent) -> doSearchGame();
         searchGameButton.addActionListener(searchListener);
         DefaultListModel<String> storeModel = new DefaultListModel<>();
-        storeModel.addElement("Item 1");
-        storeModel.addElement("Item 2");
-        storeModel.addElement("Item 3");
+        for(int i = 0; i < 3; i++){
+            storeModel.addElement(storeCollection.getGameArray()[i].getName());
+        }
         storeMenuItems = new JList<>(storeModel);
 
         menuPanel.setLayout(new BorderLayout());

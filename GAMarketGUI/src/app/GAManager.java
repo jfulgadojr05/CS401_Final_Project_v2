@@ -24,7 +24,7 @@ public class GAManager extends JFrame {
     JPanel configPane;
     JTextArea question;
     ActionListener openFriendsList;
-    private Store gameStore;
+    private GameCollection storeGC;
 
 /*  GAManager constructor
         set title
@@ -77,8 +77,11 @@ public class GAManager extends JFrame {
                 "The only menu in this program that has menu items");
         menuBar.add(settings);
 
+        // Loading data
+        storeGC = new GameCollection();
+        storeGC.loadGameData("gameData.txt");
         // text inside of each tab
-        storePane = new StoreGUI(gameStore);
+        storePane = new StoreGUI(storeGC);
         libraryPane = new JLabel("Library stuff here");
         libraryPane.setLocation(300, 300); 
         forumPane = new JLabel("Forum stuff here");
