@@ -7,7 +7,7 @@ public class User {
 	private String picturePath;
 	private String paymentInfo;
 	private String About;
-	//private Game Collection Id[];
+	//private app.Game Collection Id[];
 	
 	// attributes for Admin
 	public int adminId;
@@ -17,7 +17,7 @@ public class User {
 	private boolean isDevUser;
 	private Integer collectionId;
 	private float income; 
-	//private Collection<Game> developedGames[];
+	//private Collection<app.Game> developedGames[];
 	
 }
 

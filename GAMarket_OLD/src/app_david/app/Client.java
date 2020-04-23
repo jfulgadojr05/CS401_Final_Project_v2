@@ -29,10 +29,10 @@ public class Client extends Application {
         grid.setHgap(10);
 
         // Run the store command
-        // Store will provide the following features: purchase game, filter games,
+        // app.Store will provide the following features: purchase game, filter games,
         // search for games, go to gaming profile,
         // will load based off a text file that will store temp store data
-        Button store = new Button("Store");
+        Button store = new Button("app.Store");
         GridPane.setConstraints(store, 0, 0);
         store.setOnAction(actionEvent -> goToStore());
 

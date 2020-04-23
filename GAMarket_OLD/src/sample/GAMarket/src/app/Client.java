@@ -28,7 +28,7 @@ public class Client extends Application {
         grid.setVgap(8);
         grid.setHgap(10);
 
-        Button store = new Button("Store");
+        Button store = new Button("app.Store");
         GridPane.setConstraints(store, 0, 0);
 
 

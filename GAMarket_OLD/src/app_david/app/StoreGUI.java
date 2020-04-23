@@ -16,14 +16,14 @@ public class StoreGUI implements StoreInterface {
     }
 
     public void showGameMenu() {
-        String[] commands = { "Purchase Game",
-                "Filter Game",
-                "Search Game",
-                "Go To Game Profile",
-                "Return to Store",
+        String[] commands = { "Purchase app.Game",
+                "Filter app.Game",
+                "Search app.Game",
+                "Go To app.Game Profile",
+                "Return to app.Store",
         };
 
-        storeFrame = new JFrame("Game Store Menu");
+        storeFrame = new JFrame("app.Game app.Store Menu");
         JPanel menuPanel = new JPanel();
         JLabel gameItemLabel = new JLabel("List of Games");
         filterGameButton = new JButton("Filter Games");
@@ -83,7 +83,7 @@ public class StoreGUI implements StoreInterface {
         System.out.println("Going to gamer profile...");
     }
     public void doClose(){
-        System.out.println("Closing Store Tab");
+        System.out.println("Closing app.Store Tab");
     }
 
 

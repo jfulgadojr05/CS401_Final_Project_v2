@@ -1,4 +1,7 @@
-package app;
+package gui;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class FriendsGUI extends JFrame {
 

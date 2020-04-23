@@ -7,7 +7,7 @@ public class User{
 	private String picturePath;
 	private String paymentInfo;
 	private String About;
-	// private GameCollection Id[]; // need GameCollection class
+	// private app.GameCollection Id[]; // need app.GameCollection class
 	
 	// attributes for Admin
 	private boolean isAdmin;
@@ -23,7 +23,7 @@ public class User{
 		return this.userName;
 	}
 	
-//	public GameCollection getCollection() // need GameCollection class; retrieves list of user's owned games
+//	public app.GameCollection getCollection() // need app.GameCollection class; retrieves list of user's owned games
 //	{
 //		// code
 //	}

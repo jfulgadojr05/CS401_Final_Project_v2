@@ -1,11 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
+    <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="Configured Store and deleted store file">
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/Store.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/gui/FriendsGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CS401_GAMarket_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS401_GAMarket_Final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/AccountServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/AccountServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/FriendsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/FriendsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/GameCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/GameCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/StoreGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/StoreGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/StoreInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/StoreInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/Thread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app_david/app/clientGUI.css" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/clientGUI.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/AccountServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/AccountServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/FriendsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/FriendsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Thread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/clientGUI.css" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/clientGUI.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/sample/GAMarket/src/app/devUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/devUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarketGUI/bin/app/FriendsGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarketGUI/bin/app/GAManager$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarketGUI/bin/app/GAManager$TabManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarketGUI/bin/app/GAManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarketGUI/src/app/FriendsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarketGUI/src/app/FriendsGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarketGUI/src/app/GAManager$TabManager.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GAMarketGUI/src/app/GAManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarketGUI/src/app/GAManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarketGUI/src/app/GameCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarketGUI/src/app/GameCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GAMarketGUI/src/app/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarketGUI/src/app/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarketGUI/src/app/StoreGUI.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +86,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/GAMarketGUI/src/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/GAMarket" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -55,17 +98,20 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarketGUI\src\app" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\bin" />
+      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\bin\app" />
+      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\src" />
+      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\src\app" />
+      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\src\gui" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket" />
+      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\src" />
       <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarketGUI\src\app" />
-      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarketGUI" />
-      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarketGUI\src" />
-      <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src\app\sample\GAMarket\src\app" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.GAManager (1)">
     <configuration name="GAManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.GAManager" />
       <module name="CS401_GAMarket_Final" />
@@ -79,8 +125,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GAManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.GAManager" />
+      <module name="CS401_GAMarket_Final" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GAManager (1)" />
         <item itemvalue="Application.GAManager" />
       </list>
     </recent_temporary>
@@ -98,7 +152,9 @@
       <workItem from="1587595579361" duration="259000" />
       <workItem from="1587595876229" duration="513000" />
       <workItem from="1587596414659" duration="5514000" />
-      <workItem from="1587606529562" duration="7740000" />
+      <workItem from="1587606529562" duration="9032000" />
+      <workItem from="1587661190580" duration="592000" />
+      <workItem from="1587670840900" duration="1779000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -156,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587618240045</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Configured Store and deleted store file">
+      <created>1587618463812</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587618463813</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,68 +247,82 @@
     <MESSAGE value="Repositioning GUI and added Game/Store/Message Class" />
     <MESSAGE value="Adding Store functions" />
     <MESSAGE value="Created Load and Add function to game collection." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Load and Add function to game collection." />
+    <MESSAGE value="Configured Store and deleted store file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configured Store and deleted store file" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1737" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587596556783">
-      <screen x="1600" y="127" width="1366" height="728" />
+    <state x="517" y="101" key="#GAManager" timestamp="1587671854647">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="517" y="101" key="#GAManager/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587671854647" />
+    <state x="435" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587672035694">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="435" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587672035694" />
     <state x="1737" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596556783" />
     <state x="605" y="147" key="#com.intellij.ide.util.MemberChooser" timestamp="1587614453677">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="605" y="147" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587614453677" />
+    <state x="435" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587671739343">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="435" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587671739343" />
     <state x="673" y="338" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587595215856">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="673" y="338" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587595215856" />
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1587618237654">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1587672670023">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618237654" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587672670023" />
     <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
+    <state x="112" y="48" key="DiffContextDialog" timestamp="1587621001174">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="112" y="48" key="DiffContextDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587621001174" />
     <state x="555" y="218" key="FileChooserDialogImpl" timestamp="1587613420724">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="555" y="218" key="FileChooserDialogImpl/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587613420724" />
     <state x="666" y="266" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498875269" />
-    <state width="1557" height="178" key="GridCell.Tab.0.bottom" timestamp="1587618305118">
+    <state width="1557" height="178" key="GridCell.Tab.0.bottom" timestamp="1587672670081">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618305118" />
+    <state width="1557" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587672670081" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
-    <state width="1557" height="178" key="GridCell.Tab.0.center" timestamp="1587618305118">
+    <state width="1557" height="178" key="GridCell.Tab.0.center" timestamp="1587672670081">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618305118" />
+    <state width="1557" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587672670081" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
-    <state width="1557" height="178" key="GridCell.Tab.0.left" timestamp="1587618305118">
+    <state width="1557" height="178" key="GridCell.Tab.0.left" timestamp="1587672670080">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618305118" />
+    <state width="1557" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587672670080" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
-    <state width="1557" height="178" key="GridCell.Tab.0.right" timestamp="1587618305118">
+    <state width="1557" height="178" key="GridCell.Tab.0.right" timestamp="1587672670081">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618305118" />
+    <state width="1557" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587672670081" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
-    <state width="1557" height="276" key="GridCell.Tab.1.bottom" timestamp="1587613204358">
+    <state width="1557" height="276" key="GridCell.Tab.1.bottom" timestamp="1587621002208">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587613204358" />
-    <state width="1557" height="276" key="GridCell.Tab.1.center" timestamp="1587613204358">
+    <state width="1557" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587621002208" />
+    <state width="1557" height="276" key="GridCell.Tab.1.center" timestamp="1587621002208">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="276" key="GridCell.Tab.1.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587613204358" />
-    <state width="1557" height="276" key="GridCell.Tab.1.left" timestamp="1587613204358">
+    <state width="1557" height="276" key="GridCell.Tab.1.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587621002208" />
+    <state width="1557" height="276" key="GridCell.Tab.1.left" timestamp="1587621002208">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="276" key="GridCell.Tab.1.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587613204358" />
-    <state width="1557" height="276" key="GridCell.Tab.1.right" timestamp="1587613204358">
+    <state width="1557" height="276" key="GridCell.Tab.1.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587621002208" />
+    <state width="1557" height="276" key="GridCell.Tab.1.right" timestamp="1587621002208">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="276" key="GridCell.Tab.1.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587613204358" />
+    <state width="1557" height="276" key="GridCell.Tab.1.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587621002208" />
     <state x="152" y="74" key="MergeDialog" timestamp="1587592789373">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -254,16 +331,16 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="512" y="147" key="MultipleFileMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587592789385" />
-    <state x="367" y="11" key="SettingsEditor" timestamp="1587600434380">
+    <state x="367" y="11" key="SettingsEditor" timestamp="1587672394847">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="367" y="11" key="SettingsEditor/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587600434380" />
+    <state x="367" y="11" key="SettingsEditor/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587672394847" />
     <state x="1913" y="127" key="SettingsEditor/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596455756" />
     <state x="440" y="99" key="SettingsEditor/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498877709" />
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1586558813335">
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1587618535151">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586558813335" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587618535151" />
     <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586557860909">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -276,10 +353,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="561" y="222" key="git4idea.merge.GitMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587592711045" />
-    <state x="182" y="51" key="new project wizard" timestamp="1587596389073">
+    <state x="182" y="51" key="new project wizard" timestamp="1587672208988">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="182" y="51" key="new project wizard/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587596389073" />
+    <state x="182" y="51" key="new project wizard/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587672208988" />
     <state x="456" y="195" key="run.anything.popup" timestamp="1587595240226">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

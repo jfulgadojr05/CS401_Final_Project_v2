@@ -5,7 +5,7 @@ public class devUser extends User {
 
     private int collectionId;
     private float income;
-    // private GameCollection developedGames[];
+    // private app.GameCollection developedGames[];
 
     public Message postGames(String gameData) // creates a new message promote new games
     {

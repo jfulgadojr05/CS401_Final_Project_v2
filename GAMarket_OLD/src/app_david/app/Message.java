@@ -1,8 +1,5 @@
 package GAMarket;
 
-import java.util.*;
-import java.text.SimpleDateFormat;
-
 public class Message {
     
     private Date timeStamp;

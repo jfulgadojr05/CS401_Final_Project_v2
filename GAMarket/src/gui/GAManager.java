@@ -1,4 +1,7 @@
-package app;
+package gui;
+
+import app.GameCollection;
+import app.Store;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,6 +1,5 @@
 package sample.GAMarket.src.app;
 import java.text.SimpleDateFormat;
-import java.util.*;
 
 public class Message {
 
@@ -11,7 +10,7 @@ public class Message {
     private Date lastEditTimeStamp; 
 
      /**
-      * Message object used in threads to display messages
+      * app.Message object used in threads to display messages
       * @param msgAuthor string name of author
       * @param msg String of what the message 
       */
@@ -23,7 +22,7 @@ public class Message {
         this.modified = false;
         this.lastEditTimeStamp = null;
 	}
-    /** return String representation of Message Object */
+    /** return String representation of app.Message Object */
     public String toString () {
         return null; //TODO finish this
     }
