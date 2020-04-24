@@ -25,6 +25,8 @@ public class Store extends JPanel {
 
         JPanel menuPanel = new JPanel();
         JLabel gameItemLabel = new JLabel("List of Games");
+        gameItemLabel.setFont(new Font("Verdana", Font.PLAIN, 24));
+
         filterGameButton = new JButton("Filter Games");
         searchGameButton = new JButton("Search Games");
         ActionListener filterListener = (ActionEvent filterEvent) -> doFilterGame();
@@ -36,12 +38,12 @@ public class Store extends JPanel {
             storeModel.addElement(storeCollection.getGameArray()[i].getName());
         }
         storeMenuItems = new JList<>(storeModel);
+        storeMenuItems.setFont(new Font("Verdana", Font.PLAIN, 16));
 
         storeMenuScroll = new JScrollPane(storeMenuItems);
 
 
         menuPanel.setLayout(new BorderLayout());
-        menuPanel.repaint();
         menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
         menuPanel.add(Box.createRigidArea(new Dimension(0,1)));
         menuPanel.add(storeMenuScroll, BorderLayout.CENTER);
