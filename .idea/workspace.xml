@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="" />
+    <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,9 +29,16 @@
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1aBdrqOc1ZotxNuryj1GFqFxOfG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -43,21 +52,8 @@
       <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src\app\sample\GAMarket\src\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GAManager (2)">
-    <configuration name="GAManager (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.GAManager" />
-      <module name="CS401_GAMarket_Final" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GAManager (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="GAManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.GAManager" />
       <module name="CS401_GAMarket_Final" />
       <extension name="coverage">
@@ -70,23 +66,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GAManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GAManager" />
-      <module name="CS401_GAMarket_Final" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GAManager (2)" />
-        <item itemvalue="Application.GAManager (1)" />
         <item itemvalue="Application.GAManager" />
       </list>
     </recent_temporary>
@@ -96,11 +77,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0387a8b9-1126-4da1-b076-80a23de03786" name="Default Changelist" comment="" />
+      <changelist id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="" />
       <created>1586213122399</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586213122399</updated>
+      <workItem from="1587767271802" duration="541000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -130,8 +112,18 @@
       <option name="project" value="LOCAL" />
       <updated>1587767032842</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="IntelliJ force commit">
+      <created>1587767121067</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587767121067</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -158,36 +150,44 @@
       <screen x="1600" y="127" width="1366" height="728" />
     </state>
     <state x="1875" y="150" key="#Project_Structure/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587767077639" />
+    <state x="1737" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587767153612">
+      <screen x="1600" y="127" width="1366" height="728" />
+    </state>
+    <state x="1737" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587767153612" />
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586498824781">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
-    <state x="1893" y="127" key="CommitChangelistDialog2" timestamp="1587767030672">
+    <state x="1893" y="127" key="CommitChangelistDialog2" timestamp="1587767118322">
       <screen x="1600" y="127" width="1366" height="728" />
     </state>
     <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765675093" />
-    <state x="1893" y="127" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587767030672" />
+    <state x="1893" y="127" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587767118322" />
     <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
     <state x="666" y="266" key="FileChooserDialogImpl" timestamp="1586498875269">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="666" y="266" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498875269" />
-    <state width="1557" height="178" key="GridCell.Tab.0.bottom" timestamp="1587765655002">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1323" height="142" key="GridCell.Tab.0.bottom" timestamp="1587767870641">
+      <screen x="1600" y="127" width="1366" height="728" />
     </state>
     <state width="1557" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655002" />
-    <state width="1557" height="178" key="GridCell.Tab.0.center" timestamp="1587765655001">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1323" height="142" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587767870641" />
+    <state width="1323" height="142" key="GridCell.Tab.0.center" timestamp="1587767870639">
+      <screen x="1600" y="127" width="1366" height="728" />
     </state>
     <state width="1557" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655001" />
-    <state width="1557" height="178" key="GridCell.Tab.0.left" timestamp="1587765655001">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1323" height="142" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587767870639" />
+    <state width="1323" height="142" key="GridCell.Tab.0.left" timestamp="1587767870638">
+      <screen x="1600" y="127" width="1366" height="728" />
     </state>
     <state width="1557" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655001" />
-    <state width="1557" height="178" key="GridCell.Tab.0.right" timestamp="1587765655002">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1323" height="142" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587767870638" />
+    <state width="1323" height="142" key="GridCell.Tab.0.right" timestamp="1587767870640">
+      <screen x="1600" y="127" width="1366" height="728" />
     </state>
     <state width="1557" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655002" />
+    <state width="1323" height="142" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587767870639" />
     <state x="152" y="74" key="MergeDialog" timestamp="1587764942375">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -197,10 +197,11 @@
     </state>
     <state x="512" y="147" key="MultipleFileMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587764946700" />
     <state x="2037" y="251" key="MultipleFileMergeDialog/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587767058274" />
-    <state x="367" y="11" key="SettingsEditor" timestamp="1587765428909">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="1913" y="127" key="SettingsEditor" timestamp="1587767133851">
+      <screen x="1600" y="127" width="1366" height="728" />
     </state>
     <state x="367" y="11" key="SettingsEditor/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765428909" />
+    <state x="1913" y="127" key="SettingsEditor/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587767133851" />
     <state x="440" y="99" key="SettingsEditor/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498877709" />
     <state x="2098" y="246" width="748" height="471" key="Vcs.Push.Dialog.v2" timestamp="1587767034215">
       <screen x="1600" y="127" width="1366" height="728" />
