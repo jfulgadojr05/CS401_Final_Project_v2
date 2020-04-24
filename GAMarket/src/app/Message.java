@@ -1,9 +1,10 @@
 package app;
 
-import java.util.Date;
+import java.util.*;
+import java.text.SimpleDateFormat;
 
 public class Message {
-    
+
     private Date timeStamp;
     private String text;
 
@@ -14,7 +15,7 @@ public class Message {
     }
 
     public Message(Date timeStamp, String msg) {
-		this.timeStamp = new Date();
+        this.timeStamp = new Date();
         this.text = msg;
     }
 
@@ -26,7 +27,7 @@ public class Message {
     public void setTimeStamp(Date timeStamp) {
         this.timeStamp = timeStamp;
     }
-    
+
     public String getText() {
         return text;
     }
@@ -37,11 +38,11 @@ public class Message {
 
     // all other methods
 
-/*  createMessage function  
-        shown in thread
-            create text
-            set timestamp with current time of submission
-             */
+    /*  createMessage function
+            shown in thread
+                create text
+                set timestamp with current time of submission
+                 */
     public void createMessage() {
     }
 }

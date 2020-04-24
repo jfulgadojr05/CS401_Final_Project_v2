@@ -7,6 +7,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/* GAManager class
+	CS 401 - Final Project
+	FriendsGUI.java
+  By: Christian Magpantay
+  Code/Book Reference -
+  https://www.youtube.com/watch?v=CqWorn8dR_A&list=PLdmXYkPMWIgCocLY-B4SvpQshQWC7Nc0C&index=5
+*/
+
 public class GAManager extends JFrame {
     /**
      *
@@ -28,19 +36,46 @@ public class GAManager extends JFrame {
     JTextArea question;
     ActionListener openFriendsList;
     private GameCollection storeGC;
-
-/*  gui.GAManager constructor
-        set title
-        set size
-        set close operation
-        create menubar
-            GAMarket menu
-            friends menu
-            settings menu
-        create tabs
-            store
-            library
-            forum           */
+    JList<String> storeList;
+    JList<String> gamesList;
+    JList<String> libraryList;
+    String[] storeArr = {
+            "Top Selling:", "",
+            "BorderLand 3                                  $29.99",
+            "XCOM: Chimera Sqaud:                 $9.99",
+            "XCOM 2 Collection:                        $29.65",
+            "Mount & Blade II: Bannerlord       $49.99",
+            "Warhammer 40,000: Inquistor        $27.19",
+            "Tabletop Simulator                         $19.19",
+            "Iratus: Lord of the Dead                 $16.49",
+            "DOOM Eternal                                 $59.99"
+    };
+    String[] gamesArr = {
+            "Most Popular Disccussions:", "",
+            "Valorant", "Grand Theft Auto V", "Counter-Strike",
+            "Fornite", "League of Legends", "Call of Duty: Modern Warfare",
+            "MineCraft", "Dota 2", "Monopoly Plus",
+            "World of Warcraft", "Teamfight Tactics", "Apex Legends"
+    };
+    String[] libraryArr = {
+            "Your library: \n", "",
+            "Alan Wake", "Counter-Strike: Global Offensive", "Dead By Deadlight",
+            "Dead Space 2", "The Escapists 2", "Left 4 Dead 2",
+            "Portal", "Resident Evil 3", "Resident Evil 3: Raccoon City Demo",
+            "Resident Evil Resistance", "The Witcher 3: Wild Hunt"
+    };
+    /*  GAManager constructor
+            set title
+            set size
+            set close operation
+            create menubar
+                GAMarket menu
+                friends menu
+                settings menu
+            create tabs
+                store
+                library
+                forum           */
     public GAManager() {
         super("GAMarket"); // title
         setSize(800,700);
@@ -67,10 +102,9 @@ public class GAManager extends JFrame {
                 fGUI.setVisible(true);
             }
         };
-    
+
         viewFriends.addActionListener(openFriendsList);
         friends.add(viewFriends);
-
         menuBar.add(friends);
 
         // settings
@@ -86,21 +120,22 @@ public class GAManager extends JFrame {
         // text inside of each tab
         storePane = new Store(storeGC);
         libraryPane = new JLabel("Library stuff here");
-        libraryPane.setLocation(300, 300); 
+        libraryPane.setLocation(300, 300);
         forumPane = new JLabel("Forum stuff here");
-        forumPane.setLocation(300, 300); 
-        config = new JTabbedPane();
         configPane = new JPanel();
         configPane.setLayout(new BoxLayout(configPane, BoxLayout.Y_AXIS));
 
         // tabs for gui.GAManager
+        config = new JTabbedPane();
+        storeList = new JList<String>(storeArr);
         config.addTab("Store", null, storePane, "Choose your games");
-        config.addTab("Library", null, libraryPane, "See your library");
-        config.addTab("Forum", null, forumPane, "Talk about your favorite games");
-
+        libraryList = new JList<String>(libraryArr);
+        config.addTab("Library", null, libraryList, "See your library");
+        gamesList = new JList<String>(gamesArr);
+        config.addTab("Forum", null, gamesList, "Talk about your favorite games");
         setJMenuBar(menuBar);
         getContentPane().add(config, BorderLayout.CENTER);
-        setLocationRelativeTo(null); 
+        setLocationRelativeTo(null);
     }
 
     class TabManager implements ItemListener {
@@ -111,7 +146,7 @@ public class GAManager extends JFrame {
         public void itemStateChanged(ItemEvent ie) {
             int index = config.indexOfComponent(tab);
             if (index != -1) {
-            config.setEnabledAt(index, ie.getStateChange() == ItemEvent.SELECTED);
+                config.setEnabledAt(index, ie.getStateChange() == ItemEvent.SELECTED);
             }
             GAManager.this.repaint();
         }

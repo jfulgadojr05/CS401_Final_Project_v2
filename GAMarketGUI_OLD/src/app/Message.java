@@ -1,7 +1,5 @@
 package app;
 
-import java.util.Date;
-
 public class Message {
     
     private Date timeStamp;
