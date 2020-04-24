@@ -7,7 +7,7 @@ import javax.swing.*;
 	CS 401 - Final Project
 	FriendsGUI.java
   By: Christian Magpantay
-  Code/Book Reference - 
+  Code/Book Reference -
   https://www.youtube.com/watch?v=CqWorn8dR_A&list=PLdmXYkPMWIgCocLY-B4SvpQshQWC7Nc0C&index=5
 */
 
@@ -23,7 +23,7 @@ public class GAManager extends JFrame {
     JMenuItem viewFriends;
     JMenuItem menuItem;
     JTabbedPane config;
-    JLabel storePane;
+    Store storePane;
     JLabel libraryPane;
     JLabel forumPane;
     JLabel friendsPane;
@@ -31,34 +31,34 @@ public class GAManager extends JFrame {
     JPanel configPane;
     JTextArea question;
     ActionListener openFriendsList;
+    private GameCollection storeGC;
     JList<String> storeList;
     JList<String> gamesList;
     JList<String> libraryList;
-
     String[] storeArr = {
-        "Top Selling:", "",
-        "BorderLand 3                                  $29.99",
-        "XCOM: Chimera Sqaud:                 $9.99",
-        "XCOM 2 Collection:                        $29.65",
-        "Mount & Blade II: Bannerlord       $49.99",
-        "Warhammer 40,000: Inquistor        $27.19",
-        "Tabletop Simulator                         $19.19",
-        "Iratus: Lord of the Dead                 $16.49",
-        "DOOM Eternal                                 $59.99"
+            "Top Selling:", "",
+            "BorderLand 3                                  $29.99",
+            "XCOM: Chimera Sqaud:                 $9.99",
+            "XCOM 2 Collection:                        $29.65",
+            "Mount & Blade II: Bannerlord       $49.99",
+            "Warhammer 40,000: Inquistor        $27.19",
+            "Tabletop Simulator                         $19.19",
+            "Iratus: Lord of the Dead                 $16.49",
+            "DOOM Eternal                                 $59.99"
     };
     String[] gamesArr = {
-        "Most Popular Disccussions:", "",
-        "Valorant", "Grand Theft Auto V", "Counter-Strike",
-        "Fornite", "League of Legends", "Call of Duty: Modern Warfare",
-        "MineCraft", "Dota 2", "Monopoly Plus",
-        "World of Warcraft", "Teamfight Tactics", "Apex Legends"
+            "Most Popular Disccussions:", "",
+            "Valorant", "Grand Theft Auto V", "Counter-Strike",
+            "Fornite", "League of Legends", "Call of Duty: Modern Warfare",
+            "MineCraft", "Dota 2", "Monopoly Plus",
+            "World of Warcraft", "Teamfight Tactics", "Apex Legends"
     };
     String[] libraryArr = {
-        "Your library: \n", "",
-        "Alan Wake", "Counter-Strike: Global Offensive", "Dead By Deadlight",
-        "Dead Space 2", "The Escapists 2", "Left 4 Dead 2",
-        "Portal", "Resident Evil 3", "Resident Evil 3: Raccoon City Demo",
-        "Resident Evil Resistance", "The Witcher 3: Wild Hunt"
+            "Your library: \n", "",
+            "Alan Wake", "Counter-Strike: Global Offensive", "Dead By Deadlight",
+            "Dead Space 2", "The Escapists 2", "Left 4 Dead 2",
+            "Portal", "Resident Evil 3", "Resident Evil 3: Raccoon City Demo",
+            "Resident Evil Resistance", "The Witcher 3: Wild Hunt"
     };
 /*  GAManager constructor
         set title
@@ -110,18 +110,21 @@ public class GAManager extends JFrame {
                 "The only menu in this program that has menu items");
         menuBar.add(settings);
 
+        // Loading data
+        storeGC = new GameCollection();
+        storeGC.loadGameData("gameData.txt");
         // text inside of each tab
-        storePane = new JLabel("Store stuff here");
-        storePane.setLocation(300, 300); 
+        storePane = new Store(storeGC);
         libraryPane = new JLabel("Library stuff here");
         libraryPane.setLocation(300, 300); 
         forumPane = new JLabel("Forum stuff here");
         configPane = new JPanel();
         configPane.setLayout(new BoxLayout(configPane, BoxLayout.Y_AXIS));
-        // tabs for GAManager
+
+        // tabs for gui.GAManager
         config = new JTabbedPane();
         storeList = new JList<String>(storeArr);
-        config.addTab("Store", null, storeList, "Choose your games");
+        config.addTab("Store", null, storePane, "Choose your games");
         libraryList = new JList<String>(libraryArr);
         config.addTab("Library", null, libraryList, "See your library");
         gamesList = new JList<String>(gamesArr);

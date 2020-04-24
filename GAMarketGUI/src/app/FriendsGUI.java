@@ -3,13 +3,13 @@ package app;
 	CS 401 - Final Project
 	FriendsGUI.java
   By: Christian Magpantay
-  Code/Book Reference - 
+  Code/Book Reference -
   https://www.youtube.com/watch?v=CqWorn8dR_A&list=PLdmXYkPMWIgCocLY-B4SvpQshQWC7Nc0C&index=5
 */
 import javax.swing.*;
 import javax.swing.tree.*;
 import java.awt.*;
-import java.awt.event.*; 
+import java.awt.event.*;
 import java.util.*;
 
 
@@ -32,16 +32,16 @@ public class FriendsGUI extends JFrame {
       "TheToadKing", "Pokimane", "Maximilian_DOOD"
     };
     String[] friendsMockListAll = {
-	  "Practice", "richMag", "TheToadKing", 
+	  "Practice", "richMag", "TheToadKing",
 	  "DisguisedToast", "PitaShwang", "LuluLuvely",
-	  "Pokimane", "Maximilian_DOOD"	  
+	  "Pokimane", "Maximilian_DOOD"
     };
 
     public FriendsGUI() {
         super("Friends List"); // title
         setSize(300,500);
-        Panel c = new Panel();    
-        c.setLayout(new BoxLayout(c, BoxLayout.Y_AXIS)); 
+        Panel c = new Panel();
+        c.setLayout(new BoxLayout(c, BoxLayout.Y_AXIS));
 		setContentPane(c);
 		// create menu for chat
 		MenuBar();
