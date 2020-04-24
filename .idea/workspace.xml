@@ -1,7 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56e575d7-5389-4935-b072-c1dccbbc2083" name="Default Changelist" comment="" />
+    <list default="true" id="b2941ca0-0317-4682-a64a-8bdca75ec92a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/CS401_GAMarket_Final.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/bin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/Store.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/gui/FriendsGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/gui/MessageGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarketGUI_OLD/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarketGUI_OLD/Friends" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarketGUI_OLD/src/app/FriendsGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarketGUI_OLD/src/app/GAManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarketGUI_OLD/src/app/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarketGUI_OLD/src/app/GameCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarketGUI_OLD/src/app/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarketGUI_OLD/src/app/MessageGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarketGUI_OLD/src/app/Store.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/AccountServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/FriendsList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/GameCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/StoreGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/StoreInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/Thread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/clientGUI.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket_taroChanges.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Presentation Time.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gameData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/app/clientGUI.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/sample/GAMarket/src/app/clientGUI.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/GameCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/Store.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/AccountServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/FriendsList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/GameCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/StoreGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/StoreInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Thread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/clientGUI.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/AccountServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/FriendsList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Thread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/clientGUI.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/devUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS401_GAMarket_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS401_GAMarket_Final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/AccountServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/AccountServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/FriendsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/FriendsGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/FriendsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/FriendsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/GAManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/GAManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/LoginGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/ProfileGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/Thread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/clientGUI.css" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/app_david/app/clientGUI.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/devUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_OLD/src/sample/GAMarket/src/app/devUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/app/profile.jpg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,22 +118,19 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="taro_changes" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1aBdrqOc1ZotxNuryj1GFqFxOfG" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16113281" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -43,25 +138,13 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src\app\sample\GAMarket\src\app" />
+      <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src\app" />
       <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src" />
+      <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src\app\sample\GAMarket\src\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LoginGUI (1)">
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.GAMarket.src.app.Client" />
-      <module name="CS401_GAMarket_Final" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GAManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.GAManager (2)">
+    <configuration name="GAManager (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.GAManager" />
       <module name="CS401_GAMarket_Final" />
       <extension name="coverage">
@@ -74,12 +157,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginGUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.app.LoginGUI" />
+    <configuration name="GAManager (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.GAManager" />
       <module name="CS401_GAMarket_Final" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.app.*" />
+          <option name="PATTERN" value="gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,25 +170,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.GAMarket.src.app.LoginGUI" />
+    <configuration name="GAManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GAManager" />
       <module name="CS401_GAMarket_Final" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sample.GAMarket.src.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProfileGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.GAMarket.src.app.ProfileGUI" />
-      <module name="CS401_GAMarket_Final" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sample.GAMarket.src.app.*" />
+          <option name="PATTERN" value="app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,10 +185,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LoginGUI (1)" />
-        <item itemvalue="Application.LoginGUI" />
-        <item itemvalue="Application.ProfileGUI" />
-        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.GAManager (2)" />
+        <item itemvalue="Application.GAManager (1)" />
         <item itemvalue="Application.GAManager" />
       </list>
     </recent_temporary>
@@ -128,7 +196,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="56e575d7-5389-4935-b072-c1dccbbc2083" name="Default Changelist" comment="test 2" />
+      <changelist id="0387a8b9-1126-4da1-b076-80a23de03786" name="Default Changelist" comment="" />
       <created>1586213122399</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -141,35 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586499690575</updated>
     </task>
-    <task id="LOCAL-00002" summary="created UserGUI class">
-      <created>1587676427969</created>
+    <task id="LOCAL-00002" summary="Commit before merging with Jerome">
+      <created>1587764241640</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1587676427969</updated>
+      <updated>1587764241640</updated>
     </task>
-    <task id="LOCAL-00003" summary="Replaced UserGUI class with ProfileGUI class">
-      <created>1587681926035</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1587681926035</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Created simple login form">
-      <created>1587684071867</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1587684071867</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Created simple login form">
-      <created>1587766417102</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1587766417102</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,92 +234,74 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added admin and devUser class skeletons (both extends User class)" />
-    <MESSAGE value="created UserGUI class" />
-    <MESSAGE value="Replaced UserGUI class with ProfileGUI class" />
-    <MESSAGE value="Created simple login form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created simple login form" />
+    <MESSAGE value="Commit before merging with Jerome" />
+    <MESSAGE value="Merge branch 'master' into christian_a_changes&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;CS401_GAMarket_Final.iml&#10;#&#9;GAMarket/.settings/org.eclipse.jdt.core.prefs&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/AccountServices.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Admin.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/App.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Client.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Controller.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/FriendsList.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Game.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Login.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Main.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Message.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Server.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Thread.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/User.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/clientGUI.css&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/devUser.java&#10;#&#9;GAMarket_ChristianA/.settings/org.eclipse.jdt.core.prefs&#10;#&#9;GAMarket_ChristianA/src/app/Game.java&#10;#&#9;GAMarket_ChristianA/src/app/GameCollection.java&#10;#&#9;GAMarket_ChristianA/src/app/Message.java&#10;#&#9;GAMarket_ChristianA/src/app/Store.java&#10;#&#9;GAMarket_ChristianA/src/app/app/AccountServices.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Admin.java&#10;#&#9;GAMarket_ChristianA/src/app/app/App.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Client.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Controller.java&#10;#&#9;GAMarket_ChristianA/src/app/app/FriendsList.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Game.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Login.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Main.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Message.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Server.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Thread.java&#10;#&#9;GAMarket_ChristianA/src/app/app/User.java&#10;#&#9;GAMarket_ChristianA/src/app/app/clientGUI.css&#10;#&#9;GAMarket_ChristianA/src/app/app/devUser.java&#10;#&#9;GAMarket_ChristianA/src/gui/FriendsGUI.java&#10;#&#9;GAMarket_ChristianA/src/gui/GAManager.java&#10;#&#9;GAMarket_ChristianA/src/gui/MessageGUI.java&#10;#&#9;GAMarket_OLD/.settings/org.eclipse.jdt.core.prefs&#10;#&#9;GAMarket_OLD/src/app_david/app/clientGUI.css&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/AccountServices.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Admin.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/App.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Client.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Controller.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/FriendsList.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Game.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Login.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Main.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Message.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Server.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Thread.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/User.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/devUser.java" />
+    <MESSAGE value="TEST" />
+    <option name="LAST_COMMIT_MESSAGE" value="TEST" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587678271712">
+    <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587766669552">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587678271712" />
-    <state x="2334" y="188" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587592988111" />
-    <state x="689" y="308" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587678262617">
+    <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766669552" />
+    <state x="411" y="0" key="CommitChangelistDialog2" timestamp="1587767622045">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="689" y="308" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587678262617" />
-    <state x="2728" y="422" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587592406856">
-      <screen x="1920" y="9" width="1920" height="1050" />
-    </state>
-    <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
-    <state x="2728" y="422" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587592406856" />
-    <state x="411" y="119" key="CommitChangelistDialog2" timestamp="1587766413747">
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765654897" />
+    <state x="411" y="0" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587767622045" />
+    <state x="666" y="266" key="FileChooserDialogImpl" timestamp="1586498875269">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586558787118" />
-    <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766413747" />
-    <state x="2332" y="9" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587676426746" />
-    <state x="666" y="266" key="FileChooserDialogImpl" timestamp="1587678568974">
+    <state x="666" y="266" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498875269" />
+    <state width="938" height="240" key="GridCell.Tab.0.bottom" timestamp="1587767702034">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="666" y="266" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587678568974" />
-    <state x="2586" y="275" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587676593375" />
-    <state width="1877" height="240" key="GridCell.Tab.0.bottom" timestamp="1587766321924">
+    <state width="1557" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655002" />
+    <state width="938" height="240" key="GridCell.Tab.0.bottom/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587767702034" />
+    <state width="938" height="240" key="GridCell.Tab.0.center" timestamp="1587767702034">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.bottom/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766321924" />
-    <state width="1588" height="241" key="GridCell.Tab.0.bottom/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587593105552" />
-    <state width="1877" height="240" key="GridCell.Tab.0.center" timestamp="1587766321924">
+    <state width="1557" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655001" />
+    <state width="938" height="240" key="GridCell.Tab.0.center/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587767702034" />
+    <state width="938" height="240" key="GridCell.Tab.0.left" timestamp="1587767702034">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.center/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766321924" />
-    <state width="1588" height="241" key="GridCell.Tab.0.center/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587593105552" />
-    <state width="1877" height="240" key="GridCell.Tab.0.left" timestamp="1587766321924">
+    <state width="1557" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655001" />
+    <state width="938" height="240" key="GridCell.Tab.0.left/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587767702034" />
+    <state width="938" height="240" key="GridCell.Tab.0.right" timestamp="1587767702034">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.left/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766321924" />
-    <state width="1588" height="241" key="GridCell.Tab.0.left/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587593105552" />
-    <state width="1877" height="240" key="GridCell.Tab.0.right" timestamp="1587766321924">
+    <state width="1557" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655002" />
+    <state width="938" height="240" key="GridCell.Tab.0.right/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587767702034" />
+    <state x="152" y="74" key="MergeDialog" timestamp="1587764942375">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="152" y="74" key="MergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587764942375" />
+    <state x="512" y="147" key="MultipleFileMergeDialog" timestamp="1587764946700">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="512" y="147" key="MultipleFileMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587764946700" />
+    <state x="440" y="99" key="SettingsEditor" timestamp="1587767455212">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.right/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766321924" />
-    <state width="1588" height="241" key="GridCell.Tab.0.right/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587593105552" />
-    <state x="2080" y="121" key="MergeDialog" timestamp="1587592762003">
-      <screen x="1920" y="9" width="1920" height="1050" />
+    <state x="367" y="11" key="SettingsEditor/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765428909" />
+    <state x="440" y="99" key="SettingsEditor/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587767455212" />
+    <state x="583" y="140" width="748" height="471" key="Vcs.Push.Dialog.v2" timestamp="1587764243222">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="2080" y="121" key="MergeDialog/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587592762003" />
-    <state x="2568" y="275" key="MultipleFileMergeDialog" timestamp="1587593150502">
-      <screen x="1920" y="9" width="1920" height="1050" />
-    </state>
-    <state x="2568" y="275" key="MultipleFileMergeDialog/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587593150502" />
-    <state x="440" y="99" key="SettingsEditor" timestamp="1587766227902">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="440" y="99" key="SettingsEditor/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766227902" />
-    <state x="470" y="200" key="Vcs.Push.Dialog.v2" timestamp="1587766431078">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586558813335" />
-    <state x="470" y="200" key="Vcs.Push.Dialog.v2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766431078" />
+    <state x="583" y="140" width="748" height="471" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587764243222" />
     <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586557860909">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586557860909" />
-    <state x="649" y="176" key="git4idea.branch.GitSmartOperationDialog" timestamp="1587677605003">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="541" y="144" key="git4idea.branch.GitSmartOperationDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586558907869" />
-    <state x="649" y="176" key="git4idea.branch.GitSmartOperationDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587677605003" />
-    <state x="2569" y="185" key="git4idea.branch.GitSmartOperationDialog/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587593145247" />
-    <state x="561" y="222" key="git4idea.merge.GitMergeDialog" timestamp="1586558645195">
+    <state x="541" y="144" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586558907869">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="561" y="222" key="git4idea.merge.GitMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586558645195" />
-    <state x="642" y="316" key="git4idea.merge.GitPullDialog" timestamp="1587593291597">
+    <state x="541" y="144" key="git4idea.branch.GitSmartOperationDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586558907869" />
+    <state x="673" y="271" key="git4idea.merge.GitMergeDialog" timestamp="1587767670469">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="642" y="316" key="git4idea.merge.GitPullDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587593291597" />
-    <state x="2562" y="325" key="git4idea.merge.GitPullDialog/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587593168432" />
+    <state x="561" y="222" key="git4idea.merge.GitMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587764307637" />
+    <state x="673" y="271" key="git4idea.merge.GitMergeDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587767670469" />
   </component>
 </project>
