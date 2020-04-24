@@ -145,10 +145,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Commit before merging with Jerome" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586498824781">
+    <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587766669552">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
+    <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766669552" />
     <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1587765654897">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -158,22 +158,26 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="666" y="266" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498875269" />
-    <state width="1557" height="178" key="GridCell.Tab.0.bottom" timestamp="1587765655002">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1877" height="240" key="GridCell.Tab.0.bottom" timestamp="1587766680181">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1557" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655002" />
-    <state width="1557" height="178" key="GridCell.Tab.0.center" timestamp="1587765655001">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1877" height="240" key="GridCell.Tab.0.bottom/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766680181" />
+    <state width="1877" height="240" key="GridCell.Tab.0.center" timestamp="1587766680180">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1557" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655001" />
-    <state width="1557" height="178" key="GridCell.Tab.0.left" timestamp="1587765655001">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1877" height="240" key="GridCell.Tab.0.center/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766680180" />
+    <state width="1877" height="240" key="GridCell.Tab.0.left" timestamp="1587766680180">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1557" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655001" />
-    <state width="1557" height="178" key="GridCell.Tab.0.right" timestamp="1587765655002">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1877" height="240" key="GridCell.Tab.0.left/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766680180" />
+    <state width="1877" height="240" key="GridCell.Tab.0.right" timestamp="1587766680181">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1557" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655002" />
+    <state width="1877" height="240" key="GridCell.Tab.0.right/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766680181" />
     <state x="152" y="74" key="MergeDialog" timestamp="1587764942375">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
