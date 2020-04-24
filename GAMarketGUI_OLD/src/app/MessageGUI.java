@@ -1,11 +1,5 @@
 package app;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
-
-
 /* Message GUI class
 	CS 401 - Final Project
 	MessageGUI.java

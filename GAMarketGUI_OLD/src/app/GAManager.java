@@ -1,11 +1,7 @@
-package gui;
-
-import app.GameCollection;
-import app.Store;
-
-import javax.swing.*;
+package app;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.*;
 
 /* GAManager class
 	CS 401 - Final Project
@@ -64,18 +60,18 @@ public class GAManager extends JFrame {
             "Portal", "Resident Evil 3", "Resident Evil 3: Raccoon City Demo",
             "Resident Evil Resistance", "The Witcher 3: Wild Hunt"
     };
-    /*  GAManager constructor
-            set title
-            set size
-            set close operation
-            create menubar
-                GAMarket menu
-                friends menu
-                settings menu
-            create tabs
-                store
-                library
-                forum           */
+/*  GAManager constructor
+        set title
+        set size
+        set close operation
+        create menubar
+            GAMarket menu
+            friends menu
+            settings menu
+        create tabs
+            store
+            library
+            forum           */
     public GAManager() {
         super("GAMarket"); // title
         setSize(800,700);
@@ -102,7 +98,7 @@ public class GAManager extends JFrame {
                 fGUI.setVisible(true);
             }
         };
-
+    
         viewFriends.addActionListener(openFriendsList);
         friends.add(viewFriends);
         menuBar.add(friends);
@@ -120,7 +116,7 @@ public class GAManager extends JFrame {
         // text inside of each tab
         storePane = new Store(storeGC);
         libraryPane = new JLabel("Library stuff here");
-        libraryPane.setLocation(300, 300);
+        libraryPane.setLocation(300, 300); 
         forumPane = new JLabel("Forum stuff here");
         configPane = new JPanel();
         configPane.setLayout(new BoxLayout(configPane, BoxLayout.Y_AXIS));
@@ -135,7 +131,7 @@ public class GAManager extends JFrame {
         config.addTab("Forum", null, gamesList, "Talk about your favorite games");
         setJMenuBar(menuBar);
         getContentPane().add(config, BorderLayout.CENTER);
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(null); 
     }
 
     class TabManager implements ItemListener {
@@ -146,7 +142,7 @@ public class GAManager extends JFrame {
         public void itemStateChanged(ItemEvent ie) {
             int index = config.indexOfComponent(tab);
             if (index != -1) {
-                config.setEnabledAt(index, ie.getStateChange() == ItemEvent.SELECTED);
+            config.setEnabledAt(index, ie.getStateChange() == ItemEvent.SELECTED);
             }
             GAManager.this.repaint();
         }
