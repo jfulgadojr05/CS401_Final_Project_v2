@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56e575d7-5389-4935-b072-c1dccbbc2083" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/AccountServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/AccountServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/FriendsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/FriendsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/ProfileGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/ProfileGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/Thread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/clientGUI.css" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/clientGUI.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/sample/GAMarket/src/app/devUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket_ChristianA/src/app/sample/GAMarket/src/app/devUser.java" afterDir="false" />
-    </list>
+    <list default="true" id="56e575d7-5389-4935-b072-c1dccbbc2083" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587684071867</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Created simple login form">
+      <created>1587766417102</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587766417102</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,11 +207,11 @@
     </state>
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
     <state x="2728" y="422" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587592406856" />
-    <state x="411" y="119" key="CommitChangelistDialog2" timestamp="1587684069673">
+    <state x="411" y="119" key="CommitChangelistDialog2" timestamp="1587766413747">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586558787118" />
-    <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587684069673" />
+    <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766413747" />
     <state x="2332" y="9" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1587676426746" />
     <state x="666" y="266" key="FileChooserDialogImpl" timestamp="1587678568974">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -262,11 +250,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="440" y="99" key="SettingsEditor/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766227902" />
-    <state x="470" y="200" key="Vcs.Push.Dialog.v2" timestamp="1587684181356">
+    <state x="470" y="200" key="Vcs.Push.Dialog.v2" timestamp="1587766431078">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586558813335" />
-    <state x="470" y="200" key="Vcs.Push.Dialog.v2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587684181356" />
+    <state x="470" y="200" key="Vcs.Push.Dialog.v2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766431078" />
     <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586557860909">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
