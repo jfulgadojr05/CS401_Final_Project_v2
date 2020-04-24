@@ -1,4 +1,4 @@
-package sample.GAMarket.src.app;
+package app.app;
 
 public class devUser extends User {
     // Interface would list four buttons that would execute the four methods in the class

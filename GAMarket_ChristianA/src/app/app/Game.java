@@ -1,4 +1,4 @@
-package sample.GAMarket.src.app;
+package app.app;
 
 public class Game {
     private String name;
@@ -44,7 +44,7 @@ public class Game {
     }
 
     //TODO WRITE DOC
-    public Thread createThread() { // creates new thread based on game
+    public java.lang.Thread createThread() { // creates new thread based on game
         return null; // TODO finish this
     }
 }

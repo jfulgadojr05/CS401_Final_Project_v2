@@ -1,4 +1,4 @@
-package sample.GAMarket.src.app;
+package app.app;
 
 import javax.swing.*;
 import java.io.IOException;

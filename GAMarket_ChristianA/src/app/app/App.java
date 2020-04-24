@@ -1,4 +1,4 @@
-package sample.GAMarket.src.app;
+package app.app;
 
 public class App {
     public static void main(String[] args) throws Exception {

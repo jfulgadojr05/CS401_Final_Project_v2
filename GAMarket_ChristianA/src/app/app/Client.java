@@ -1,4 +1,4 @@
-package sample.GAMarket.src.app;
+package app.app;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
