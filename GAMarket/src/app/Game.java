@@ -14,6 +14,16 @@ public class Game {
 
     
     //public initializeGame(gameName): file
+    public Game() {
+        id = 0;
+        name = null;
+        genre = null;
+        gamePath = null;
+        metaTags = null;
+        imgPath = null;
+        developerName = null;
+        averageRating = 0;
+    }
 
     // Setters
     public void setGameName (String gameName) {

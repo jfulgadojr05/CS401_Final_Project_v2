@@ -70,10 +70,11 @@ public class GameCollection {
         // Declaring temp variables
         String gameID;
         String gameName;
+        String gameGenre;
         String gameRating;
-        String gameImagePath;
-        String gameMetaTag;
-        String gamePath;
+//        String gameImagePath;
+//        String gameMetaTag;
+//        String gamePath;
 
         // Try-Catch for reading file
         try (Scanner gameFile = new Scanner(Paths.get(filename))) {
@@ -85,19 +86,18 @@ public class GameCollection {
                 // Putting values in temp variables
                 gameID = st.nextToken();
                 gameName = st.nextToken();
+                gameGenre = st.nextToken();
                 gameRating = st.nextToken();
-                gameImagePath = st.nextToken();
-                gameMetaTag = st.nextToken();
-                gamePath = st.nextToken();
+//                gameImagePath = st.nextToken();
+//                gameMetaTag = st.nextToken();
+//                gamePath = st.nextToken();
 
                 Game tempGame = new Game();
 
                 tempGame.setId(Integer.parseInt(gameID));
                 tempGame.setGameName(gameName);
+                tempGame.setGenre(gameGenre);
                 tempGame.setRating(Float.parseFloat(gameRating));
-                tempGame.setImgPath(gameImagePath);
-                tempGame.setMetaTags(gameMetaTag);
-                tempGame.setGamePath(gamePath);
 
                 addGame(tempGame);
                 // Add function to the array.

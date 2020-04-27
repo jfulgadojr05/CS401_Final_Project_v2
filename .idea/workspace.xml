@@ -1,8 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
+    <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="IntelliJ force commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gameData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/FriendsGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/GAManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/GameCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/Store.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/AccountServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/FriendsList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/GameCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/StoreGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/StoreInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Thread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/clientGUI.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/AccountServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/FriendsList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Thread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/clientGUI.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/devUser.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +57,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="ONTO" value="refs/heads/jerome_f_changes" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -52,6 +94,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket" />
+      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\src" />
+      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarketGUI\src\app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\bin" />
       <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\bin\app" />
@@ -59,19 +106,14 @@
       <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\src\app" />
       <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\src\gui" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket" />
-      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\src" />
-      <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarketGUI\src\app" />
-    </key>
   </component>
-  <component name="RunManager" selected="Application.GAManager (1)">
-    <configuration name="GAManager (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.GAManager" />
+  <component name="RunManager">
+    <configuration name="GAManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.GAManager" />
       <module name="CS401_GAMarket_Final" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.*" />
+          <option name="PATTERN" value="app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,12 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GAManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.GAManager" />
+    <configuration name="GAManager" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="gui.GAManager" />
       <module name="CS401_GAMarket_Final" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.*" />
+          <option name="PATTERN" value="gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,7 +143,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GAManager (1)" />
+        <item itemvalue="Application.GAManager" />
         <item itemvalue="Application.GAManager" />
       </list>
     </recent_temporary>
@@ -123,6 +165,7 @@
       <workItem from="1587661190580" duration="592000" />
       <workItem from="1587670840900" duration="5187000" />
       <workItem from="1587761594999" duration="1003000" />
+      <workItem from="1588022700901" duration="2273000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -240,15 +283,15 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="517" y="101" key="#GAManager/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587671854647" />
-    <state x="435" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587672035694">
+    <state x="435" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588023058457">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="435" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587672035694" />
+    <state x="435" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1588023058457" />
     <state x="1737" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596556783" />
-    <state x="605" y="147" key="#com.intellij.ide.util.MemberChooser" timestamp="1587614453677">
+    <state x="605" y="147" key="#com.intellij.ide.util.MemberChooser" timestamp="1588026646624">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="147" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587614453677" />
+    <state x="605" y="147" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1588026646624" />
     <state x="435" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587671739343">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -258,10 +301,10 @@
     </state>
     <state x="673" y="338" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587595215856" />
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1587768027322">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1587768489975">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768027322" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768489975" />
     <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
     <state x="112" y="48" key="DiffContextDialog" timestamp="1587621001174">
       <screen x="0" y="0" width="1600" height="860" />
@@ -272,25 +315,25 @@
     </state>
     <state x="555" y="218" key="FileChooserDialogImpl/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587613420724" />
     <state x="666" y="266" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498875269" />
-    <state width="1557" height="142" key="GridCell.Tab.0.bottom" timestamp="1587768051099">
+    <state width="1557" height="142" key="GridCell.Tab.0.bottom" timestamp="1588026743670">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="142" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768051099" />
+    <state width="1557" height="142" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1588026743670" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
-    <state width="1557" height="142" key="GridCell.Tab.0.center" timestamp="1587768051099">
+    <state width="1557" height="142" key="GridCell.Tab.0.center" timestamp="1588026743670">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="142" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768051099" />
+    <state width="1557" height="142" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1588026743670" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
-    <state width="1557" height="142" key="GridCell.Tab.0.left" timestamp="1587768051099">
+    <state width="1557" height="142" key="GridCell.Tab.0.left" timestamp="1588026743670">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="142" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768051099" />
+    <state width="1557" height="142" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1588026743670" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
-    <state width="1557" height="142" key="GridCell.Tab.0.right" timestamp="1587768051099">
+    <state width="1557" height="142" key="GridCell.Tab.0.right" timestamp="1588026743670">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="142" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768051099" />
+    <state width="1557" height="142" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1588026743670" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="276" key="GridCell.Tab.1.bottom" timestamp="1587621002208">
       <screen x="0" y="0" width="1600" height="860" />
@@ -312,10 +355,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="152" y="74" key="MergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587592789373" />
-    <state x="512" y="147" key="MultipleFileMergeDialog" timestamp="1587592789385">
+    <state x="512" y="147" key="MultipleFileMergeDialog" timestamp="1587768455810">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="512" y="147" key="MultipleFileMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587592789385" />
+    <state x="512" y="147" key="MultipleFileMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768455810" />
     <state x="367" y="11" key="SettingsEditor" timestamp="1587672739644">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -338,14 +381,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="144" key="git4idea.branch.GitSmartOperationDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768101490" />
-    <state x="561" y="222" key="git4idea.merge.GitMergeDialog" timestamp="1587592711045">
+    <state x="561" y="222" key="git4idea.merge.GitMergeDialog" timestamp="1587768451385">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="561" y="222" key="git4idea.merge.GitMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587592711045" />
-    <state x="422" y="238" key="git4idea.rebase.GitRebaseDialog" timestamp="1587768087329">
+    <state x="561" y="222" key="git4idea.merge.GitMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768451385" />
+    <state x="422" y="238" key="git4idea.rebase.GitRebaseDialog" timestamp="1587768444432">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="422" y="238" key="git4idea.rebase.GitRebaseDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768087329" />
+    <state x="422" y="238" key="git4idea.rebase.GitRebaseDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768444432" />
     <state x="182" y="51" key="new project wizard" timestamp="1587672208988">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -354,9 +397,9 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="456" y="195" key="run.anything.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587595240226" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1587614442515">
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1588026477067">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587614442515" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1588026477067" />
   </component>
 </project>

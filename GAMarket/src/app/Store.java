@@ -29,7 +29,7 @@ public class Store extends JPanel {
 
         filterGameButton = new JButton("Filter Games");
         searchGameButton = new JButton("Search Games");
-        ActionListener filterListener = (ActionEvent filterEvent) -> doFilterGame();
+        ActionListener filterListener = (ActionEvent filterEvent) -> doFilterGame(storeCollection);
         filterGameButton.addActionListener(filterListener);
         ActionListener searchListener = (ActionEvent searchEvent) -> doSearchGame();
         searchGameButton.addActionListener(searchListener);
@@ -38,7 +38,7 @@ public class Store extends JPanel {
             storeModel.addElement(storeCollection.getGameArray()[i].getName());
         }
         storeMenuItems = new JList<>(storeModel);
-        storeMenuItems.setFont(new Font("Verdana", Font.PLAIN, 16));
+        storeMenuItems.setFont(new Font("Verdana", Font.PLAIN, 12));
 
         storeMenuScroll = new JScrollPane(storeMenuItems);
 
@@ -67,7 +67,10 @@ public class Store extends JPanel {
 
 
 
-    public void doFilterGame(){
+    public void doFilterGame(GameCollection storeGC){
+        for (int i = 0; i < storeGC.getNumberOfGames(); i++){
+            System.out.println(storeGC.getGameArray()[i].getName());
+        }
         System.out.println("Filtering game...");
     }
     public void doSearchGame(){
