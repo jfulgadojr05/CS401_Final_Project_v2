@@ -51,8 +51,6 @@ public class GameCollection {
         }
     }
 
-
-
     public Game searchForGame(String title) {
         // Can be used to search for a game in a collection
         // Will return a specific game object with its game fields
@@ -64,6 +62,9 @@ public class GameCollection {
         // a game is being played from start up
         // will required the game title to search for
         // game and initialize it
+
+    }
+    public void filterGame(String aGenre){
 
     }
     public void loadGameData(String filename){
