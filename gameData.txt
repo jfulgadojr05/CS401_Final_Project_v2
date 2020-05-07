@@ -1,3 +1,6 @@
 1001,Super Mario Odyssey,E,8
 1002,Tetris 99,E10,10
 1003,Overcooked 2,T,7
+1004,Grand Theft Auto,M,8
+1005,Sonic Mania,E10,10
+1006,Cooking Mama,E,7
