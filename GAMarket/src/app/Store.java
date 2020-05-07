@@ -35,22 +35,6 @@ public class Store extends JPanel {
         menuPanel.setLayout(new BorderLayout());
         menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
 
-        ActionListener filterListener = (ActionEvent filterEvent) -> doSearchGame();
-        filterGameButton.addActionListener(e -> {
-            menuPanel.removeAll();
-            System.out.println("Filtering game...");
-            String genreSelect = JOptionPane.showInputDialog("Type a genre to filter");
-            JList<String> filterList = storeCollection.filterGame(genreSelect);
-            filterList.setFont(new Font("Verdana", Font.PLAIN, 12));
-            JScrollPane filterScroll = new JScrollPane(filterList);
-            menuPanel.setLayout(new BorderLayout());
-            menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
-            menuPanel.add(filterScroll, BorderLayout.CENTER);
-            menuPanel.revalidate();
-            menuPanel.repaint();
-        });
-        searchGameButton.addActionListener(filterListener);
-
         DefaultListModel<String> storeModel = new DefaultListModel<>();
         for(int i = 0; i < storeCollection.getNumberOfGames(); i++){
             String tempItem = storeCollection.getGameArray()[i].getName() + ", " +
@@ -63,9 +47,36 @@ public class Store extends JPanel {
 
         storeMenuScroll = new JScrollPane(storeMenuItems);
 
-
-
         menuPanel.add(storeMenuScroll, BorderLayout.CENTER);
+
+        ActionListener searchListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                doSearchGame();
+            }
+        };
+        filterGameButton.addActionListener(e -> {
+            menuPanel.removeAll();
+            String genreSelect = JOptionPane.showInputDialog("Type a genre to filter");
+            JList<String> filterList = storeCollection.filterGame(genreSelect);
+            filterList.setFont(new Font("Verdana", Font.PLAIN, 12));
+            JScrollPane filterScroll = new JScrollPane(filterList);
+            menuPanel.setLayout(new BorderLayout());
+            menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
+            menuPanel.add(filterScroll, BorderLayout.CENTER);
+            menuPanel.revalidate();
+            menuPanel.repaint();
+        });
+        unfilterGameButton.addActionListener(e -> {
+            menuPanel.removeAll();
+            menuPanel.setLayout(new BorderLayout());
+            menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
+            menuPanel.add(storeMenuScroll, BorderLayout.CENTER);
+            menuPanel.revalidate();
+            menuPanel.repaint();
+        });
+        searchGameButton.addActionListener(searchListener);
+
 //        menuPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
         JPanel buttonPanel = new JPanel();
