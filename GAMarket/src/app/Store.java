@@ -2,23 +2,15 @@ package app;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Store extends JPanel {
-
-//    private app.Store gameStore;
-
-//    static JFrame storeFrame;
 
     static JList<String> storeMenuItems;
 
     static JButton filterGameButton, searchGameButton, unfilterGameButton;
     static JScrollPane storeMenuScroll;
+    static JTextField searchTextField;
 
-//    public StoreGUI(app.Store gameStore) {
-//        this.gameStore = gameStore;
-//    }
 
 
     public Store(GameCollection storeCollection){
@@ -29,7 +21,7 @@ public class Store extends JPanel {
         gameItemLabel.setFont(new Font("Verdana", Font.PLAIN, 24));
 
         filterGameButton = new JButton("Filter Games");
-        searchGameButton = new JButton("Search Games");
+        searchGameButton = new JButton("Search Game");
         unfilterGameButton = new JButton("Unfilter Games");
 
         menuPanel.setLayout(new BorderLayout());
@@ -44,17 +36,10 @@ public class Store extends JPanel {
         }
         storeMenuItems = new JList<>(storeModel);
         storeMenuItems.setFont(new Font("Verdana", Font.PLAIN, 12));
-
         storeMenuScroll = new JScrollPane(storeMenuItems);
 
         menuPanel.add(storeMenuScroll, BorderLayout.CENTER);
 
-        ActionListener searchListener = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                doSearchGame();
-            }
-        };
         filterGameButton.addActionListener(e -> {
             menuPanel.removeAll();
             String genreSelect = JOptionPane.showInputDialog("Type a genre to filter");
@@ -75,9 +60,17 @@ public class Store extends JPanel {
             menuPanel.revalidate();
             menuPanel.repaint();
         });
-        searchGameButton.addActionListener(searchListener);
 
-//        menuPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+        searchGameButton.addActionListener(e -> {
+            String search = e.getActionCommand();
+            if (search.equals("Search Game")) {
+                System.out.println(searchTextField.getText());
+                searchTextField.setText(" ");
+            }
+        });
+
+
+        searchTextField = new JTextField(20);
 
         JPanel buttonPanel = new JPanel();
         JPanel searchPanel = new JPanel();
@@ -86,33 +79,19 @@ public class Store extends JPanel {
         filterPanel.add(unfilterGameButton, BorderLayout.LINE_START);
         filterPanel.add(filterGameButton, BorderLayout.LINE_END);
         searchPanel.setLayout(new BorderLayout());
-        searchPanel.add(searchGameButton, BorderLayout.LINE_START);
+        searchPanel.add(searchTextField, BorderLayout.LINE_START);
+        searchPanel.add(searchGameButton, BorderLayout.LINE_END);
         buttonPanel.setLayout(new BorderLayout());
-//        buttonPanel.add(Box.createRigidArea(new Dimension(10,0)));
         buttonPanel.add(filterPanel, BorderLayout.WEST);
         buttonPanel.add(searchPanel, BorderLayout.EAST);
 
-//        buttonPanel.add(Box.createRigidArea(new Dimension(10,0)));
-//        buttonPanel.setBorder(BorderFactory.createEmptyBorder(0,10,10,10));
 
         this.setLayout(new BorderLayout());
         this.add(menuPanel, BorderLayout.CENTER);
         this.add(buttonPanel, BorderLayout.PAGE_START);
         this.setVisible(true);
-        this.revalidate();
-        this.repaint();
+
 
     }
-
-
-
-    public void doFilterGame(GameCollection storeGC){
-
-    }
-    public void doSearchGame(){
-        System.out.println("Searching game...");
-    }
-
-
 
 }
