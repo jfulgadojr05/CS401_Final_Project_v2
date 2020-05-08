@@ -59,10 +59,19 @@ public class GameCollection {
         }
     }
 
-    public Game searchForGame(String title) {
-        // Can be used to search for a game in a collection
-        // Will return a specific game object with its game fields
-        Game temp = new Game();
+    public String searchForGame(String gameTitle) {
+        String temp = null;
+        for(int i = 0; i < numberOfGames; i++){
+            System.out.println(gameArray[i].getName().toUpperCase());
+            System.out.println(gameTitle.toUpperCase());
+            if (gameArray[i].getName().toUpperCase().equals(gameTitle.toUpperCase())){
+                temp = gameArray[i].toString();
+                break;
+            }
+        }
+        if(temp == null){
+            temp = "Not found";
+        }
         return temp;
     }
     public void intitializeGame(String gameName) {
