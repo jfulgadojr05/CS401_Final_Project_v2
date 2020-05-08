@@ -107,6 +107,17 @@ public class Game {
         return averageRating;
     }
 
+    public String toString(){
+        String gameIdString = Integer.toString(id);
+        String averageRatingString = Float.toString(averageRating);
+        String temp =  "ID: " + gameIdString + "\nTitle: " + name + "\nGenre: " + genre + "\nAverage Rating: " + averageRatingString;
+        return temp;
+    }
+
+    public void showInfo(Game aGame) {
+        // Null
+    }
+
     //TODO WRITE DOC
     public void reviewGame () {
     }
