@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2941ca0-0317-4682-a64a-8bdca75ec92a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/accountsystem.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,12 +30,16 @@
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1aBdrqOc1ZotxNuryj1GFqFxOfG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
@@ -167,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589001164159</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added register button to login gui">
+      <created>1589004804153</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589004804153</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,6 +196,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added admin and devUser class skeletons (both extends User class)" />
     <MESSAGE value="Commit before merging with Jerome" />
     <MESSAGE value="Merge branch 'master' into christian_a_changes&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;CS401_GAMarket_Final.iml&#10;#&#9;GAMarket/.settings/org.eclipse.jdt.core.prefs&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/AccountServices.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Admin.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/App.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Client.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Controller.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/FriendsList.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Game.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Login.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Main.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Message.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Server.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Thread.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/User.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/clientGUI.css&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/devUser.java&#10;#&#9;GAMarket_ChristianA/.settings/org.eclipse.jdt.core.prefs&#10;#&#9;GAMarket_ChristianA/src/app/Game.java&#10;#&#9;GAMarket_ChristianA/src/app/GameCollection.java&#10;#&#9;GAMarket_ChristianA/src/app/Message.java&#10;#&#9;GAMarket_ChristianA/src/app/Store.java&#10;#&#9;GAMarket_ChristianA/src/app/app/AccountServices.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Admin.java&#10;#&#9;GAMarket_ChristianA/src/app/app/App.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Client.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Controller.java&#10;#&#9;GAMarket_ChristianA/src/app/app/FriendsList.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Game.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Login.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Main.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Message.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Server.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Thread.java&#10;#&#9;GAMarket_ChristianA/src/app/app/User.java&#10;#&#9;GAMarket_ChristianA/src/app/app/clientGUI.css&#10;#&#9;GAMarket_ChristianA/src/app/app/devUser.java&#10;#&#9;GAMarket_ChristianA/src/gui/FriendsGUI.java&#10;#&#9;GAMarket_ChristianA/src/gui/GAManager.java&#10;#&#9;GAMarket_ChristianA/src/gui/MessageGUI.java&#10;#&#9;GAMarket_OLD/.settings/org.eclipse.jdt.core.prefs&#10;#&#9;GAMarket_OLD/src/app_david/app/clientGUI.css&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/AccountServices.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Admin.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/App.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Client.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Controller.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/FriendsList.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Game.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Login.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Main.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Message.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Server.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Thread.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/User.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/devUser.java" />
@@ -192,18 +205,19 @@
     <MESSAGE value="recreated loginGUI using swing" />
     <MESSAGE value="begin implementing login functionality to GAMarket" />
     <MESSAGE value="Working login system from text file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working login system from text file" />
+    <MESSAGE value="added register button to login gui" />
+    <option name="LAST_COMMIT_MESSAGE" value="added register button to login gui" />
   </component>
   <component name="WindowStateProjectService">
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587766669552">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766669552" />
-    <state x="411" y="0" key="CommitChangelistDialog2" timestamp="1589001162408">
+    <state x="411" y="0" key="CommitChangelistDialog2" timestamp="1589004803196">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765654897" />
-    <state x="411" y="0" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1589001162408" />
+    <state x="411" y="0" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1589004803196" />
     <state x="666" y="266" key="FileChooserDialogImpl" timestamp="1586498875269">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -241,11 +255,11 @@
     </state>
     <state x="367" y="11" key="SettingsEditor/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765428909" />
     <state x="440" y="99" key="SettingsEditor/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587767455212" />
-    <state x="700" y="171" width="748" height="471" key="Vcs.Push.Dialog.v2" timestamp="1587767784731">
+    <state x="700" y="171" width="748" height="471" key="Vcs.Push.Dialog.v2" timestamp="1589004941714">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="583" y="140" width="748" height="471" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587764243222" />
-    <state x="700" y="171" key="Vcs.Push.Dialog.v2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587767784731" />
+    <state x="700" y="171" key="Vcs.Push.Dialog.v2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1589004941714" />
     <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586557860909">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
