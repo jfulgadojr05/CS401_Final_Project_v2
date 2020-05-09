@@ -4,12 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-/* GAManager class
+/* 
+    ForumGUI class
 	CS 401 - Final Project
-	FriendsGUI.java
-  By: Christian Magpantay
-  Code/Book Reference -
-  https://www.youtube.com/watch?v=CqWorn8dR_A&list=PLdmXYkPMWIgCocLY-B4SvpQshQWC7Nc0C&index=5
+	ForumGUI.java
+    By: Christian Magpantay
+    Code/Book Reference -
+    https://www.youtube.com/watch?v=CqWorn8dR_A&list=PLdmXYkPMWIgCocLY-B4SvpQshQWC7Nc0C&index=5
 */
 
 public class ForumGUI extends JPanel {
@@ -64,7 +65,10 @@ public class ForumGUI extends JPanel {
 
         // sets game collection max width
         gameCollectionPane.setMaximumSize(
-            new Dimension(500, gameCollectionPane.getMaximumSize().height)
+            new Dimension(600, gameCollectionPane.getMaximumSize().height)
+        );
+        gameCollectionPane.setPreferredSize(
+            new Dimension(200, gameCollectionPane.getMaximumSize().height)
         );
 
         // for user to click on game collection list
@@ -93,7 +97,7 @@ public class ForumGUI extends JPanel {
                         emptyThreadPane = new JScrollPane(listOvercooked2);
                     }
 
-                    // readd pane
+                    // read pane
                     forumPanel.add(emptyThreadPane);
                     forumPanel.revalidate();
                     forumPanel.repaint();

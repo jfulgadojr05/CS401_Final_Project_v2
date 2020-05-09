@@ -1,11 +1,13 @@
 package gui;
 
+import db.DBHelper;
 import app.GameCollection;
 import app.Store;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.SQLException;
 
 /* GAManager class
 	CS 401 - Final Project
@@ -24,7 +26,7 @@ public class GAManager extends JFrame {
     JMenuItem viewFriends;
     JMenuItem menuItem;
     JTabbedPane config;
-    Store storePane;    
+    Store storePane;
     ForumGUI forumPane;
     JLabel libraryPane;
     JLabel friendsPane;
@@ -37,59 +39,47 @@ public class GAManager extends JFrame {
     JList<String> gamesList;
     JList<String> libraryList;
 
-    String[] gamesArr = {
-            "Most Popular Disccussions:", "",
-            "Valorant", "Grand Theft Auto V", "Counter-Strike",
-            "Fornite", "League of Legends", "Call of Duty: Modern Warfare",
-            "MineCraft", "Dota 2", "Monopoly Plus",
-            "World of Warcraft", "Teamfight Tactics", "Apex Legends"
-    };
-    String[] libraryArr = {
-            "Your library: \n", "",
-            "Alan Wake", "Counter-Strike: Global Offensive", "Dead By Deadlight",
-            "Dead Space 2", "The Escapists 2", "Left 4 Dead 2",
-            "Portal", "Resident Evil 3", "Resident Evil 3: Raccoon City Demo",
-            "Resident Evil Resistance", "The Witcher 3: Wild Hunt"
-    };
-    /*  GAManager constructor
-            set title
-            set size
-            set close operation
-            create menubar
-                GAMarket menu
-                friends menu
-                settings menu
-            create tabs
-                store
-                library
-                forum           */
-    public GAManager() {
+    String[] gamesArr = { "Most Popular Disccussions:", "", "Valorant", "Grand Theft Auto V", "Counter-Strike",
+            "Fornite", "League of Legends", "Call of Duty: Modern Warfare", "MineCraft", "Dota 2", "Monopoly Plus",
+            "World of Warcraft", "Teamfight Tactics", "Apex Legends" };
+    String[] libraryArr = { "Your library: \n", "", "Alan Wake", "Counter-Strike: Global Offensive",
+            "Dead By Deadlight", "Dead Space 2", "The Escapists 2", "Left 4 Dead 2", "Portal", "Resident Evil 3",
+            "Resident Evil 3: Raccoon City Demo", "Resident Evil Resistance", "The Witcher 3: Wild Hunt" };
 
-        super("GAMarket");  // app title
-        setSize(800,700);   // defalut size
+    /*
+     * GAManager constructor set title set size set close operation create menubar
+     * GAMarket menu friends menu settings menu create tabs store library forum
+     */
+    public GAManager(DBHelper mydb) {
+
+        super("GAMarket"); // app title
+        setSize(800, 700); // defalut size
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        
+
         // create menu bar
         menuBar = new JMenuBar();
         // menu bar items
         // GAMarket
         GAMarket = new JMenu("GAMarket");
         GAMarket.setMnemonic(KeyEvent.VK_A);
-        GAMarket.getAccessibleContext().setAccessibleDescription(
-                "GAMarket");
+        GAMarket.getAccessibleContext().setAccessibleDescription("GAMarket");
         menuBar.add(GAMarket);
 
         // friends
         friends = new JMenu("Friends");
         friends.setMnemonic(KeyEvent.VK_A);
-        friends.getAccessibleContext().setAccessibleDescription(
-                "Friends");
+        friends.getAccessibleContext().setAccessibleDescription("Friends");
         viewFriends = new JMenuItem("View Friends List");
         // view friends list menu item
         openFriendsList = new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                FriendsGUI fGUI = new FriendsGUI();
-                fGUI.setVisible(true);
+                FriendsGUI fGUI;
+                try {
+                    fGUI = new FriendsGUI(mydb);
+                    fGUI.setVisible(true);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         };
 
@@ -101,8 +91,7 @@ public class GAManager extends JFrame {
         // settings
         settings = new JMenu("Settings");
         settings.setMnemonic(KeyEvent.VK_A);
-        settings.getAccessibleContext().setAccessibleDescription(
-                "The only menu in this program that has menu items");
+        settings.getAccessibleContext().setAccessibleDescription("The only menu in this program that has menu items");
         menuBar.add(settings);
 
         configPane = new JPanel();
@@ -126,7 +115,6 @@ public class GAManager extends JFrame {
         forumPane = new ForumGUI();
         config.addTab("Forum", null, forumPane, "Talk about your favorite games");
 
-
         // final adds to create
         setJMenuBar(menuBar);
         getContentPane().add(config, BorderLayout.CENTER);
@@ -136,9 +124,11 @@ public class GAManager extends JFrame {
     // tab handler
     class TabManager implements ItemListener {
         Component tab;
+
         public TabManager(Component tabToManage) {
             tab = tabToManage;
         }
+
         public void itemStateChanged(ItemEvent ie) {
             int index = config.indexOfComponent(tab);
             if (index != -1) {
@@ -149,8 +139,11 @@ public class GAManager extends JFrame {
     }
 
     // run main here
-    public static void main(String args[]) {
-        GAManager gm = new GAManager();
+    public static void main(String args[]) throws SQLException {
+        DBHelper dbh = new DBHelper();
+        dbh.createNewDatabase();
+        dbh.createFriendsTable();
+        GAManager gm = new GAManager(dbh);
         gm.setVisible(true);
     }
 }

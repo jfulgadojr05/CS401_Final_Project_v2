@@ -6,49 +6,46 @@ package gui;
   Code/Book Reference -
   https://www.youtube.com/watch?v=CqWorn8dR_A&list=PLdmXYkPMWIgCocLY-B4SvpQshQWC7Nc0C&index=5
 */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
+import java.sql.SQLException;
+import db.DBHelper;
 
 public class FriendsGUI extends JFrame {
+
     private static final long serialVersionUID = 1L;
     Container c;
     JMenuBar menuBarChat;
     JMenu username;
-    JMenu addFriend;
+    JMenu editFriends;
     JMenu settings;
+    JMenuItem addFriend;
     JTabbedPane chat;
     JList<String> online;
     JList<String> allFriends;
     ActionListener toAddFriend;
     JMenuItem viewProfile;
     JMenuItem editProfile;
-    JMenuItem editFriends;
 
-    String[] friendsMockListOnline = {
-            "TheToadKing", "Pokimane", "Maximilian_DOOD"
-    };
-    String[] friendsMockListAll = {
-            "Practice", "richMag", "TheToadKing",
-            "DisguisedToast", "PitaShwang", "LuluLuvely",
-            "Pokimane", "Maximilian_DOOD"
-    };
+    String[] friendsMockListOnline = { "TheToadKing", "Pokimane", "Maximilian_DOOD" };
+    String[] emptyList = { "Empty" };
 
-    public FriendsGUI() {
+    public FriendsGUI(DBHelper mydb) throws SQLException {
         super("Friends List"); // title
-        setSize(300,500);
+        setSize(300, 500);
         Panel c = new Panel();
         c.setLayout(new BoxLayout(c, BoxLayout.Y_AXIS));
         setContentPane(c);
         // create menu for chat
-        MenuBar();
-        ChatTabs();
+        MenuBar(mydb);
+        ChatTabs(mydb);
         // settings
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    public void MenuBar() {
+    public void MenuBar(DBHelper mydb) {
         menuBarChat = new JMenuBar();
         // username menu
         username = new JMenu("chrisTaro");
@@ -59,31 +56,37 @@ public class FriendsGUI extends JFrame {
         username.add(editProfile);
         menuBarChat.add(username);
         // friends
-        addFriend = new JMenu("Add Friend+");
-        addFriend.setMnemonic(KeyEvent.VK_A);
+        editFriends = new JMenu("Edit Friends");
+        editFriends.setMnemonic(KeyEvent.VK_A);
+        editFriends.getAccessibleContext().setAccessibleDescription("Edit Friends");
+        addFriend = new JMenuItem("Add Friend+");
+
         toAddFriend = new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                addFriend();
+                String username = JOptionPane.showInputDialog("Enter Friends Username");
+                if (username == null) {
+                    return;
+                }
+                try {
+                    mydb.addFriend(username);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         };
+
         addFriend.addActionListener(toAddFriend);
-        menuBarChat.add(addFriend);
-        //settings
-        settings = new JMenu("Settings");
-        settings.setMnemonic(KeyEvent.VK_A);
-        editFriends = new JMenuItem("Edit Friends List");
-        settings.add(editFriends);
-        menuBarChat.add(settings);
+        editFriends.add(addFriend);
+        
+        menuBarChat.add(editFriends);
         setJMenuBar(menuBarChat);
     }
 
-    public void addFriend() {
-    }
 
-    public void ChatTabs() {
+    public void ChatTabs(DBHelper mydb) throws SQLException {
         chat = new JTabbedPane();
         online = new JList<String>(friendsMockListOnline);
-        allFriends = new JList<String>(friendsMockListAll);
+        allFriends = mydb.getAllFriends();
 
         online.addMouseListener(new MouseAdapter() {
             @Override
