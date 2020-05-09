@@ -26,6 +26,7 @@ public class LoginGUI extends JFrame {
     public LoginGUI() {
         this.gm = new GAManager();
 
+        // setting up gui bounds
         container.setLayout(null);
         usernameLabel.setBounds(50, 150, 100, 30);
         passwordLabel.setBounds(50, 220, 100, 30);
@@ -43,6 +44,7 @@ public class LoginGUI extends JFrame {
         container.add(loginButton);
         container.add(registerButton);
 
+        // login button functionality
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -50,6 +52,7 @@ public class LoginGUI extends JFrame {
             }
         });
 
+        // register button functionality
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -61,6 +64,7 @@ public class LoginGUI extends JFrame {
             }
         });
 
+        // check box to show password
         showPassword.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -76,7 +80,11 @@ public class LoginGUI extends JFrame {
     }
 
     private void doLogin() {
+
+        // load account database txt file
         File accounts = new File("accountsystem.txt");
+
+        // run through each line of text to see if account and password exists
         try {
             Scanner read = new Scanner(accounts);
             read.useDelimiter(":|\n");
@@ -89,9 +97,13 @@ public class LoginGUI extends JFrame {
                     break;
                 }
             }
+
+            // if login successful, open GAMarket
             if(success) {
                 dispose();
                 gm.setVisible(true);
+
+            // invalid username/password if unsuccessful
             } else {
                 JOptionPane.showMessageDialog(null, "Invalid Username or Password.");
             }
@@ -102,14 +114,21 @@ public class LoginGUI extends JFrame {
     }
 
     private void doRegister() throws IOException {
-        String registerUser = JOptionPane.showInputDialog("Please enter your desired username:");
+        String registerUser = " ";
+
+        // prompt username
+        registerUser = JOptionPane.showInputDialog("Please enter your desired username:");
+
+        // load account database
         File accounts = new File("accountsystem.txt");
+
+        // look if username exists
         try {
             Scanner read = new Scanner(accounts);
-            read.useDelimiter(":|\n");
+            read.useDelimiter(":");
             boolean duplicate = false;
             while (read.hasNext()) {
-                    String u = read.next();
+                    String u = read.nextLine();
                     if (u.trim().equals(registerUser.trim())) {
                         duplicate = true;
                         break;
@@ -117,6 +136,8 @@ public class LoginGUI extends JFrame {
             }
             if(duplicate) {
                 JOptionPane.showMessageDialog(null, "Username already exists. Please choose a different username.");
+
+            // proceed with password creation if unique username
             } else {
                 String registerPass = JOptionPane.showInputDialog("Please enter your desired password:");
                 String confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
