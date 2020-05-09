@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b2941ca0-0317-4682-a64a-8bdca75ec92a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
       <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src\app\sample\GAMarket\src\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GAManager (2)">
+  <component name="RunManager" selected="Application.LoginGUI">
     <configuration name="GAManager (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.GAManager" />
       <module name="CS401_GAMarket_Final" />
@@ -92,8 +93,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.LoginGUI" />
+      <module name="CS401_GAMarket_Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LoginGUI" />
         <item itemvalue="Application.GAManager (2)" />
         <item itemvalue="Application.GAManager (1)" />
         <item itemvalue="Application.GAManager" />
@@ -132,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587767764359</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="recreated loginGUI using swing">
+      <created>1588293072984</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588293072984</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,42 +176,43 @@
     <MESSAGE value="Merge branch 'master' into christian_a_changes&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;CS401_GAMarket_Final.iml&#10;#&#9;GAMarket/.settings/org.eclipse.jdt.core.prefs&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/AccountServices.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Admin.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/App.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Client.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Controller.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/FriendsList.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Game.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Login.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Main.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Message.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Server.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/Thread.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/User.java&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/clientGUI.css&#10;#&#9;GAMarket/src/app/sample/GAMarket/src/app/devUser.java&#10;#&#9;GAMarket_ChristianA/.settings/org.eclipse.jdt.core.prefs&#10;#&#9;GAMarket_ChristianA/src/app/Game.java&#10;#&#9;GAMarket_ChristianA/src/app/GameCollection.java&#10;#&#9;GAMarket_ChristianA/src/app/Message.java&#10;#&#9;GAMarket_ChristianA/src/app/Store.java&#10;#&#9;GAMarket_ChristianA/src/app/app/AccountServices.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Admin.java&#10;#&#9;GAMarket_ChristianA/src/app/app/App.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Client.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Controller.java&#10;#&#9;GAMarket_ChristianA/src/app/app/FriendsList.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Game.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Login.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Main.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Message.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Server.java&#10;#&#9;GAMarket_ChristianA/src/app/app/Thread.java&#10;#&#9;GAMarket_ChristianA/src/app/app/User.java&#10;#&#9;GAMarket_ChristianA/src/app/app/clientGUI.css&#10;#&#9;GAMarket_ChristianA/src/app/app/devUser.java&#10;#&#9;GAMarket_ChristianA/src/gui/FriendsGUI.java&#10;#&#9;GAMarket_ChristianA/src/gui/GAManager.java&#10;#&#9;GAMarket_ChristianA/src/gui/MessageGUI.java&#10;#&#9;GAMarket_OLD/.settings/org.eclipse.jdt.core.prefs&#10;#&#9;GAMarket_OLD/src/app_david/app/clientGUI.css&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/AccountServices.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Admin.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/App.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Client.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Controller.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/FriendsList.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Game.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Login.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Main.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Message.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Server.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/Thread.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/User.java&#10;#&#9;GAMarket_OLD/src/sample/GAMarket/src/app/devUser.java" />
     <MESSAGE value="TEST" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="recreated loginGUI using swing" />
+    <option name="LAST_COMMIT_MESSAGE" value="recreated loginGUI using swing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587766669552">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587766669552" />
-    <state x="411" y="0" key="CommitChangelistDialog2" timestamp="1587767762717">
+    <state x="411" y="0" key="CommitChangelistDialog2" timestamp="1588293071827">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765654897" />
-    <state x="411" y="0" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1587767762717" />
+    <state x="411" y="0" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1588293071827" />
     <state x="666" y="266" key="FileChooserDialogImpl" timestamp="1586498875269">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="666" y="266" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498875269" />
-    <state width="938" height="240" key="GridCell.Tab.0.bottom" timestamp="1588292850984">
+    <state width="938" height="240" key="GridCell.Tab.0.bottom" timestamp="1588990388232">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1557" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655002" />
-    <state width="938" height="240" key="GridCell.Tab.0.bottom/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1588292850984" />
-    <state width="938" height="240" key="GridCell.Tab.0.center" timestamp="1588292850984">
+    <state width="938" height="240" key="GridCell.Tab.0.bottom/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1588990388232" />
+    <state width="938" height="240" key="GridCell.Tab.0.center" timestamp="1588990388232">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1557" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655001" />
-    <state width="938" height="240" key="GridCell.Tab.0.center/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1588292850984" />
-    <state width="938" height="240" key="GridCell.Tab.0.left" timestamp="1588292850984">
+    <state width="938" height="240" key="GridCell.Tab.0.center/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1588990388232" />
+    <state width="938" height="240" key="GridCell.Tab.0.left" timestamp="1588990388232">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1557" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655001" />
-    <state width="938" height="240" key="GridCell.Tab.0.left/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1588292850984" />
-    <state width="938" height="240" key="GridCell.Tab.0.right" timestamp="1588292850984">
+    <state width="938" height="240" key="GridCell.Tab.0.left/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1588990388232" />
+    <state width="938" height="240" key="GridCell.Tab.0.right" timestamp="1588990388232">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1557" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765655002" />
-    <state width="938" height="240" key="GridCell.Tab.0.right/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1588292850984" />
+    <state width="938" height="240" key="GridCell.Tab.0.right/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1588990388232" />
     <state x="152" y="74" key="MergeDialog" timestamp="1587764942375">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
