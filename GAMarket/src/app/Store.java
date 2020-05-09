@@ -42,7 +42,6 @@ public class Store extends JPanel {
 
         storeMenuScroll = new JScrollPane(storeMenuItems);
 
-
         menuPanel.setLayout(new BorderLayout());
         menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
         menuPanel.add(Box.createRigidArea(new Dimension(0,1)));
@@ -62,7 +61,6 @@ public class Store extends JPanel {
         this.add(menuPanel, BorderLayout.CENTER);
         this.add(buttonPanel, BorderLayout.PAGE_START);
         this.setVisible(true);
-
     }
 
 
