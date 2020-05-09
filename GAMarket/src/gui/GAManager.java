@@ -6,7 +6,6 @@ import app.Store;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.IOException;
 
 /* GAManager class
 	CS 401 - Final Project
@@ -139,10 +138,6 @@ public class GAManager extends JFrame {
         setLocationRelativeTo(null);
     }
 
-    public boolean login(String login, String password) throws IOException {
-        String cmd = "login " + login + " " + password + "\n";
-
-    }
 
     class TabManager implements ItemListener {
         Component tab;
