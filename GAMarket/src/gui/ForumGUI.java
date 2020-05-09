@@ -21,11 +21,9 @@ public class ForumGUI extends JPanel {
     JList<String> listSuperMario;
     JList<String> listTetris99;
     JList<String> listOvercooked2;
-    
     String[] gamesCollList = {
         "Super Mario Odyssey", "Tetris 99", "Overcooked 2"
     };
-
     String[] arrSuperMario = {
             "Handling is bad", 
             "3D World should not be lumped with the NSMB games", 
@@ -50,40 +48,52 @@ public class ForumGUI extends JPanel {
     };
 
     public ForumGUI() {
+        // main forum panel init
         forumPanel = new JPanel();
         forumPanel.setLayout(new BoxLayout(forumPanel, BoxLayout.X_AXIS));
 
-        // all jLists
+        // all jLists init
         gamesList = new JList<String>(gamesCollList);
         listSuperMario = new JList<String>(arrSuperMario);
         listTetris99 = new JList<String>(arrTetris99);
         listOvercooked2 = new JList<String>(arrOvercooked2);
 
-        // all panes
+        // all panes init with lists
         gameCollectionPane = new JScrollPane(gamesList);
         emptyThreadPane = new JScrollPane();
 
+        // sets game collection max width
         gameCollectionPane.setMaximumSize(
             new Dimension(500, gameCollectionPane.getMaximumSize().height)
         );
 
+        // for user to click on game collection list
+        // will open up the respective game and its own threads/posts
         gamesList.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
                 if(mouseEvent.getClickCount() == 2) {
-                    String user = gamesList.getSelectedValue();
+
+                    // which one is clicked
+                    String game = gamesList.getSelectedValue();
+
+                    // remove empty pane to reset
                     forumPanel.remove(emptyThreadPane);
                     forumPanel.revalidate();
                     forumPanel.repaint();
-                    if(user.equals("Super Mario Odyssey")) {
+
+                    // rebuild pane with appropriate thread list
+                    if(game.equals("Super Mario Odyssey")) {
                         emptyThreadPane = new JScrollPane(listSuperMario);
                     }
-                    else if(user.equals("Tetris 99")) {
+                    else if(game.equals("Tetris 99")) {
                         emptyThreadPane = new JScrollPane(listTetris99);
                     }
-                    else if(user.equals("Overcooked 2")) {
+                    else if(game.equals("Overcooked 2")) {
                         emptyThreadPane = new JScrollPane(listOvercooked2);
                     }
+
+                    // readd pane
                     forumPanel.add(emptyThreadPane);
                     forumPanel.revalidate();
                     forumPanel.repaint();
@@ -91,9 +101,11 @@ public class ForumGUI extends JPanel {
             }
         });
 
+        // add game collection and empty pane
         forumPanel.add(gameCollectionPane);
         forumPanel.add(emptyThreadPane);
 
+        // finals add
         this.setLayout(new BorderLayout());
         this.add(forumPanel, BorderLayout.CENTER);
         this.setVisible(true);
@@ -102,7 +114,6 @@ public class ForumGUI extends JPanel {
     // implement background image
     // @Override
     // protected void paintComponent(Graphics g) {
-  
     //   super.paintComponent(g);
     //       g.drawImage(bgImage, 0, 0, null);
     // }
