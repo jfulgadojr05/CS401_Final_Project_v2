@@ -1,5 +1,7 @@
 package app;
 
+import javax.swing.*;
+
 public class Game {
     private String name;
     private Thread[] discussions;
@@ -112,6 +114,11 @@ public class Game {
         String averageRatingString = Float.toString(averageRating);
         String temp =  "ID: " + gameIdString + "\nTitle: " + name + "\nGenre: " + genre + "\nAverage Rating: " + averageRatingString;
         return temp;
+    }
+
+    public void initializeGame() {
+        String initializeStr = "Initializing "+ this.name + "...";
+        JOptionPane.showMessageDialog(null, initializeStr);
     }
 
     public void showInfo(Game aGame) {

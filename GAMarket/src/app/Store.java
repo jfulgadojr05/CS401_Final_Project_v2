@@ -61,7 +61,7 @@ public class Store extends JPanel {
                             gameCommands,
                             gameCommands[gameCommands.length - 1]);
                     switch(gameChoice) {
-                        case 0: System.out.println("Play Game"); break;
+                        case 0: tempGame.initializeGame(); break;
                         case 1: System.out.println("Purchase Game"); break;
                         case 2: System.out.println("Show Forum"); break;
                         case 3: return;
