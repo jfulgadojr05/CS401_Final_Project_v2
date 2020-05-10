@@ -1,6 +1,7 @@
-allcallday:runescape
-dragon97:password123
-abc:def
-hi:asd
-helloman:asdfg
-horse:hello123
+allcallday:runescape:developer
+dragon97:password123:developer
+abc:def:developer
+hi:asd:player
+helloman:asdfg:player
+horse:hello123:player
+crab23:hello:developer

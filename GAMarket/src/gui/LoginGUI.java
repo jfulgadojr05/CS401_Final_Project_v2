@@ -45,7 +45,7 @@ public class LoginGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 boolean success = app.Login.sendLogin(usernameField.getText().trim(), passwordField.getText().trim());
-                if(success) {
+                if (success) {
                     // if login successful, open GAMarket
                     dispose();
                     gm.setVisible(true);
@@ -76,20 +76,45 @@ public class LoginGUI extends JFrame {
                         confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
                     }
                     String result = app.Login.sendRegistration(registerUser, confirmPass);
+
+                    // prompt player or dev
+                    String[] command = {"Player", "Developer"};
+                    int choice;
+                    do {
+                        choice = JOptionPane.showOptionDialog(null,
+                                "Are you a new player or new developer?",
+                                "Register",
+                                JOptionPane.YES_NO_CANCEL_OPTION,
+                                JOptionPane.QUESTION_MESSAGE,
+                                null,
+                                command,
+                                command[command.length - 1]);
+                        switch (choice) {
+                            case 0:
+                                app.Login.setAccountType("player");
+                                break;
+                            case 1:
+                                app.Login.setAccountType("developer");
+                                break;
+                            default:
+                        }
+                    } while (choice != command.length - 1);
+
                     JOptionPane.showMessageDialog(null, result);
                 }
             }
         });
+
 
         recoveryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String username = JOptionPane.showInputDialog("Please enter your account's username:");
                 JOptionPane.showMessageDialog(null, "Verifying ownership...");
-                if(app.Login.isDuplicate(username) == true) {
+                if (app.Login.isDuplicate(username) == true) {
                     String password = JOptionPane.showInputDialog("Please enter a new password:");
                     String confirm = JOptionPane.showInputDialog("Please confirm your new password:");
-                    while(!password.equals(confirm)) {
+                    while (!password.equals(confirm)) {
                         password = JOptionPane.showInputDialog("Passwords did not match. Please enter a new password:");
                         confirm = JOptionPane.showInputDialog("Please confirm your new password:");
                     }
@@ -119,13 +144,11 @@ public class LoginGUI extends JFrame {
     }
 
 
-
-
     public static void main(String[] args) {
         LoginGUI loginUser = new LoginGUI();
         loginUser.setVisible(true);
         loginUser.setTitle("GAMarket Login");
-        loginUser.setBounds(10,10,370,600);
+        loginUser.setBounds(10, 10, 370, 600);
         loginUser.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         loginUser.setResizable(false);
         loginUser.setLocationRelativeTo(null);

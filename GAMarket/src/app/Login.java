@@ -56,6 +56,14 @@ public class Login {
         }
     }
 
+    public static void setAccountType(String accountType) {
+        try {
+            Files.write(Paths.get("accountsystem.txt"), (":" + accountType).getBytes(), StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            //
+        }
+    }
+
     public static boolean isDuplicate(String username) {
         boolean duplicate = false;
         try {
