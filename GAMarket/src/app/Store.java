@@ -45,7 +45,6 @@ public class Store extends JPanel {
                     String selectedItemStr = storeMenuItems.getSelectedValue();
                     StringTokenizer st = new StringTokenizer(selectedItemStr, ",");
                     String listGameName = st.nextToken();
-                    System.out.println(listGameName);
                     for (int i = 0; i < storeCollection.getNumberOfGames(); i++){
                         if (storeCollection.getGameArray()[i].getName().equals(listGameName)){
                             tempGame = storeCollection.getGameArray()[i];

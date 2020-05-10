@@ -62,8 +62,6 @@ public class GameCollection {
     public String searchForGame(String gameTitle) {
         String temp = null;
         for(int i = 0; i < numberOfGames; i++){
-            System.out.println(gameArray[i].getName().toUpperCase());
-            System.out.println(gameTitle.toUpperCase());
             if (gameArray[i].getName().toUpperCase().equals(gameTitle.toUpperCase())){
                 temp = gameArray[i].toString();
                 break;
