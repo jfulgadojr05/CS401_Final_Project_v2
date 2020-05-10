@@ -4,13 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.util.Scanner;
 
 public class LoginGUI extends JFrame {
     private final GAManager gm;
@@ -22,6 +16,7 @@ public class LoginGUI extends JFrame {
     JCheckBox showPassword = new JCheckBox("Show Password");
     JButton loginButton = new JButton("Login");
     JButton registerButton = new JButton("Register");
+    JButton recoveryButton = new JButton("Account Recovery");
 
     public LoginGUI() {
         this.gm = new GAManager();
@@ -35,6 +30,7 @@ public class LoginGUI extends JFrame {
         showPassword.setBounds(150, 250, 150, 30);
         loginButton.setBounds(50, 300, 100, 30);
         registerButton.setBounds(200, 300, 100, 30);
+        recoveryButton.setBounds(75, 350, 200, 30);
 
         container.add(usernameLabel);
         container.add(passwordLabel);
@@ -43,12 +39,21 @@ public class LoginGUI extends JFrame {
         container.add(showPassword);
         container.add(loginButton);
         container.add(registerButton);
+        container.add(recoveryButton);
 
         // login button functionality
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                doLogin();
+                boolean success = app.Login.sendLogin(usernameField.getText().trim(), passwordField.getText().trim());
+                if(success) {
+                    // if login successful, open GAMarket
+                    dispose();
+                    gm.setVisible(true);
+                } else {
+                    // invalid username/password if unsuccessful
+                    JOptionPane.showMessageDialog(null, "Invalid Username or Password.");
+                }
             }
         });
 
@@ -56,11 +61,35 @@ public class LoginGUI extends JFrame {
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // prompt username
+                String registerUser = JOptionPane.showInputDialog("Please enter your desired username:");
                 try {
-                    doRegister();
+                    app.Login.sendRegistration(registerUser);
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
+            }
+        });
+
+        recoveryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String username = JOptionPane.showInputDialog("Please enter your account's username:");
+                JOptionPane.showMessageDialog(null, "Verifying ownership...");
+                if(app.Login.isDuplicate(username) == true) {
+                    String password = JOptionPane.showInputDialog("Please enter a new password:");
+                    String confirm = JOptionPane.showInputDialog("Please confirm your new password:");
+                    while(!password.equals(confirm)) {
+                        password = JOptionPane.showInputDialog("Passwords did not match. Please enter a new password:");
+                        confirm = JOptionPane.showInputDialog("Please confirm your new password:");
+                    }
+                    app.Login.loginRecovery(username, confirm);
+                    JOptionPane.showMessageDialog(null, "Password successfully updated. Please log in.");
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "No such account exists.");
+                }
+
             }
         });
 
@@ -79,84 +108,8 @@ public class LoginGUI extends JFrame {
         });
     }
 
-    private void doLogin() {
 
-        // load account database txt file
-        File accounts = new File("accountsystem.txt");
 
-        // run through each line of text to see if account and password exists
-        try {
-            Scanner read = new Scanner(accounts);
-            read.useDelimiter(":|\n");
-            boolean success = false;
-            while(read.hasNext()) {
-                String u = read.next();
-                String p = read.next();
-                if(u.trim().equals(usernameField.getText().trim()) && p.trim().equals(passwordField.getText().trim())) {
-                    success = true;
-                    break;
-                }
-            }
-
-            // if login successful, open GAMarket
-            if(success) {
-                dispose();
-                gm.setVisible(true);
-
-            // invalid username/password if unsuccessful
-            } else {
-                JOptionPane.showMessageDialog(null, "Invalid Username or Password.");
-            }
-        }
-        catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "accountsystem.txt not found.");
-        }
-    }
-
-    private void doRegister() throws IOException {
-        String registerUser = " ";
-
-        // prompt username
-        registerUser = JOptionPane.showInputDialog("Please enter your desired username:");
-
-        // load account database
-        File accounts = new File("accountsystem.txt");
-
-        // look if username exists
-        try {
-            Scanner read = new Scanner(accounts);
-            read.useDelimiter(":");
-            boolean duplicate = false;
-            while (read.hasNext()) {
-                    String u = read.nextLine();
-                    if (u.trim().equals(registerUser.trim())) {
-                        duplicate = true;
-                        break;
-                    }
-            }
-            if(duplicate) {
-                JOptionPane.showMessageDialog(null, "Username already exists. Please choose a different username.");
-
-            // proceed with password creation if unique username
-            } else {
-                String registerPass = JOptionPane.showInputDialog("Please enter your desired password:");
-                String confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
-                while(!registerPass.equals(confirmPass)) {
-                    registerPass = JOptionPane.showInputDialog("Invalid password. Please enter your desired password:");
-                    confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
-                }
-                try {
-                    Files.write(Paths.get("accountsystem.txt"), ("\n" + registerUser + ":" + registerPass).getBytes(), StandardOpenOption.APPEND);
-                } catch (IOException e) {
-
-                }
-                JOptionPane.showMessageDialog(null, "Account creation successful. Please login.");
-            }
-        }
-        catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "accountsystem.txt not found.");
-        }
-    }
 
     public static void main(String[] args) {
         LoginGUI loginUser = new LoginGUI();
