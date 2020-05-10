@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 
 public class LoginGUI extends JFrame {
     private final GAManager gm;
@@ -63,10 +62,21 @@ public class LoginGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // prompt username
                 String registerUser = JOptionPane.showInputDialog("Please enter your desired username:");
-                try {
-                    app.Login.sendRegistration(registerUser);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
+
+                // look if duplicate username exists
+                boolean duplicate = app.Login.isDuplicate(registerUser);
+                if (duplicate) {
+                    JOptionPane.showMessageDialog(null, "Username already exists. Please choose a different username.");
+                    // proceed with password creation if unique username
+                } else {
+                    String registerPass = JOptionPane.showInputDialog("Please enter your desired password:");
+                    String confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
+                    while (!registerPass.equals(confirmPass)) {
+                        registerPass = JOptionPane.showInputDialog("Invalid password. Please enter your desired password:");
+                        confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
+                    }
+                    String result = app.Login.sendRegistration(registerUser, confirmPass);
+                    JOptionPane.showMessageDialog(null, result);
                 }
             }
         });

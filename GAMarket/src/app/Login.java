@@ -95,25 +95,12 @@ public class Login {
         return success;
     }
 
-    public static void sendRegistration(String registerUser) throws IOException {
+    public static String sendRegistration(String registerUser, String registerPass) {
         Login log = new Login();
 
-        // look if duplicate username exists
-        boolean duplicate = isDuplicate(registerUser);
-        if (duplicate) {
-            JOptionPane.showMessageDialog(null, "Username already exists. Please choose a different username.");
-            // proceed with password creation if unique username
-        } else {
-            String registerPass = JOptionPane.showInputDialog("Please enter your desired password:");
-            String confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
-            while (!registerPass.equals(confirmPass)) {
-                registerPass = JOptionPane.showInputDialog("Invalid password. Please enter your desired password:");
-                confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
-            }
             log.setUsername(registerUser);
-            log.setPassword(confirmPass);
-            JOptionPane.showMessageDialog(null, "Account creation successful. Please login.");
-        }
+            log.setPassword(registerPass);
+            return "Account creation successful. Please login.";
     }
 
     public static void loginRecovery(String username, String password) {
