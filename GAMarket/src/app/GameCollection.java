@@ -81,8 +81,7 @@ public class GameCollection {
         // game and initialize it
 
     }
-    public JList<String> filterGame(String aGenre){
-        GameCollection tempCollect = new GameCollection();
+    public JList<String> filterGameGenre(String aGenre){
         JList<String> filterList;
         Game[] tempArray = new Game[numberOfGames];
         int counter = 0;
@@ -102,6 +101,29 @@ public class GameCollection {
         filterList = new JList<>(tempStoreModel);
         return filterList;
     }
+
+    public JList<String> filterGameRating(String aRating){
+        float aRatingFloat = Float.parseFloat(aRating);
+        JList<String> filterList;
+        Game[] tempArray = new Game[numberOfGames];
+        int counter = 0;
+        for (int i = 0; i < numberOfGames; i++) {
+            if (gameArray[i].getAverageRating() <= aRatingFloat) {
+                tempArray[counter] = gameArray[i];
+                counter++;
+            }
+        }
+        DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
+        for(int i = 0; i < counter; i++){
+            String tempItem = tempArray[i].getName() + ", " +
+                    tempArray[i].getGenre() + ", " +
+                    tempArray[i].getAverageRating();
+            tempStoreModel.addElement(tempItem);
+        }
+        filterList = new JList<>(tempStoreModel);
+        return filterList;
+    }
+
     public void loadGameData(String filename){
         // Declaring temp variables
         String gameID;
