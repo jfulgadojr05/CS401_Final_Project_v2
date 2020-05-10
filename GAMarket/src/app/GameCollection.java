@@ -91,15 +91,30 @@ public class GameCollection {
                 counter++;
             }
         }
-        DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
-        for(int i = 0; i < counter; i++){
-            String tempItem = tempArray[i].getName() + ", " +
-                    tempArray[i].getGenre() + ", " +
-                    tempArray[i].getAverageRating();
-            tempStoreModel.addElement(tempItem);
+
+        if (tempArray[0] == null){
+            JOptionPane.showMessageDialog(null, "No games found");
+            DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
+            for(int i = 0; i < numberOfGames; i++){
+                String tempItem = gameArray[i].getName() + ", " +
+                        gameArray[i].getGenre() + ", " +
+                        gameArray[i].getAverageRating();
+                tempStoreModel.addElement(tempItem);
+            }
+            filterList = new JList<>(tempStoreModel);
         }
-        filterList = new JList<>(tempStoreModel);
+        else {
+            DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
+            for(int i = 0; i < counter; i++){
+                String tempItem = tempArray[i].getName() + ", " +
+                        tempArray[i].getGenre() + ", " +
+                        tempArray[i].getAverageRating();
+                tempStoreModel.addElement(tempItem);
+            }
+            filterList = new JList<>(tempStoreModel);
+        }
         return filterList;
+
     }
 
     public JList<String> filterGameRating(String aRating){
