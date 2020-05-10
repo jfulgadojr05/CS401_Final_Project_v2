@@ -9,7 +9,6 @@ import java.util.StringTokenizer;
 public class Store extends JPanel {
 
     static JList<String> storeMenuItems;
-
     static JButton filterGameButton, searchGameButton, unfilterGameButton;
     static JScrollPane storeMenuScroll;
     static JTextField searchTextField;

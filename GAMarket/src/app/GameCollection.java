@@ -89,7 +89,6 @@ public class GameCollection {
                 counter++;
             }
         }
-
         if (tempArray[0] == null){
             JOptionPane.showMessageDialog(null, "No games found");
             DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
@@ -119,21 +118,48 @@ public class GameCollection {
         float aRatingFloat = Float.parseFloat(aRating);
         JList<String> filterList;
         Game[] tempArray = new Game[numberOfGames];
-        int counter = 0;
-        for (int i = 0; i < numberOfGames; i++) {
-            if (gameArray[i].getAverageRating() <= aRatingFloat) {
-                tempArray[counter] = gameArray[i];
-                counter++;
+
+        if (aRatingFloat > 10.0 || aRatingFloat < 0.0) {
+            JOptionPane.showMessageDialog(null, "Filter exceeds limit");
+            DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
+            for(int i = 0; i < numberOfGames; i++){
+                String tempItem = gameArray[i].getName() + ", " +
+                        gameArray[i].getGenre() + ", " +
+                        gameArray[i].getAverageRating();
+                tempStoreModel.addElement(tempItem);
+            }
+            filterList = new JList<>(tempStoreModel);
+        }
+        else {
+            int counter = 0;
+            for (int i = 0; i < numberOfGames; i++) {
+                if (gameArray[i].getAverageRating() <= aRatingFloat) {
+                    tempArray[counter] = gameArray[i];
+                    counter++;
+                }
+            }
+            if (tempArray[0] == null){
+                JOptionPane.showMessageDialog(null, "No games found");
+                DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
+                for(int i = 0; i < numberOfGames; i++){
+                    String tempItem = gameArray[i].getName() + ", " +
+                            gameArray[i].getGenre() + ", " +
+                            gameArray[i].getAverageRating();
+                    tempStoreModel.addElement(tempItem);
+                }
+                filterList = new JList<>(tempStoreModel);
+            }
+            else {
+                DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
+                for(int i = 0; i < counter; i++){
+                    String tempItem = tempArray[i].getName() + ", " +
+                            tempArray[i].getGenre() + ", " +
+                            tempArray[i].getAverageRating();
+                    tempStoreModel.addElement(tempItem);
+                }
+                filterList = new JList<>(tempStoreModel);
             }
         }
-        DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
-        for(int i = 0; i < counter; i++){
-            String tempItem = tempArray[i].getName() + ", " +
-                    tempArray[i].getGenre() + ", " +
-                    tempArray[i].getAverageRating();
-            tempStoreModel.addElement(tempItem);
-        }
-        filterList = new JList<>(tempStoreModel);
         return filterList;
     }
 
