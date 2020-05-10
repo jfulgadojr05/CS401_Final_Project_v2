@@ -8,7 +8,7 @@ import java.awt.event.*;
     ForumGUI class
 	CS 401 - Final Project
 	ForumGUI.java
-    By: Christian Magpantay
+    By: Christian Taro Magpantay
     Code/Book Reference -
     https://www.youtube.com/watch?v=CqWorn8dR_A&list=PLdmXYkPMWIgCocLY-B4SvpQshQWC7Nc0C&index=5
 */

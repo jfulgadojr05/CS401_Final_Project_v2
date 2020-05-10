@@ -16,16 +16,19 @@ import db.DBHelper;
 public class FriendsGUI extends JFrame {
 
     private static final long serialVersionUID = 1L;
+    
     Container c;
     JMenuBar menuBarChat;
     JMenu username;
     JMenu editFriends;
     JMenu settings;
     JMenuItem addFriend;
+    JMenuItem removeFriend;
     JTabbedPane chat;
     JList<String> online;
     JList<String> allFriends;
     ActionListener toAddFriend;
+    ActionListener toRemoveFriend;
     JMenuItem viewProfile;
     JMenuItem editProfile;
 
@@ -39,55 +42,112 @@ public class FriendsGUI extends JFrame {
         c.setLayout(new BoxLayout(c, BoxLayout.Y_AXIS));
         setContentPane(c);
         // create menu for chat
-        MenuBar(mydb);
-        ChatTabs(mydb);
+        createFriendsGUI(mydb);
         // settings
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    public void MenuBar(DBHelper mydb) {
+    public void createFriendsGUI(DBHelper mydb) throws SQLException {
         menuBarChat = new JMenuBar();
         // username menu
         username = new JMenu("chrisTaro");
         username.setMnemonic(KeyEvent.VK_A);
+        // menu items for user's name
         viewProfile = new JMenuItem("View Profile");
         editProfile = new JMenuItem("Edit Profile");
         username.add(viewProfile);
         username.add(editProfile);
         menuBarChat.add(username);
-        // friends
-        editFriends = new JMenu("Edit Friends");
+
+        // edit friends menu items
+        editFriends = new JMenu("Manage");
         editFriends.setMnemonic(KeyEvent.VK_A);
         editFriends.getAccessibleContext().setAccessibleDescription("Edit Friends");
         addFriend = new JMenuItem("Add Friend+");
+        removeFriend = new JMenuItem("Remove Friend-");
 
         toAddFriend = new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                String username = JOptionPane.showInputDialog("Enter Friends Username");
+                String username = 
+                        JOptionPane.showInputDialog("Enter Friends Username to Add");
                 if (username == null) {
                     return;
                 }
+
+                // remove empty pane to reset
+                chat.remove(online);
+                chat.remove(allFriends);
+                chat.revalidate();
+                chat.repaint();
+
                 try {
                     mydb.addFriend(username);
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
+
+                try {
+                    allFriends = mydb.getAllFriends();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                chat.addTab("Online", online);
+                chat.addTab("All", allFriends);
+                chat.revalidate();
+                chat.repaint();
+            }
+        };
+
+        toRemoveFriend = new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                String username = 
+                        JOptionPane.showInputDialog("Enter Friends Username to Delete");
+                if (username == null) {
+                    return;
+                }
+
+                // remove empty pane to reset
+                chat.remove(online);
+                chat.remove(allFriends);
+                chat.revalidate();
+                chat.repaint();
+
+                // read pane
+                try {
+                    mydb.deleteFriend(username);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                
+                try {
+                    allFriends = mydb.getAllFriends();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+
+                chat.addTab("Online", online);
+                chat.addTab("All", allFriends);
+                chat.revalidate();
+                chat.repaint();
             }
         };
 
         addFriend.addActionListener(toAddFriend);
+        removeFriend.addActionListener(toRemoveFriend);
         editFriends.add(addFriend);
-        
+        editFriends.add(removeFriend);
+
         menuBarChat.add(editFriends);
         setJMenuBar(menuBarChat);
-    }
 
-
-    public void ChatTabs(DBHelper mydb) throws SQLException {
+        // chat related
         chat = new JTabbedPane();
         online = new JList<String>(friendsMockListOnline);
         allFriends = mydb.getAllFriends();
 
+        // responds when user double clicks username
+        // so that they can instantly message that user
+        // that is online
         online.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
@@ -103,8 +163,11 @@ public class FriendsGUI extends JFrame {
             }
         });
 
-        chat.addTab("Online", null, online, "Friends that are online");
-        chat.addTab("All", null, allFriends, "All Friends");
+        chat.addTab("Online", online);
+        chat.addTab("All", allFriends);
         getContentPane().add(chat, BorderLayout.CENTER);
     }
+
+
+
 }

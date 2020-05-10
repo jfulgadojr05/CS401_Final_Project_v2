@@ -4,38 +4,52 @@ import java.sql.*;
 import javax.swing.*;
 
 
-/* Code/referenced
-    https://www.sqlitetutorial.net/sqlite-java/create-database/
+/* 
+    DBHelper class
+	CS 401 - Final Project
+	DBHelper.java
+    By: Christian Taro Magpantay
+    Code/Book Reference -
+    https://www.sqlitetutorial.net/sqlite-java/
     http://borg.csueastbay.edu/~bhecker/CS-453/Examples/Database%20Example.txt
  */
 
-/**
- *
- * @author sqlitetutorial.net
- */
 public class DBHelper {
+
+    // connection string
     String url = "jdbc:sqlite:C:\\Users\\chris\\CS401_GAMarket_Final\\GAMarket\\src\\db\\GAMarket.db";
 
+    // creates the GAMarket.db
     public void createNewDatabase() throws SQLException {
         DriverManager.getConnection(url);
-        System.out.println("A new database has been created.");
+        System.out.println("Database connected");
     }
 
-    public void createFriendsTable() {
-        // SQL statement for creating a new table
-        String sql = "CREATE TABLE IF NOT EXISTS friends ("
-                + "	id integer PRIMARY KEY,"
-                + "	username text NOT NULL"
+    // add any new tables needed in this function
+    public void createAllTables() throws SQLException {
+        Connection conn = DriverManager.getConnection(url);
+        Statement stmt = conn.createStatement();
+
+        // SQL statement for creating any new table
+        String sql = "create table if not exists friends ("
+                + "	id integer primary key," // needed
+                + "	username text not null"
                 + ")";
-        try (Connection conn = DriverManager.getConnection(url);
-                Statement stmt = conn.createStatement()) {
-            // create a new table
-            stmt.execute(sql);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
+
+        stmt.execute(sql);
+
+        // this creates threads table
+        sql = "create table if not exists threads ("
+                + "	id integer primary key,"
+                + "	username text not null"
+                + ")";
+        stmt.execute(sql);
+
+        // create all other tables here
+
     }
 
+    // all functions below are for 'friends' table
     public void addFriend(String username) throws SQLException  {
         String sql = "insert into friends(username) values(?)";
         Connection conn = DriverManager.getConnection(url);
@@ -43,10 +57,8 @@ public class DBHelper {
         pstmt.setString(1, username);
         pstmt.executeUpdate();
     }
-
     public void updateFriend(int id, String username) throws SQLException {
-        String sql = "update friends set username = ? , "
-                + "where id = ?";
+        String sql = "update friends set username = ? , where id = ?";
         Connection conn = DriverManager.getConnection(url);
         PreparedStatement pstmt = conn.prepareStatement(sql);
         // set the corresponding param
@@ -55,24 +67,19 @@ public class DBHelper {
         // update 
         pstmt.executeUpdate();
     }
-
-    public void deleteFriend(int id) throws SQLException {
-        String sql = "delete from friends where id = ?";
-
+    public void deleteFriend(String username) throws SQLException {
+        String sql = "delete from friends where username = ?";
         Connection conn = DriverManager.getConnection(url);
         PreparedStatement pstmt = conn.prepareStatement(sql);
             // set the corresponding param
-        pstmt.setInt(1, id);
+        pstmt.setString(1, username);
             // execute the delete statement
         pstmt.executeUpdate();
     }
-
     public JList<String> getAllFriends() throws SQLException {
         DefaultListModel<String> model = new DefaultListModel<>();
         JList<String> j_list = new JList<String>(model);
-
-        String sql = "select id, username from friends";
-        
+        String sql = "select id, username from friends order by username asc";
         Connection conn = DriverManager.getConnection(url);
         Statement stmt  = conn.createStatement();
         ResultSet rs    = stmt.executeQuery(sql);
@@ -82,5 +89,23 @@ public class DBHelper {
         }
         return j_list;
     }
+
+
+    public JList<String> getAllThreads() throws SQLException {
+        DefaultListModel<String> model = new DefaultListModel<>();
+        JList<String> j_list = new JList<String>(model);
+        String sql = "select id, username from friends" 
+                        + "order by first asc";
+        Connection conn = DriverManager.getConnection(url);
+        Statement stmt  = conn.createStatement();
+        ResultSet rs    = stmt.executeQuery(sql);
+            // loop through the result set
+        while (rs.next()) {
+            model.addElement(rs.getString("username"));
+        }
+        return j_list;
+    }
+
+    // add all other functions needed for db
 
 }

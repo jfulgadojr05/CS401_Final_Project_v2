@@ -32,12 +32,12 @@ public class MessageGUI extends JPanel {
 
     public MessageGUI() {
         messagePanel.setLayout(new BoxLayout(messagePanel, BoxLayout.Y_AXIS));
-        table = new JTable(new JTableButtonModel());
         scroll = new JScrollPane(table);
+
         tableRenderer = table.getDefaultRenderer(JButton.class);
         table.getColumn("Messages").setCellRenderer(tableRenderer);
-        table.setDefaultRenderer(JButton.class, new JTableButtonRenderer(tableRenderer));
         table.setBackground(new Color(255,255,255));
+
 
         chatBubble.setHorizontalAlignment(SwingConstants.RIGHT);
         chatBubble.setForeground(Color.WHITE);
@@ -81,42 +81,4 @@ public class MessageGUI extends JPanel {
         this.setVisible(true);
     }
     
-}
-
-    class JTableButtonRenderer implements TableCellRenderer {
-        private TableCellRenderer defaultRenderer;
-        public JTableButtonRenderer(TableCellRenderer renderer) {
-        defaultRenderer = renderer;
-        }
-        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
-        if(value instanceof Component)
-            return (Component)value;
-            return defaultRenderer.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
-        }
-    }
-
-    class JTableButtonModel extends AbstractTableModel {
-        /**
-         *
-         */
-        private static final long serialVersionUID = 1L;
-        private Object[][] rows = {{}};
-        private String[] columns = {"Messages"};
-        public String getColumnName(int column) {
-            return columns[column];
-        }
-
-
-    @Override
-    public int getRowCount() {
-        return rows.length;
-    }
-    @Override
-    public int getColumnCount() {
-        return columns.length;
-    }
-    @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        return rows[rowIndex][columnIndex];
-    }
 }

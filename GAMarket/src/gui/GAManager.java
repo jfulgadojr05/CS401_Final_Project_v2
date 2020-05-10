@@ -11,10 +11,10 @@ import java.sql.SQLException;
 
 /* GAManager class
 	CS 401 - Final Project
-	FriendsGUI.java
-  By: Christian Magpantay
-  Code/Book Reference -
-  https://www.youtube.com/watch?v=CqWorn8dR_A&list=PLdmXYkPMWIgCocLY-B4SvpQshQWC7Nc0C&index=5
+    FriendsGUI.java
+    By: Christian Taro Magpantay
+    Code/Book Reference -
+    https://www.youtube.com/watch?v=CqWorn8dR_A&list=PLdmXYkPMWIgCocLY-B4SvpQshQWC7Nc0C&index=5
 */
 
 public class GAManager extends JFrame {
@@ -142,7 +142,7 @@ public class GAManager extends JFrame {
     public static void main(String args[]) throws SQLException {
         DBHelper dbh = new DBHelper();
         dbh.createNewDatabase();
-        dbh.createFriendsTable();
+        dbh.createAllTables();
         GAManager gm = new GAManager(dbh);
         gm.setVisible(true);
     }
