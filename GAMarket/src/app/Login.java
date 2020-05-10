@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class Login {
     private String username;
     private String password;
+    private String accountType;
 
     private static boolean success;
     private static File accounts = new File("accountsystem.txt");
@@ -31,10 +32,11 @@ public class Login {
         String password = "";
         try {
             Scanner read = new Scanner(accounts);
-            read.useDelimiter(":|\n");
+            read.useDelimiter(":");
             while (read.hasNext()) {
                 String u = read.next();
                 String p = read.next();
+                String t = read.nextLine();
                 if (u.trim().equals(username)) {
                     password = p;
                     break;
@@ -56,13 +58,19 @@ public class Login {
         }
     }
 
-    public static void setAccountType(String accountType) {
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
         try {
-            Files.write(Paths.get("accountsystem.txt"), (":" + accountType).getBytes(), StandardOpenOption.APPEND);
+            Files.write(Paths.get("accountsystem.txt"), (":" + this.accountType).getBytes(), StandardOpenOption.APPEND);
         } catch (IOException e) {
             //
         }
     }
+
 
     public static boolean isDuplicate(String username) {
         boolean duplicate = false;
@@ -103,12 +111,20 @@ public class Login {
         return success;
     }
 
-    public static String sendRegistration(String registerUser, String registerPass) {
+    public static String sendRegistration(String registerUser, String registerPass, String registerType) {
         Login log = new Login();
-
-            log.setUsername(registerUser);
-            log.setPassword(registerPass);
-            return "Account creation successful. Please login.";
+        log.setUsername(registerUser);
+        log.setPassword(registerPass);
+        if(registerType.equals("player")) {
+            log.setAccountType("player");
+        } else {
+            log.setAccountType("developer");
+        }
+        return "Account creation successful with the following fields:\n" +
+                "Username: " + registerUser +
+                "\nPassword: " + registerPass +
+                "\nAccount Type: " + registerType +
+                "\nPlease login to your account.";
     }
 
     public static void loginRecovery(String username, String password) {

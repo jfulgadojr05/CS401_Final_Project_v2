@@ -75,7 +75,6 @@ public class LoginGUI extends JFrame {
                         registerPass = JOptionPane.showInputDialog("Invalid password. Please enter your desired password:");
                         confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
                     }
-                    String result = app.Login.sendRegistration(registerUser, confirmPass);
 
                     // prompt player or dev
                     String[] command = {"Player", "Developer"};
@@ -91,16 +90,17 @@ public class LoginGUI extends JFrame {
                                 command[command.length - 1]);
                         switch (choice) {
                             case 0:
-                                app.Login.setAccountType("player");
+                                String result1 = app.Login.sendRegistration(registerUser, confirmPass, "player" );
+                                JOptionPane.showMessageDialog(null, result1);
                                 break;
                             case 1:
-                                app.Login.setAccountType("developer");
+                                String result2 = app.Login.sendRegistration(registerUser, confirmPass, "developer");
+                                JOptionPane.showMessageDialog(null, result2);
                                 break;
                             default:
+                                break;
                         }
-                    } while (choice != command.length - 1);
-
-                    JOptionPane.showMessageDialog(null, result);
+                    } while (choice > 1);
                 }
             }
         });
