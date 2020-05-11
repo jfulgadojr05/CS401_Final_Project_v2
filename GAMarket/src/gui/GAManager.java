@@ -138,12 +138,12 @@ public class GAManager extends JFrame {
         }
     }
 
-    // run main here
-    public static void main(String args[]) throws SQLException {
-        DBHelper dbh = new DBHelper();
-        dbh.createNewDatabase();
-        dbh.createAllTables();
-        GAManager gm = new GAManager(dbh);
-        gm.setVisible(true);
-    }
+//    // run main here
+//    public static void main(String args[]) throws SQLException {
+//        DBHelper dbh = new DBHelper();
+//        dbh.createNewDatabase();
+//        dbh.createAllTables();
+//        GAManager gm = new GAManager(dbh);
+//        gm.setVisible(true);
+//    }
 }
