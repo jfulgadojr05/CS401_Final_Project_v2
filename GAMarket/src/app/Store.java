@@ -1,9 +1,12 @@
 package app;
 
+import db.DBHelper;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
 import java.util.StringTokenizer;
 
 public class Store extends JPanel {
@@ -15,7 +18,7 @@ public class Store extends JPanel {
 
 
 
-    public Store(GameCollection storeCollection){
+    public Store(GameCollection storeCollection, DBHelper dbh) throws SQLException {
 
         JPanel menuPanel = new JPanel();
         JLabel gameItemLabel = new JLabel("List of Games");
@@ -30,12 +33,14 @@ public class Store extends JPanel {
 
         DefaultListModel<String> storeModel = new DefaultListModel<>();
         for(int i = 0; i < storeCollection.getNumberOfGames(); i++){
-            String tempItem = storeCollection.getGameArray()[i].getName() + ", " +
+            String gameIDstr = Integer.toString(storeCollection.getGameArray()[i].getId());
+            String tempItem = gameIDstr + "," +
+                    storeCollection.getGameArray()[i].getName() + ", " +
                     storeCollection.getGameArray()[i].getGenre() + ", " +
                     storeCollection.getGameArray()[i].getAverageRating();
             storeModel.addElement(tempItem);
         }
-        storeMenuItems = new JList<>(storeModel);
+        storeMenuItems = dbh.getAllGames();
         storeMenuItems.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -43,29 +48,35 @@ public class Store extends JPanel {
                     Game tempGame = new Game();
                     String selectedItemStr = storeMenuItems.getSelectedValue();
                     StringTokenizer st = new StringTokenizer(selectedItemStr, ",");
-                    String listGameName = st.nextToken();
-                    for (int i = 0; i < storeCollection.getNumberOfGames(); i++){
-                        if (storeCollection.getGameArray()[i].getName().equals(listGameName)){
-                            tempGame = storeCollection.getGameArray()[i];
-                            break;
+                    String listGameID = st.nextToken();
+//                    int listGameIDInt = Integer.parseInt(listGameID);
+//                    for (int i = 0; i < storeCollection.getNumberOfGames(); i++) {
+//                        if (storeCollection.getGameArray()[i].getId() == listGameIDInt) {
+//                            tempGame = storeCollection.getGameArray()[i];
+//                            break;
+//                        }
+//                    }
+                    try {
+                        tempGame = dbh.getGameProfile(listGameID);
+                        String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
+                        int gameChoice;
+                        gameChoice = JOptionPane.showOptionDialog(null,
+                                tempGame.toString(),
+                                tempGame.getName(),
+                                JOptionPane.YES_NO_CANCEL_OPTION,
+                                JOptionPane.INFORMATION_MESSAGE,
+                                null,
+                                gameCommands,
+                                gameCommands[gameCommands.length - 1]);
+                        switch(gameChoice) {
+                            case 0: tempGame.initializeGame(); break;
+                            case 1: System.out.println("Purchase Game"); break;
+                            case 2: System.out.println("Show Forum"); break;
+                            case 3: return;
+                            default: // do nothing
                         }
-                    }
-                    String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
-                    int gameChoice;
-                    gameChoice = JOptionPane.showOptionDialog(null,
-                            tempGame.toString(),
-                            tempGame.getName(),
-                            JOptionPane.YES_NO_CANCEL_OPTION,
-                            JOptionPane.INFORMATION_MESSAGE,
-                            null,
-                            gameCommands,
-                            gameCommands[gameCommands.length - 1]);
-                    switch(gameChoice) {
-                        case 0: tempGame.initializeGame(); break;
-                        case 1: System.out.println("Purchase Game"); break;
-                        case 2: System.out.println("Show Forum"); break;
-                        case 3: return;
-                        default: // do nothing
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
                     }
                 }
             }

@@ -5,7 +5,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.Scanner;
+import java.util.*;
 
 public class Login {
     private String username;
@@ -96,7 +96,7 @@ public class Login {
         // run through each line of text to see if account and password exists
         try {
             Scanner read = new Scanner(accounts);
-            read.useDelimiter(":|\n");
+            read.useDelimiter("[:\n]");
             while (read.hasNext()) {
                 String u = read.next();
                 String p = read.next();

@@ -34,7 +34,6 @@ public class GAManager extends JFrame {
     JPanel configPane;
     JTextArea question;
     ActionListener openFriendsList;
-    private GameCollection storeGC;
     JList<String> storeList;
     JList<String> gamesList;
     JList<String> libraryList;
@@ -50,7 +49,7 @@ public class GAManager extends JFrame {
      * GAManager constructor set title set size set close operation create menubar
      * GAMarket menu friends menu settings menu create tabs store library forum
      */
-    public GAManager(DBHelper mydb) {
+    public GAManager(DBHelper mydb) throws SQLException {
 
         super("GAMarket"); // app title
         setSize(800, 700); // defalut size
@@ -102,9 +101,9 @@ public class GAManager extends JFrame {
 
         // for store tab
         // Loading data
-        storeGC = new GameCollection();
+        GameCollection storeGC = new GameCollection();
         storeGC.loadGameData("gameData.txt");
-        storePane = new Store(storeGC);
+        storePane = new Store(storeGC, mydb);
         config.addTab("Store", null, storePane, "Choose your games");
 
         // for library tab
@@ -138,12 +137,12 @@ public class GAManager extends JFrame {
         }
     }
 
-//    // run main here
-//    public static void main(String args[]) throws SQLException {
-//        DBHelper dbh = new DBHelper();
-//        dbh.createNewDatabase();
-//        dbh.createAllTables();
-//        GAManager gm = new GAManager(dbh);
-//        gm.setVisible(true);
-//    }
+    //run store
+    public static void main(String args[]) throws SQLException {
+        DBHelper dbh = new DBHelper();
+        dbh.createNewDatabase();
+        dbh.createAllTables();
+        GAManager gm = new GAManager(dbh);
+        gm.setVisible(true);
+    }
 }

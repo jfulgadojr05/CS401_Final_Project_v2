@@ -109,6 +109,8 @@ public class Game {
         return averageRating;
     }
 
+
+
     public String toString(){
         String gameIdString = Integer.toString(id);
         String averageRatingString = Float.toString(averageRating);
@@ -142,5 +144,6 @@ public class Game {
     public Thread createNewThread (String topic, String originalPost){
         return null; // TODO finish this
     }
+
 
 }

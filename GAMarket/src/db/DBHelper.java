@@ -1,5 +1,7 @@
 package db;
 
+import app.Game;
+
 import javax.swing.*;
 import java.sql.*;
 
@@ -55,6 +57,9 @@ public class DBHelper {
                 + "game_rating double,"
                 + "fk_collection int"
                 + ")";
+
+        stmt.execute(sql);
+
 
     }
 
@@ -113,6 +118,42 @@ public class DBHelper {
             model.addElement(rs.getString("username"));
         }
         return j_list;
+    }
+
+    public JList<String> getAllGames() throws SQLException{
+        DefaultListModel<String> storeModel = new DefaultListModel<>();
+        JList<String> storeMenuItems;
+        String sql = "select game_id, game_name, game_genre, game_rating from game";
+        Connection conn = DriverManager.getConnection(url);
+        Statement stmt  = conn.createStatement();
+        ResultSet rs    = stmt.executeQuery(sql);
+        while (rs.next()){
+            String tempItem = rs.getString("game_id") + "," +
+                    rs.getString("game_name") + ", " +
+                    rs.getString("game_genre") + ", " +
+                    rs.getString("game_rating");
+            storeModel.addElement(tempItem);
+        }
+        storeMenuItems = new JList<>(storeModel);
+        return storeMenuItems;
+    }
+
+    public Game getGameProfile(String gameID) throws SQLException {
+        Game tempGame = new Game();
+        String sql = "select game_id, game_name, game_genre, game_rating from game where game_id = ?";
+        Connection conn = DriverManager.getConnection(url);
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1,gameID);
+        ResultSet rs = pstmt.executeQuery();
+        while (rs.next()){
+            tempGame.setId(Integer.parseInt(rs.getString(1)));
+            tempGame.setGameName(rs.getString(2));
+            tempGame.setGenre(rs.getString(3));
+            tempGame.setRating(Float.parseFloat(rs.getString(4)));
+        }
+        rs.close();
+
+        return tempGame;
     }
 
     // add all other functions needed for db
