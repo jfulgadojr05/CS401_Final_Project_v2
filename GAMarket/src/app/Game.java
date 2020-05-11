@@ -12,7 +12,7 @@ public class Game {
     private String developerName;
     private float averageRating; // TODO make not of change in uml
 
-    
+
     //public initializeGame(gameName): file
 
     // Setters
