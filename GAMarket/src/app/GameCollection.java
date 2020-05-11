@@ -62,11 +62,13 @@ public class GameCollection {
         }
     }
 
-    public String searchForGame(String gameTitle) {
+    public String searchForGame(String gameTitle, DBHelper dbh) throws SQLException {
         String temp = null;
-        for(int i = 0; i < numberOfGames; i++){
-            if (gameArray[i].getName().toUpperCase().equals(gameTitle.toUpperCase())){
-                temp = gameArray[i].toString();
+        Game[] tempGameArray = dbh.getAllGameObjects();
+
+        for (Game game : tempGameArray) {
+            if (game.getName().toUpperCase().equals(gameTitle.toUpperCase())) {
+                temp = Integer.toString(game.getId());
                 break;
             }
         }

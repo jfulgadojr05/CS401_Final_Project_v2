@@ -214,37 +214,37 @@ public class Store extends JPanel {
         searchGameButton.addActionListener(e -> {
             String search = e.getActionCommand();
             if (search.equals("Search Game")) {
-                String result = storeCollection.searchForGame(searchTextField.getText());
-                if (result.equals("Not found")){
-                    JOptionPane.showMessageDialog(null, "No game found");
-                }
-                else {
-                    Game displayGame = new Game();
-                    for (int i = 0; i < storeCollection.getNumberOfGames(); i++){
-                        if (storeCollection.getGameArray()[i].toString().equals(result)){
-                            displayGame = storeCollection.getGameArray()[i];
-                            break;
+                String result = null;
+                try {
+                    result = storeCollection.searchForGame(searchTextField.getText(), dbh);
+                    if (result.equals("Not found")){
+                        JOptionPane.showMessageDialog(null, "No game found");
+                    }
+                    else {
+                        Game displayGame = dbh.getGameProfile(result);
+                        String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
+                        int gameChoice;
+                        gameChoice = JOptionPane.showOptionDialog(null,
+                                displayGame.toString(),
+                                displayGame.getName(),
+                                JOptionPane.YES_NO_CANCEL_OPTION,
+                                JOptionPane.INFORMATION_MESSAGE,
+                                null,
+                                gameCommands,
+                                gameCommands[gameCommands.length - 1]);
+                        switch(gameChoice) {
+                            case 0: System.out.println("Play Game"); break;
+                            case 1: System.out.println("Purchase Game"); break;
+                            case 2: System.out.println("Show Forum"); break;
+                            case 3: return;
+                            default: // do nothing
                         }
                     }
-                    String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
-                    int gameChoice;
-                    gameChoice = JOptionPane.showOptionDialog(null,
-                            displayGame.toString(),
-                            displayGame.getName(),
-                            JOptionPane.YES_NO_CANCEL_OPTION,
-                            JOptionPane.INFORMATION_MESSAGE,
-                            null,
-                            gameCommands,
-                            gameCommands[gameCommands.length - 1]);
-                    switch(gameChoice) {
-                        case 0: System.out.println("Play Game"); break;
-                        case 1: System.out.println("Purchase Game"); break;
-                        case 2: System.out.println("Show Forum"); break;
-                        case 3: return;
-                        default: // do nothing
-                    }
+                    searchTextField.setText("");
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
                 }
-                searchTextField.setText("");
+
             }
         });
 

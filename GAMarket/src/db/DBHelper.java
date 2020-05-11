@@ -138,6 +138,35 @@ public class DBHelper {
         return storeMenuItems;
     }
 
+    public Game[] getAllGameObjects() throws SQLException {
+        DefaultListModel<String> storeModel = new DefaultListModel<>();
+        JList<String> storeMenuItems;
+        int counter = 0;
+        Game[] tempArray;
+        String sql = "select game_id, game_name, game_genre, game_rating from game";
+        Connection conn = DriverManager.getConnection(url);
+        Statement stmt  = conn.createStatement();
+        ResultSet rs    = stmt.executeQuery(sql);
+        while (rs.next()){
+            counter++;
+        }
+
+        tempArray = new Game[counter];
+//        Game temp = new Game();
+        counter = 0;
+        rs = stmt.executeQuery(sql);
+        while(rs.next()){
+            Game temp = new Game();
+            temp.setId(Integer.parseInt(rs.getString("game_id")));
+            temp.setGameName(rs.getString("game_name"));
+            temp.setGenre(rs.getString("game_genre"));
+            temp.setRating(Float.parseFloat(rs.getString("game_rating")));
+            tempArray[counter] = temp;
+            counter++;
+        }
+        return tempArray;
+    }
+
     public Game getGameProfile(String gameID) throws SQLException {
         Game tempGame = new Game();
         String sql = "select game_id, game_name, game_genre, game_rating from game where game_id = ?";
