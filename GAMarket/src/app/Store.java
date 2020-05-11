@@ -97,12 +97,13 @@ public class Store extends JPanel {
                     JList<String> filterList = null;
                     try {
                         filterList = storeCollection.filterGameGenre(genreSelect, dbh);
+                        JList<String> finalFilterList1 = filterList;
                         filterList.addMouseListener(new MouseAdapter() {
                             @Override
                             public void mouseClicked(MouseEvent e) {
                                 if (e.getClickCount() == 2) {
                                     Game tempGame = new Game();
-                                    String selectedItemStr = storeMenuItems.getSelectedValue();
+                                    String selectedItemStr = finalFilterList1.getSelectedValue();
                                     StringTokenizer st = new StringTokenizer(selectedItemStr, ",");
                                     String listGameID = st.nextToken();
                                     try {
@@ -145,12 +146,13 @@ public class Store extends JPanel {
                     String ratingSelect = JOptionPane.showInputDialog(null,"Enter rating to filter");
                     try {
                         filterList = storeCollection.filterGameRating(ratingSelect, dbh);
+                        JList<String> finalFilterList = filterList;
                         filterList.addMouseListener(new MouseAdapter() {
                             @Override
                             public void mouseClicked(MouseEvent e) {
                                 if (e.getClickCount() == 2) {
                                     Game tempGame = new Game();
-                                    String selectedItemStr = storeMenuItems.getSelectedValue();
+                                    String selectedItemStr = finalFilterList.getSelectedValue();
                                     StringTokenizer st = new StringTokenizer(selectedItemStr, ",");
                                     String listGameID = st.nextToken();
                                     try {

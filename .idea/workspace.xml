@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e360fdca-503d-462f-9e87-384157fade45.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e360fdca-503d-462f-9e87-384157fade45.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3493161d-461e-4fe5-9bcc-08950db9c1f0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9551e55d-ed44-42df-8c6d-6deeae78bddd.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9213940-e47a-4ec0-9ce2-bccad3f70c96.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +168,8 @@
       <workItem from="1588903760652" duration="301000" />
       <workItem from="1588904078923" duration="7577000" />
       <workItem from="1589065885236" duration="7991000" />
-      <workItem from="1589091674472" duration="17184000" />
+      <workItem from="1589091674472" duration="17353000" />
+      <workItem from="1589209926945" duration="248000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -369,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589177876896</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="change filter to use jdbc connection">
+      <created>1589180774816</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1589180774816</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +394,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Extend JPanel to StoreGUI" />
     <MESSAGE value="Repositioning GUI and added Game/Store/Message Class" />
     <MESSAGE value="Adding Store functions" />
     <MESSAGE value="Created Load and Add function to game collection." />
@@ -414,7 +418,8 @@
     <MESSAGE value="Added accountsystem.txt" />
     <MESSAGE value="Created main game runner class" />
     <MESSAGE value="implemented db connection for game collection" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented db connection for game collection" />
+    <MESSAGE value="change filter to use jdbc connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="change filter to use jdbc connection" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="101" key="#GAManager" timestamp="1587671854647">
@@ -443,10 +448,10 @@
     </state>
     <state x="673" y="338" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587595215856" />
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589177874052">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589180770012">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589177874052" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180770012" />
     <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
     <state x="112" y="48" key="DiffContextDialog" timestamp="1587621001174">
       <screen x="0" y="0" width="1600" height="860" />
@@ -457,50 +462,50 @@
     </state>
     <state x="555" y="218" key="FileChooserDialogImpl/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589152124380" />
     <state x="666" y="266" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498875269" />
-    <state width="310" height="280" key="Git.Branch.Popup" timestamp="1589145464566">
+    <state width="312" height="282" key="Git.Branch.Popup" timestamp="1589180776371">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="310" height="280" key="Git.Branch.Popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589145464566" />
-    <state width="1557" height="233" key="GridCell.Tab.0.bottom" timestamp="1589180611298">
+    <state width="312" height="282" key="Git.Branch.Popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180776371" />
+    <state width="1557" height="275" key="GridCell.Tab.0.bottom" timestamp="1589210241210">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180611298" />
+    <state width="1557" height="275" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589210241210" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="233" key="GridCell.Tab.0.center" timestamp="1589180611297">
+    <state width="1557" height="275" key="GridCell.Tab.0.center" timestamp="1589210241209">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180611297" />
+    <state width="1557" height="275" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589210241209" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="233" key="GridCell.Tab.0.left" timestamp="1589180611297">
+    <state width="1557" height="275" key="GridCell.Tab.0.left" timestamp="1589210241209">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180611297" />
+    <state width="1557" height="275" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589210241209" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="233" key="GridCell.Tab.0.right" timestamp="1589180611298">
+    <state width="1557" height="275" key="GridCell.Tab.0.right" timestamp="1589210241210">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180611298" />
+    <state width="1557" height="275" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589210241210" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1589180349438">
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1589210253766">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180349438" />
-    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1589180349438">
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589210253766" />
+    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1589210253766">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180349438" />
-    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1589180349438">
+    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589210253766" />
+    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1589210253766">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180349438" />
-    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1589180349438">
+    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589210253766" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1589210253766">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180349438" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589210253766" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1589149519111">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -523,10 +528,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="390" y="78" key="VCS.ChangeListViewerDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768014242" />
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1589145468472">
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1589180779853">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589145468472" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180779853" />
     <state x="462" y="171" width="632" height="469" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1589178460286">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -578,6 +583,11 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/GAMarket/src/app/Store.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
