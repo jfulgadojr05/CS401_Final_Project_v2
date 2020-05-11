@@ -49,13 +49,6 @@ public class Store extends JPanel {
                     String selectedItemStr = storeMenuItems.getSelectedValue();
                     StringTokenizer st = new StringTokenizer(selectedItemStr, ",");
                     String listGameID = st.nextToken();
-//                    int listGameIDInt = Integer.parseInt(listGameID);
-//                    for (int i = 0; i < storeCollection.getNumberOfGames(); i++) {
-//                        if (storeCollection.getGameArray()[i].getId() == listGameIDInt) {
-//                            tempGame = storeCollection.getGameArray()[i];
-//                            break;
-//                        }
-//                    }
                     try {
                         tempGame = dbh.getGameProfile(listGameID);
                         String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
@@ -101,25 +94,107 @@ public class Store extends JPanel {
                 case 0:
                     menuPanel.removeAll();
                     String genreSelect = JOptionPane.showInputDialog(null,"Enter genre to filter");
-                    JList<String> filterList = storeCollection.filterGameGenre(genreSelect);
-                    filterList.setFont(new Font("Verdana", Font.PLAIN, 12));
-                    JScrollPane filterScroll = new JScrollPane(filterList);
-                    menuPanel.setLayout(new BorderLayout());
-                    menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
-                    menuPanel.add(filterScroll, BorderLayout.CENTER);
+                    JList<String> filterList = null;
+                    try {
+                        filterList = storeCollection.filterGameGenre(genreSelect, dbh);
+                        filterList.addMouseListener(new MouseAdapter() {
+                            @Override
+                            public void mouseClicked(MouseEvent e) {
+                                if (e.getClickCount() == 2) {
+                                    Game tempGame = new Game();
+                                    String selectedItemStr = storeMenuItems.getSelectedValue();
+                                    StringTokenizer st = new StringTokenizer(selectedItemStr, ",");
+                                    String listGameID = st.nextToken();
+                                    try {
+                                        tempGame = dbh.getGameProfile(listGameID);
+                                        String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
+                                        int gameChoice;
+                                        gameChoice = JOptionPane.showOptionDialog(null,
+                                                tempGame.toString(),
+                                                tempGame.getName(),
+                                                JOptionPane.YES_NO_CANCEL_OPTION,
+                                                JOptionPane.INFORMATION_MESSAGE,
+                                                null,
+                                                gameCommands,
+                                                gameCommands[gameCommands.length - 1]);
+                                        switch(gameChoice) {
+                                            case 0: tempGame.initializeGame(); break;
+                                            case 1: System.out.println("Purchase Game"); break;
+                                            case 2: System.out.println("Show Forum"); break;
+                                            case 3: return;
+                                            default: // do nothing
+                                        }
+                                    } catch (SQLException throwables) {
+                                        throwables.printStackTrace();
+                                    }
+                                }
+                            }
+                        });
+
+                        filterList.setFont(new Font("Verdana", Font.PLAIN, 12));
+                        JScrollPane filterScroll = new JScrollPane(filterList);
+                        menuPanel.setLayout(new BorderLayout());
+                        menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
+                        menuPanel.add(filterScroll, BorderLayout.CENTER);
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
                     break;
                 case 1:
                     menuPanel.removeAll();
                     String ratingSelect = JOptionPane.showInputDialog(null,"Enter rating to filter");
-                    filterList = storeCollection.filterGameRating(ratingSelect);
-                    filterList.setFont(new Font("Verdana", Font.PLAIN, 12));
-                    filterScroll = new JScrollPane(filterList);
-                    menuPanel.setLayout(new BorderLayout());
-                    menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
-                    menuPanel.add(filterScroll, BorderLayout.CENTER);
+                    try {
+                        filterList = storeCollection.filterGameRating(ratingSelect, dbh);
+                        filterList.addMouseListener(new MouseAdapter() {
+                            @Override
+                            public void mouseClicked(MouseEvent e) {
+                                if (e.getClickCount() == 2) {
+                                    Game tempGame = new Game();
+                                    String selectedItemStr = storeMenuItems.getSelectedValue();
+                                    StringTokenizer st = new StringTokenizer(selectedItemStr, ",");
+                                    String listGameID = st.nextToken();
+                                    try {
+                                        tempGame = dbh.getGameProfile(listGameID);
+                                        String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
+                                        int gameChoice;
+                                        gameChoice = JOptionPane.showOptionDialog(null,
+                                                tempGame.toString(),
+                                                tempGame.getName(),
+                                                JOptionPane.YES_NO_CANCEL_OPTION,
+                                                JOptionPane.INFORMATION_MESSAGE,
+                                                null,
+                                                gameCommands,
+                                                gameCommands[gameCommands.length - 1]);
+                                        switch(gameChoice) {
+                                            case 0: tempGame.initializeGame(); break;
+                                            case 1: System.out.println("Purchase Game"); break;
+                                            case 2: System.out.println("Show Forum"); break;
+                                            case 3: return;
+                                            default: // do nothing
+                                        }
+                                    } catch (SQLException throwables) {
+                                        throwables.printStackTrace();
+                                    }
+                                }
+                            }
+                        });
+                        filterList.setFont(new Font("Verdana", Font.PLAIN, 12));
+                        JScrollPane filterScroll = new JScrollPane(filterList);
+                        filterScroll = new JScrollPane(filterList);
+                        menuPanel.setLayout(new BorderLayout());
+                        menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
+                        menuPanel.add(filterScroll, BorderLayout.CENTER);
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
                     break;
                 case 2:
-                    break;
+                    menuPanel.removeAll();
+                    menuPanel.setLayout(new BorderLayout());
+                    menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
+                    menuPanel.add(storeMenuScroll, BorderLayout.CENTER);
+                    menuPanel.revalidate();
+                    menuPanel.repaint();
                 default: //do nothing
             }
             menuPanel.revalidate();

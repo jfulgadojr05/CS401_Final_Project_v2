@@ -156,6 +156,44 @@ public class DBHelper {
         return tempGame;
     }
 
+    public JList<String> getFilterGameGenre(String aGenre) throws SQLException{
+        DefaultListModel<String> storeModel = new DefaultListModel<>();
+        JList<String> filterItems;
+        String sql = "select game_id, game_name, game_genre, game_rating from game where game_genre = ?";
+        Connection conn = DriverManager.getConnection(url);
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1,aGenre);
+        ResultSet rs = pstmt.executeQuery();
+        while (rs.next()){
+            String tempItem = rs.getString("game_id") + "," +
+                    rs.getString("game_name") + ", " +
+                    rs.getString("game_genre") + ", " +
+                    rs.getString("game_rating");
+            storeModel.addElement(tempItem);
+        }
+        filterItems = new JList<>(storeModel);
+        return filterItems;
+    }
+
+    public JList<String> getFilterGameRating(String aRating) throws SQLException {
+        DefaultListModel<String> storeModel = new DefaultListModel<>();
+        JList<String> filterItems;
+        String sql = "select game_id, game_name, game_genre, game_rating from game where game_rating = ?";
+        Connection conn = DriverManager.getConnection(url);
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1,aRating);
+        ResultSet rs = pstmt.executeQuery();
+        while (rs.next()){
+            String tempItem = rs.getString("game_id") + "," +
+                    rs.getString("game_name") + ", " +
+                    rs.getString("game_genre") + ", " +
+                    rs.getString("game_rating");
+            storeModel.addElement(tempItem);
+        }
+        filterItems = new JList<>(storeModel);
+        return filterItems;
+    }
+
     // add all other functions needed for db
 
 }

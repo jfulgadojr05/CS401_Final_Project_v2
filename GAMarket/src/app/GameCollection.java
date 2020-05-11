@@ -1,8 +1,11 @@
 package app;
 
+import db.DBHelper;
+
 import javax.swing.*;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.sql.SQLException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.StringTokenizer;
@@ -79,88 +82,87 @@ public class GameCollection {
         // game and initialize it
 
     }
-    public JList<String> filterGameGenre(String aGenre){
-        JList<String> filterList;
-        Game[] tempArray = new Game[numberOfGames];
-        int counter = 0;
-        for (int i = 0; i < numberOfGames; i++) {
-            if (gameArray[i].getGenre().equals(aGenre)) {
-                tempArray[counter] = gameArray[i];
-                counter++;
-            }
-        }
-        if (tempArray[0] == null){
-            JOptionPane.showMessageDialog(null, "No games found");
-            DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
-            for(int i = 0; i < numberOfGames; i++){
-                String tempItem = gameArray[i].getName() + ", " +
-                        gameArray[i].getGenre() + ", " +
-                        gameArray[i].getAverageRating();
-                tempStoreModel.addElement(tempItem);
-            }
-            filterList = new JList<>(tempStoreModel);
-        }
-        else {
-            DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
-            for(int i = 0; i < counter; i++){
-                String tempItem = tempArray[i].getName() + ", " +
-                        tempArray[i].getGenre() + ", " +
-                        tempArray[i].getAverageRating();
-                tempStoreModel.addElement(tempItem);
-            }
-            filterList = new JList<>(tempStoreModel);
-        }
-        return filterList;
+    public JList<String> filterGameGenre(String aGenre, DBHelper dbh) throws SQLException {
+        //        Game[] tempArray = new Game[numberOfGames];
+//        int counter = 0;
+//        for (int i = 0; i < numberOfGames; i++) {
+//            if (gameArray[i].getGenre().equals(aGenre)) {
+//                tempArray[counter] = gameArray[i];
+//                counter++;
+//            }
+//        }
+//        if (tempArray[0] == null){
+//            JOptionPane.showMessageDialog(null, "No games found");
+//            DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
+//            for(int i = 0; i < numberOfGames; i++){
+//                String tempItem = gameArray[i].getName() + ", " +
+//                        gameArray[i].getGenre() + ", " +
+//                        gameArray[i].getAverageRating();
+//                tempStoreModel.addElement(tempItem);
+//            }
+//            filterList = new JList<>(tempStoreModel);
+//        }
+//        else {
+//            DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
+//            for(int i = 0; i < counter; i++){
+//                String tempItem = tempArray[i].getName() + ", " +
+//                        tempArray[i].getGenre() + ", " +
+//                        tempArray[i].getAverageRating();
+//                tempStoreModel.addElement(tempItem);
+//            }
+//            filterList = new JList<>(tempStoreModel);
+//        }
+        return dbh.getFilterGameGenre(aGenre);
 
     }
 
-    public JList<String> filterGameRating(String aRating){
-        float aRatingFloat = Float.parseFloat(aRating);
-        JList<String> filterList;
-        Game[] tempArray = new Game[numberOfGames];
-
-        if (aRatingFloat > 10.0 || aRatingFloat < 0.0) {
-            JOptionPane.showMessageDialog(null, "Filter exceeds limit");
-            DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
-            for(int i = 0; i < numberOfGames; i++){
-                String tempItem = gameArray[i].getName() + ", " +
-                        gameArray[i].getGenre() + ", " +
-                        gameArray[i].getAverageRating();
-                tempStoreModel.addElement(tempItem);
-            }
-            filterList = new JList<>(tempStoreModel);
-        }
-        else {
-            int counter = 0;
-            for (int i = 0; i < numberOfGames; i++) {
-                if (gameArray[i].getAverageRating() <= aRatingFloat) {
-                    tempArray[counter] = gameArray[i];
-                    counter++;
-                }
-            }
-            if (tempArray[0] == null){
-                JOptionPane.showMessageDialog(null, "No games found");
-                DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
-                for(int i = 0; i < numberOfGames; i++){
-                    String tempItem = gameArray[i].getName() + ", " +
-                            gameArray[i].getGenre() + ", " +
-                            gameArray[i].getAverageRating();
-                    tempStoreModel.addElement(tempItem);
-                }
-                filterList = new JList<>(tempStoreModel);
-            }
-            else {
-                DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
-                for(int i = 0; i < counter; i++){
-                    String tempItem = tempArray[i].getName() + ", " +
-                            tempArray[i].getGenre() + ", " +
-                            tempArray[i].getAverageRating();
-                    tempStoreModel.addElement(tempItem);
-                }
-                filterList = new JList<>(tempStoreModel);
-            }
-        }
-        return filterList;
+    public JList<String> filterGameRating(String aRating, DBHelper dbh) throws SQLException {
+//        float aRatingFloat = Float.parseFloat(aRating);
+//        JList<String> filterList;
+//        Game[] tempArray = new Game[numberOfGames];
+//
+//        if (aRatingFloat > 10.0 || aRatingFloat < 0.0) {
+//            JOptionPane.showMessageDialog(null, "Filter exceeds limit");
+//            DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
+//            for(int i = 0; i < numberOfGames; i++){
+//                String tempItem = gameArray[i].getName() + ", " +
+//                        gameArray[i].getGenre() + ", " +
+//                        gameArray[i].getAverageRating();
+//                tempStoreModel.addElement(tempItem);
+//            }
+//            filterList = new JList<>(tempStoreModel);
+//        }
+//        else {
+//            int counter = 0;
+//            for (int i = 0; i < numberOfGames; i++) {
+//                if (gameArray[i].getAverageRating() <= aRatingFloat) {
+//                    tempArray[counter] = gameArray[i];
+//                    counter++;
+//                }
+//            }
+//            if (tempArray[0] == null){
+//                JOptionPane.showMessageDialog(null, "No games found");
+//                DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
+//                for(int i = 0; i < numberOfGames; i++){
+//                    String tempItem = gameArray[i].getName() + ", " +
+//                            gameArray[i].getGenre() + ", " +
+//                            gameArray[i].getAverageRating();
+//                    tempStoreModel.addElement(tempItem);
+//                }
+//                filterList = new JList<>(tempStoreModel);
+//            }
+//            else {
+//                DefaultListModel<String> tempStoreModel = new DefaultListModel<>();
+//                for(int i = 0; i < counter; i++){
+//                    String tempItem = tempArray[i].getName() + ", " +
+//                            tempArray[i].getGenre() + ", " +
+//                            tempArray[i].getAverageRating();
+//                    tempStoreModel.addElement(tempItem);
+//                }
+//                filterList = new JList<>(tempStoreModel);
+//            }
+//        }
+        return dbh.getFilterGameRating(aRating);
     }
 
     public void loadGameData(String filename){
