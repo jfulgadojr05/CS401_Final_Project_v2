@@ -75,8 +75,10 @@ public class GameCollection {
     public void purchaseGame(String gameName) {
         // Function to purchase game, which adds to store
         String confirmMessage = "Purchase " + gameName + "?";
-        JOptionPane.showConfirmDialog(null, confirmMessage);
+        int confirmOption = JOptionPane.showConfirmDialog(null, confirmMessage);
+        if (confirmOption == JOptionPane.YES_OPTION){
 
+        }
 
     }
     public JList<String> filterGameGenre(String aGenre, DBHelper dbh) throws SQLException {
