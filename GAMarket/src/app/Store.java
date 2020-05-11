@@ -48,7 +48,7 @@ public class Store extends JPanel {
                     String selectedItemStr = storeMenuItems.getSelectedValue();
                     try {
                         tempGame = dbh.getGameProfileName(selectedItemStr);
-                        String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
+                        String[] gameCommands = {"Purchase Game", "Show Forum"};
                         int gameChoice;
                         gameChoice = JOptionPane.showOptionDialog(null,
                                 tempGame.toString(),
@@ -59,10 +59,9 @@ public class Store extends JPanel {
                                 gameCommands,
                                 gameCommands[gameCommands.length - 1]);
                         switch(gameChoice) {
-                            case 0: tempGame.initializeGame(); break;
-                            case 1: System.out.println("Purchase Game"); break;
-                            case 2: System.out.println("Show Forum"); break;
-                            case 3: return;
+                            case 0: storeCollection.purchaseGame(selectedItemStr); break;
+                            case 1: System.out.println("Show Forum"); break;
+                            case 2: return;
                             default: // do nothing
                         }
                     } catch (SQLException throwables) {
@@ -103,7 +102,7 @@ public class Store extends JPanel {
                                     String selectedItemStr = finalFilterList1.getSelectedValue();
                                     try {
                                         tempGame = dbh.getGameProfileName(selectedItemStr);
-                                        String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
+                                        String[] gameCommands = {"Purchase Game", "Show Forum"};
                                         int gameChoice;
                                         gameChoice = JOptionPane.showOptionDialog(null,
                                                 tempGame.toString(),
@@ -114,10 +113,9 @@ public class Store extends JPanel {
                                                 gameCommands,
                                                 gameCommands[gameCommands.length - 1]);
                                         switch(gameChoice) {
-                                            case 0: tempGame.initializeGame(); break;
-                                            case 1: System.out.println("Purchase Game"); break;
-                                            case 2: System.out.println("Show Forum"); break;
-                                            case 3: return;
+                                            case 0: storeCollection.purchaseGame(selectedItemStr); break;
+                                            case 1: System.out.println("Show Forum"); break;
+                                            case 2: return;
                                             default: // do nothing
                                         }
                                     } catch (SQLException throwables) {
@@ -150,7 +148,7 @@ public class Store extends JPanel {
                                     String selectedItemStr = finalFilterList.getSelectedValue();
                                     try {
                                         tempGame = dbh.getGameProfileName(selectedItemStr);
-                                        String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
+                                        String[] gameCommands = {"Purchase Game", "Show Forum"};
                                         int gameChoice;
                                         gameChoice = JOptionPane.showOptionDialog(null,
                                                 tempGame.toString(),
@@ -161,10 +159,9 @@ public class Store extends JPanel {
                                                 gameCommands,
                                                 gameCommands[gameCommands.length - 1]);
                                         switch(gameChoice) {
-                                            case 0: tempGame.initializeGame(); break;
-                                            case 1: System.out.println("Purchase Game"); break;
-                                            case 2: System.out.println("Show Forum"); break;
-                                            case 3: return;
+                                            case 0: storeCollection.purchaseGame(selectedItemStr); break;
+                                            case 1: System.out.println("Show Forum"); break;
+                                            case 2: return;
                                             default: // do nothing
                                         }
                                     } catch (SQLException throwables) {
@@ -226,10 +223,9 @@ public class Store extends JPanel {
                                 gameCommands,
                                 gameCommands[gameCommands.length - 1]);
                         switch(gameChoice) {
-                            case 0: System.out.println("Play Game"); break;
-                            case 1: System.out.println("Purchase Game"); break;
-                            case 2: System.out.println("Show Forum"); break;
-                            case 3: return;
+                            case 0: storeCollection.purchaseGame(result); break;
+                            case 1: System.out.println("Show Forum"); break;
+                            case 2: return;
                             default: // do nothing
                         }
                     }

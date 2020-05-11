@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreTesSuite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreTestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CS401_GAMarket_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS401_GAMarket_Final.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/META-INF/CS401_GAMarket_Final.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -45,10 +53,17 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/GAMarket/src/test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -61,11 +76,17 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="test" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\src\test" />
       <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket" />
       <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\src" />
       <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarketGUI\src\app" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\src\db" />
@@ -169,7 +190,7 @@
       <workItem from="1588904078923" duration="7577000" />
       <workItem from="1589065885236" duration="7991000" />
       <workItem from="1589091674472" duration="17353000" />
-      <workItem from="1589209926945" duration="8650000" />
+      <workItem from="1589209926945" duration="10281000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -395,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589220943577</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Alter filter to display only names">
+      <created>1589221509089</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1589221509089</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +443,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Configured Store and deleted store file" />
     <MESSAGE value="Repackaged GAMarket to single folder" />
     <MESSAGE value="Added scroll pane to GameList" />
     <MESSAGE value="IntelliJ force commit" />
@@ -440,7 +467,8 @@
     <MESSAGE value="Got the filter list to work with jdbc" />
     <MESSAGE value="Fixed search function with jdbc" />
     <MESSAGE value="Modified list for names only" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified list for names only" />
+    <MESSAGE value="Alter filter to display only names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alter filter to display only names" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="101" key="#GAManager" timestamp="1587671854647">
@@ -460,6 +488,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="605" y="147" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589178812360" />
+    <state x="530" y="206" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1589221621915">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="206" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589221621915" />
     <state x="435" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587671739343">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -469,10 +501,10 @@
     </state>
     <state x="673" y="338" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587595215856" />
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589220940731">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589221506072">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589220940731" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589221506072" />
     <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
     <state x="112" y="48" key="DiffContextDialog" timestamp="1587621001174">
       <screen x="0" y="0" width="1600" height="860" />
@@ -487,28 +519,28 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="312" height="282" key="Git.Branch.Popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180776371" />
-    <state width="1557" height="233" key="GridCell.Tab.0.bottom" timestamp="1589221231740">
+    <state width="1557" height="233" key="GridCell.Tab.0.bottom" timestamp="1589222991910">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589221231740" />
+    <state width="1557" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589222991910" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="233" key="GridCell.Tab.0.center" timestamp="1589221231739">
+    <state width="1557" height="233" key="GridCell.Tab.0.center" timestamp="1589222991910">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589221231739" />
+    <state width="1557" height="233" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589222991910" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="233" key="GridCell.Tab.0.left" timestamp="1589221231739">
+    <state width="1557" height="233" key="GridCell.Tab.0.left" timestamp="1589222991910">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589221231739" />
+    <state width="1557" height="233" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589222991910" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="233" key="GridCell.Tab.0.right" timestamp="1589221231739">
+    <state width="1557" height="233" key="GridCell.Tab.0.right" timestamp="1589222991910">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589221231739" />
+    <state width="1557" height="233" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589222991910" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
     <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1589214544226">
@@ -561,10 +593,18 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="462" y="171" width="632" height="469" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589216324815" />
+    <state x="504" y="322" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1589221641461">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="504" y="322" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589221641461" />
     <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589156093215">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589156093215" />
+    <state x="571" y="243" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589221630868">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="571" y="243" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589221630868" />
     <state x="530" y="191" key="extract.method.dialog" timestamp="1589089970973">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -593,10 +633,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="456" y="195" key="run.anything.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1588906646735" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1589220810190">
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1589221928879">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589220810190" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589221928879" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS401_GAMarket_Final$GAManager.ic" NAME="GAManager Coverage Results" MODIFIED="1589176402406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

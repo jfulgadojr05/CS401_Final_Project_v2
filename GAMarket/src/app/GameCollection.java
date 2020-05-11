@@ -3,12 +3,7 @@ package app;
 import db.DBHelper;
 
 import javax.swing.*;
-import java.io.IOException;
-import java.nio.file.Paths;
 import java.sql.SQLException;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
-import java.util.StringTokenizer;
 
 // GUI that will provide a display of all games in a collection
 // This will required a database file that will host the games
@@ -77,11 +72,11 @@ public class GameCollection {
         }
         return temp;
     }
-    public void intitializeGame(String gameName) {
-        // Function to initialize a game as if
-        // a game is being played from start up
-        // will required the game title to search for
-        // game and initialize it
+    public void purchaseGame(String gameName) {
+        // Function to purchase game, which adds to store
+        String confirmMessage = "Purchase " + gameName + "?";
+        JOptionPane.showConfirmDialog(null, confirmMessage);
+
 
     }
     public JList<String> filterGameGenre(String aGenre, DBHelper dbh) throws SQLException {
@@ -166,50 +161,49 @@ public class GameCollection {
 //        }
         return dbh.getFilterGameRating(aRating);
     }
-
-    public void loadGameData(String filename){
-        // Declaring temp variables
-        String gameID;
-        String gameName;
-        String gameGenre;
-        String gameRating;
-        String gameDeveloper;
-//        String gameImagePath;
-//        String gameMetaTag;
-//        String gamePath;
-
-        // Try-Catch for reading file
-        try (Scanner gameFile = new Scanner(Paths.get(filename))) {
-//            JOptionPane.showMessageDialog(null,"The file successfully loaded");
-            // Checking file
-            while (gameFile.hasNextLine()) {
-                // Loops reads line and splits the comma for individual substrings
-                StringTokenizer st = new StringTokenizer(gameFile.nextLine(), ",");
-                // Putting values in temp variables
-                gameID = st.nextToken();
-                gameName = st.nextToken();
-                gameGenre = st.nextToken();
-                gameRating = st.nextToken();
-//                gameImagePath = st.nextToken();
-//                gameMetaTag = st.nextToken();
-//                gamePath = st.nextToken();
-
-                Game tempGame = new Game();
-
-                tempGame.setId(Integer.parseInt(gameID));
-                tempGame.setGameName(gameName);
-                tempGame.setGenre(gameGenre);
-                tempGame.setRating(Float.parseFloat(gameRating));
-
-                addGame(tempGame);
-                // Add function to the array.
-            }//while
-        }
-        catch (IOException | NoSuchElementException | IllegalStateException e) {
-            JPanel errorPanel = new JPanel();
-            JLabel errorMessage = new JLabel("File not found.\nCreating blank game store...");
-            errorPanel.add(errorMessage);
-            errorPanel.setVisible(true);
-        }//catch()
-    }
+//    public void loadGameData(String filename){
+//        // Declaring temp variables
+//        String gameID;
+//        String gameName;
+//        String gameGenre;
+//        String gameRating;
+//        String gameDeveloper;
+////        String gameImagePath;
+////        String gameMetaTag;
+////        String gamePath;
+//
+//        // Try-Catch for reading file
+//        try (Scanner gameFile = new Scanner(Paths.get(filename))) {
+////            JOptionPane.showMessageDialog(null,"The file successfully loaded");
+//            // Checking file
+//            while (gameFile.hasNextLine()) {
+//                // Loops reads line and splits the comma for individual substrings
+//                StringTokenizer st = new StringTokenizer(gameFile.nextLine(), ",");
+//                // Putting values in temp variables
+//                gameID = st.nextToken();
+//                gameName = st.nextToken();
+//                gameGenre = st.nextToken();
+//                gameRating = st.nextToken();
+////                gameImagePath = st.nextToken();
+////                gameMetaTag = st.nextToken();
+////                gamePath = st.nextToken();
+//
+//                Game tempGame = new Game();
+//
+//                tempGame.setId(Integer.parseInt(gameID));
+//                tempGame.setGameName(gameName);
+//                tempGame.setGenre(gameGenre);
+//                tempGame.setRating(Float.parseFloat(gameRating));
+//
+//                addGame(tempGame);
+//                // Add function to the array.
+//            }//while
+//        }
+//        catch (IOException | NoSuchElementException | IllegalStateException e) {
+//            JPanel errorPanel = new JPanel();
+//            JLabel errorMessage = new JLabel("File not found.\nCreating blank game store...");
+//            errorPanel.add(errorMessage);
+//            errorPanel.setVisible(true);
+//        }//catch()
+//    }
 }
