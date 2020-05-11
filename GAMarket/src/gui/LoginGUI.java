@@ -1,9 +1,12 @@
 package gui;
 
+import db.DBHelper;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class LoginGUI extends JFrame {
     private final GAManager gm;
@@ -17,8 +20,11 @@ public class LoginGUI extends JFrame {
     JButton registerButton = new JButton("Register");
     JButton recoveryButton = new JButton("Account Recovery");
 
-    public LoginGUI() {
-        this.gm = new GAManager();
+    public LoginGUI() throws SQLException {
+        DBHelper dbh = new DBHelper();
+        dbh.createNewDatabase();
+        dbh.createAllTables();
+        this.gm = new GAManager(dbh);
 
         // setting up gui bounds
         container.setLayout(null);
@@ -144,7 +150,7 @@ public class LoginGUI extends JFrame {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         LoginGUI loginUser = new LoginGUI();
         loginUser.setVisible(true);
         loginUser.setTitle("GAMarket Login");
