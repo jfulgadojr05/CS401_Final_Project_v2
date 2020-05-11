@@ -138,6 +138,24 @@ public class DBHelper {
         return storeMenuItems;
     }
 
+    public JList<String> getAllGameName() throws SQLException {
+        DefaultListModel<String> storeModel = new DefaultListModel<>();
+        JList<String> storeMenuItems;
+        String sql = "select game_name from game";
+        Connection conn = DriverManager.getConnection(url);
+        Statement stmt  = conn.createStatement();
+        ResultSet rs    = stmt.executeQuery(sql);
+        while (rs.next()){
+//            String tempItem = rs.getString("game_id") + "," +
+//                    rs.getString("game_name") + ", " +
+//                    rs.getString("game_genre") + ", " +
+//                    rs.getString("game_rating");
+            storeModel.addElement(rs.getString("game_name"));
+        }
+        storeMenuItems = new JList<>(storeModel);
+        return storeMenuItems;
+    }
+
     public Game[] getAllGameObjects() throws SQLException {
         DefaultListModel<String> storeModel = new DefaultListModel<>();
         JList<String> storeMenuItems;
@@ -179,6 +197,24 @@ public class DBHelper {
             tempGame.setGameName(rs.getString(2));
             tempGame.setGenre(rs.getString(3));
             tempGame.setRating(Float.parseFloat(rs.getString(4)));
+        }
+        rs.close();
+
+        return tempGame;
+    }
+
+    public Game getGameProfileName(String gameName) throws SQLException {
+        Game tempGame = new Game();
+        String sql = "select game_id, game_name, game_genre, game_rating from game where game_name = ?";
+        Connection conn = DriverManager.getConnection(url);
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1,gameName);
+        ResultSet rs = pstmt.executeQuery();
+        while (rs.next()){
+            tempGame.setId(Integer.parseInt(rs.getString("game_id")));
+            tempGame.setGameName(rs.getString("game_name"));
+            tempGame.setGenre(rs.getString("game_genre"));
+            tempGame.setRating(Float.parseFloat(rs.getString("game_rating")));
         }
         rs.close();
 

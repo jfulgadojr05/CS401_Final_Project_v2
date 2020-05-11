@@ -60,83 +60,87 @@
       <Position>6</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="21" parent="7" name="game_game_id_uindex">
+    <column id="21" parent="7" name="fk_developer">
+      <Position>7</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <index id="22" parent="7" name="game_game_id_uindex">
       <ColNames>game_id</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="22" parent="7" name="game_pk">
+    <key id="23" parent="7" name="game_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="23" parent="7" name="game_game_collection_collection_id_fk">
+    <foreign-key id="24" parent="7" name="game_game_collection_collection_id_fk">
       <ColNames>fk_collection</ColNames>
       <RefTableName>game_collection</RefTableName>
       <RefColNames>collection_id</RefColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="24" parent="8" name="id">
+    <column id="25" parent="8" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="25" parent="8" name="collection_id">
+    <column id="26" parent="8" name="collection_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="26" parent="8" name="fk_game">
+    <column id="27" parent="8" name="fk_game">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </column>
-    <key id="27" parent="8" name="game_collection_pk">
+    <key id="28" parent="8" name="game_collection_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="28" parent="8" name="game_collection_game_game_id_fk">
+    <foreign-key id="29" parent="8" name="game_collection_game_game_id_fk">
       <ColNames>fk_game</ColNames>
       <RefTableName>game</RefTableName>
       <RefColNames>game_id</RefColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="29" parent="9" name="type">
+    <column id="30" parent="9" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="30" parent="9" name="name">
+    <column id="31" parent="9" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="31" parent="9" name="tbl_name">
+    <column id="32" parent="9" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="32" parent="9" name="rootpage">
+    <column id="33" parent="9" name="rootpage">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="33" parent="9" name="sql">
+    <column id="34" parent="9" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="34" parent="10" name="name">
+    <column id="35" parent="10" name="name">
       <Position>1</Position>
     </column>
-    <column id="35" parent="10" name="seq">
+    <column id="36" parent="10" name="seq">
       <Position>2</Position>
     </column>
-    <column id="36" parent="11" name="id">
+    <column id="37" parent="11" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
     </column>
-    <column id="37" parent="11" name="username">
+    <column id="38" parent="11" name="username">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="38" parent="11">
+    <key id="39" parent="11">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>

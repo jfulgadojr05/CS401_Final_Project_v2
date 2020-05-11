@@ -31,26 +31,24 @@ public class Store extends JPanel {
         menuPanel.setLayout(new BorderLayout());
         menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
 
-        DefaultListModel<String> storeModel = new DefaultListModel<>();
-        for(int i = 0; i < storeCollection.getNumberOfGames(); i++){
-            String gameIDstr = Integer.toString(storeCollection.getGameArray()[i].getId());
-            String tempItem = gameIDstr + "," +
-                    storeCollection.getGameArray()[i].getName() + ", " +
-                    storeCollection.getGameArray()[i].getGenre() + ", " +
-                    storeCollection.getGameArray()[i].getAverageRating();
-            storeModel.addElement(tempItem);
-        }
-        storeMenuItems = dbh.getAllGames();
+//        DefaultListModel<String> storeModel = new DefaultListModel<>();
+//        for(int i = 0; i < storeCollection.getNumberOfGames(); i++){
+//            String gameIDstr = Integer.toString(storeCollection.getGameArray()[i].getId());
+//            String tempItem = gameIDstr + "," +
+//                    storeCollection.getGameArray()[i].getName() + ", " +
+//                    storeCollection.getGameArray()[i].getGenre() + ", " +
+//                    storeCollection.getGameArray()[i].getAverageRating();
+//            storeModel.addElement(storeCollection.get);
+//        }
+        storeMenuItems = dbh.getAllGameName();
         storeMenuItems.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
                     Game tempGame = new Game();
                     String selectedItemStr = storeMenuItems.getSelectedValue();
-                    StringTokenizer st = new StringTokenizer(selectedItemStr, ",");
-                    String listGameID = st.nextToken();
                     try {
-                        tempGame = dbh.getGameProfile(listGameID);
+                        tempGame = dbh.getGameProfileName(selectedItemStr);
                         String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
                         int gameChoice;
                         gameChoice = JOptionPane.showOptionDialog(null,

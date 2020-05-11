@@ -173,6 +173,7 @@ public class GameCollection {
         String gameName;
         String gameGenre;
         String gameRating;
+        String gameDeveloper;
 //        String gameImagePath;
 //        String gameMetaTag;
 //        String gamePath;

@@ -1,8 +1,8 @@
 package gui;
 
-import db.DBHelper;
 import app.GameCollection;
 import app.Store;
+import db.DBHelper;
 
 import javax.swing.*;
 import java.awt.*;
@@ -102,7 +102,6 @@ public class GAManager extends JFrame {
         // for store tab
         // Loading data
         GameCollection storeGC = new GameCollection();
-        storeGC.loadGameData("gameData.txt");
         storePane = new Store(storeGC, mydb);
         config.addTab("Store", null, storePane, "Choose your games");
 
