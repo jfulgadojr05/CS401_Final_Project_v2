@@ -146,10 +146,6 @@ public class DBHelper {
         Statement stmt  = conn.createStatement();
         ResultSet rs    = stmt.executeQuery(sql);
         while (rs.next()){
-//            String tempItem = rs.getString("game_id") + "," +
-//                    rs.getString("game_name") + ", " +
-//                    rs.getString("game_genre") + ", " +
-//                    rs.getString("game_rating");
             storeModel.addElement(rs.getString("game_name"));
         }
         storeMenuItems = new JList<>(storeModel);
@@ -170,7 +166,6 @@ public class DBHelper {
         }
 
         tempArray = new Game[counter];
-//        Game temp = new Game();
         counter = 0;
         rs = stmt.executeQuery(sql);
         while(rs.next()){
@@ -230,11 +225,7 @@ public class DBHelper {
         pstmt.setString(1,aGenre);
         ResultSet rs = pstmt.executeQuery();
         while (rs.next()){
-            String tempItem = rs.getString("game_id") + "," +
-                    rs.getString("game_name") + ", " +
-                    rs.getString("game_genre") + ", " +
-                    rs.getString("game_rating");
-            storeModel.addElement(tempItem);
+            storeModel.addElement(rs.getString("game_name"));
         }
         filterItems = new JList<>(storeModel);
         return filterItems;
@@ -249,16 +240,11 @@ public class DBHelper {
         pstmt.setString(1,aRating);
         ResultSet rs = pstmt.executeQuery();
         while (rs.next()){
-            String tempItem = rs.getString("game_id") + "," +
-                    rs.getString("game_name") + ", " +
-                    rs.getString("game_genre") + ", " +
-                    rs.getString("game_rating");
-            storeModel.addElement(tempItem);
+            storeModel.addElement(rs.getString("game_name"));
         }
         filterItems = new JList<>(storeModel);
         return filterItems;
     }
 
-    // add all other functions needed for db
 
 }

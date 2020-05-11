@@ -7,7 +7,6 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.SQLException;
-import java.util.StringTokenizer;
 
 public class Store extends JPanel {
 
@@ -102,10 +101,8 @@ public class Store extends JPanel {
                                 if (e.getClickCount() == 2) {
                                     Game tempGame = new Game();
                                     String selectedItemStr = finalFilterList1.getSelectedValue();
-                                    StringTokenizer st = new StringTokenizer(selectedItemStr, ",");
-                                    String listGameID = st.nextToken();
                                     try {
-                                        tempGame = dbh.getGameProfile(listGameID);
+                                        tempGame = dbh.getGameProfileName(selectedItemStr);
                                         String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
                                         int gameChoice;
                                         gameChoice = JOptionPane.showOptionDialog(null,
@@ -151,10 +148,8 @@ public class Store extends JPanel {
                                 if (e.getClickCount() == 2) {
                                     Game tempGame = new Game();
                                     String selectedItemStr = finalFilterList.getSelectedValue();
-                                    StringTokenizer st = new StringTokenizer(selectedItemStr, ",");
-                                    String listGameID = st.nextToken();
                                     try {
-                                        tempGame = dbh.getGameProfile(listGameID);
+                                        tempGame = dbh.getGameProfileName(selectedItemStr);
                                         String[] gameCommands = {"Play Game", "Purchase Game", "Show Forum"};
                                         int gameChoice;
                                         gameChoice = JOptionPane.showOptionDialog(null,
