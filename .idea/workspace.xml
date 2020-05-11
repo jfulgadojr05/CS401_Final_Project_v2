@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_30_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GAMarket/src/gui/ForumGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CS401_GAMarket_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS401_GAMarket_Final.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/app/devUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/FriendsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/FriendsGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/MessageGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/MessageGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +141,7 @@
       <workItem from="1588903760652" duration="301000" />
       <workItem from="1588904078923" duration="7577000" />
       <workItem from="1589065885236" duration="7991000" />
-      <workItem from="1589091674472" duration="8187000" />
+      <workItem from="1589091674472" duration="8614000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -309,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589090438250</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Modified code to incorporate db files and Taro changes">
+      <created>1589155150274</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1589155150274</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +355,8 @@
     <MESSAGE value="Removed extra system outs" />
     <MESSAGE value="Created validation for filter" />
     <MESSAGE value="Created initialize game function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created initialize game function" />
+    <MESSAGE value="Modified code to incorporate db files and Taro changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified code to incorporate db files and Taro changes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="101" key="#GAManager" timestamp="1587671854647">
@@ -382,10 +385,10 @@
     </state>
     <state x="673" y="338" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587595215856" />
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589090435898">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589155146852">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589090435898" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589155146852" />
     <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
     <state x="112" y="48" key="DiffContextDialog" timestamp="1587621001174">
       <screen x="0" y="0" width="1600" height="860" />
