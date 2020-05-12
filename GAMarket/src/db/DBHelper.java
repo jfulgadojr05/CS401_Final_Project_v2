@@ -289,7 +289,7 @@ public class DBHelper {
                 "on game_collection_user.fk_game = game.game_id)" +
                 "inner join user " +
                 "on game_collection_user.fk_user = user.id)" +
-                "where game_collection_user.fk_user = 3";
+                "where game_collection_user.fk_user = 1";
         Connection conn = DriverManager.getConnection(url);
         Statement stmt  = conn.createStatement();
         ResultSet rs    = stmt.executeQuery(sql);
@@ -300,6 +300,61 @@ public class DBHelper {
         return libraryItems;
     }
 
+    // login gui functions
+
+    public boolean isDuplciate(String username) throws SQLException {
+        boolean duplicate = false;
+        String sql = "select username from user where username = ?";
+        Connection conn = DriverManager.getConnection(url);
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, username);
+        ResultSet rs = pstmt.executeQuery();
+        if(rs.next()) {
+            duplicate = true;
+        }
+        rs.close();
+        return duplicate;
+    }
+
+    public boolean sendLogin(String username, String password) throws SQLException {
+        boolean success = false;
+        String sql = "select username, password from user where username = ? and password = ?";
+        Connection conn = DriverManager.getConnection(url);
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, username);
+        pstmt.setString(2, password);
+        ResultSet rs = pstmt.executeQuery();
+        if(rs.next()) {
+            success = true;
+        }
+        rs.close();
+        return success;
+    }
+
+    public String sendRegistration(String registerUser, String registerPass, String registerType) throws SQLException {
+        String sql = "insert into user(username, password, user_type) values(?,?,?)";
+        Connection conn = DriverManager.getConnection(url);
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, registerUser);
+        pstmt.setString(2, registerPass);
+        pstmt.setString(3, registerType);
+        pstmt.executeUpdate();
+
+        return "Account creation successful with the following fields:\n"
+                + "Username: " + registerUser
+                + "\nPassword: " + registerPass
+                + "\nAccount Type: " + registerType
+                + "\nPlease login to your account.";
+    }
+
+    public void loginRecovery(String username, String password) throws SQLException {
+        String sql = "update user set password = ? where username = ?";
+        Connection conn = DriverManager.getConnection(url);
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, password);
+        pstmt.setString(2, username);
+        pstmt.executeUpdate();
+    }
 
 
 }
