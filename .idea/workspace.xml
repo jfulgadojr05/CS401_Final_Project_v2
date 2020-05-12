@@ -19,21 +19,54 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2941ca0-0317-4682-a64a-8bdca75ec92a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_30_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GAMarket/src/gui/ForumGUI.java" afterDir="false" />
+    <list default="true" id="b2941ca0-0317-4682-a64a-8bdca75ec92a" name="Default Changelist" comment="Implemented SQLite with LoginGUI">
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/test/LoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/test/LoginTestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/test/LoginTestSuite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreTestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreTestSuite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/CS401_GAMarket_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS401_GAMarket_Final.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/FriendsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/FriendsGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/LoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/LoginGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/META-INF/CS401_GAMarket_Final.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/app/app/clientGUI.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/app/app/profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/app/clientGUI.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/sample/GAMarket/src/app/clientGUI.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/FriendsGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/GAManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/GameCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app/Store.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/AccountServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/FriendsList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/GameCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/StoreGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/StoreInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/Thread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/app_david/app/clientGUI.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/AccountServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/FriendsList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/Thread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/clientGUI.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/src/sample/GAMarket/src/app/devUser.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +79,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -70,11 +104,18 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/lib/sqlite-jdbc-3.30.1.jar!/" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -84,14 +125,20 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="test" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src\app" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src\db" />
       <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src\app" />
       <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src" />
       <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src\app\sample\GAMarket\src\app" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="S:\Desktop\Software Engineering\CS401_GAMarket_Final\GAMarket\src\app" />
     </key>
   </component>
   <component name="RunManager" selected="Application.LoginGUI">
@@ -180,7 +227,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586213122399</updated>
-      <workItem from="1589245014395" duration="11760000" />
+      <workItem from="1589245014395" duration="16516000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -273,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589168417609</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Implemented SQLite with LoginGUI">
+      <created>1589257636340</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1589257636340</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,17 +362,18 @@
     <MESSAGE value="can now indicate account type during registration (player/dev)" />
     <MESSAGE value="account recovery button working with account type field" />
     <MESSAGE value="Started on ProfileGUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started on ProfileGUI" />
+    <MESSAGE value="Implemented SQLite with LoginGUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented SQLite with LoginGUI" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589245217916">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1589245217916" />
-    <state x="2685" y="217" key="#com.intellij.ide.util.MemberChooser" timestamp="1589151140120">
+    <state x="2685" y="217" key="#com.intellij.ide.util.MemberChooser" timestamp="1589257572861">
       <screen x="1920" y="9" width="1920" height="1050" />
     </state>
-    <state x="2685" y="217" key="#com.intellij.ide.util.MemberChooser/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1589151140120" />
+    <state x="2685" y="217" key="#com.intellij.ide.util.MemberChooser/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1589257572861" />
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1589148931658">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -387,20 +442,28 @@
     </state>
     <state x="367" y="11" key="SettingsEditor/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587765428909" />
     <state x="440" y="99" key="SettingsEditor/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1589245122647" />
-    <state x="2620" y="180" width="748" height="471" key="Vcs.Push.Dialog.v2" timestamp="1589153054159">
+    <state x="2620" y="180" width="748" height="471" key="Vcs.Push.Dialog.v2" timestamp="1589257644882">
       <screen x="1920" y="9" width="1920" height="1050" />
     </state>
     <state x="583" y="140" width="748" height="471" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587764243222" />
     <state x="700" y="171" key="Vcs.Push.Dialog.v2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1589005053688" />
-    <state x="2620" y="180" key="Vcs.Push.Dialog.v2/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1589153054159" />
+    <state x="2620" y="180" key="Vcs.Push.Dialog.v2/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1589257644882" />
     <state x="370" y="127" width="1091" height="682" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1589245667914">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="370" y="127" width="1091" height="682" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1589245667914" />
+    <state x="2584" y="425" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1589266970065">
+      <screen x="1920" y="9" width="1920" height="1050" />
+    </state>
+    <state x="2584" y="425" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1589266970065" />
     <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586557860909">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1586557860909" />
+    <state x="2651" y="232" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589266955942">
+      <screen x="1920" y="9" width="1920" height="1050" />
+    </state>
+    <state x="2651" y="232" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.9.1920.1050/0.0.1920.1050@1920.9.1920.1050" timestamp="1589266955942" />
     <state x="2318" y="249" width="1194" height="896" key="dock-window-1" timestamp="1589152932970">
       <screen x="1920" y="9" width="1920" height="1050" />
     </state>
