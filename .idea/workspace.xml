@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
+    <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="Added comments to DBhelper">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/test/StoreGUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreGUITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,12 +138,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.LoginGUI" />
+    <configuration name="StoreTestRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.StoreTestRunner" />
       <module name="CS401_GAMarket_Final" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,7 +151,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StoreGUITest.getAllGameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StoreGUITest.getGameProfileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS401_GAMarket_Final" />
       <extension name="coverage">
         <pattern>
@@ -161,7 +161,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.StoreGUITest" />
-      <option name="METHOD_NAME" value="getAllGameTest" />
+      <option name="METHOD_NAME" value="getGameProfileTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreGUITest.purchaseGameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS401_GAMarket_Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.StoreGUITest" />
+      <option name="METHOD_NAME" value="purchaseGameTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreGUITest.resetGameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS401_GAMarket_Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.StoreGUITest" />
+      <option name="METHOD_NAME" value="resetGameTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,9 +202,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GAMarketRun" />
-        <item itemvalue="JUnit.StoreGUITest.getAllGameTest" />
-        <item itemvalue="Application.LoginGUI" />
-        <item itemvalue="Application.GAManager" />
+        <item itemvalue="Application.StoreTestRunner" />
+        <item itemvalue="JUnit.StoreGUITest.purchaseGameTest" />
+        <item itemvalue="JUnit.StoreGUITest.resetGameTest" />
+        <item itemvalue="JUnit.StoreGUITest.getGameProfileTest" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +238,7 @@
       <workItem from="1589209926945" duration="11918000" />
       <workItem from="1589228250434" duration="27480000" />
       <workItem from="1589267507547" duration="4427000" />
-      <workItem from="1589295915530" duration="5834000" />
+      <workItem from="1589295915530" duration="10096000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -529,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589299061099</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Added comments to DBhelper">
+      <created>1589303257172</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1589303257172</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,7 +589,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created validation for filter" />
     <MESSAGE value="Created initialize game function" />
     <MESSAGE value="Modified code to incorporate db files and Taro changes" />
     <MESSAGE value="Added GUI file" />
@@ -574,7 +613,8 @@
     <MESSAGE value="Implemented delete function for a player to delete a game from their collection" />
     <MESSAGE value="Adding store GUI comments" />
     <MESSAGE value="Added comments to game collection file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added comments to game collection file" />
+    <MESSAGE value="Added comments to DBhelper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments to DBhelper" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="101" key="#GAManager" timestamp="1587671854647">
@@ -590,6 +630,10 @@
     </state>
     <state x="435" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589151994549" />
     <state x="1737" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596556783" />
+    <state x="92" y="92" width="1416" height="676" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1589306486622">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="92" y="92" width="1416" height="676" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589306486622" />
     <state x="551" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589149900039">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -615,10 +659,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="624" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589267982043" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589299058215">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589307563406">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589299058215" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589307563406" />
     <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
     <state x="112" y="48" key="DiffContextDialog" timestamp="1587621001174">
       <screen x="0" y="0" width="1600" height="860" />
@@ -633,46 +677,46 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="318" height="288" key="Git.Branch.Popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589243808876" />
-    <state width="1557" height="228" key="GridCell.Tab.0.bottom" timestamp="1589298136250">
+    <state width="1557" height="215" key="GridCell.Tab.0.bottom" timestamp="1589307876806">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="228" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589298136250" />
+    <state width="1557" height="215" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589307876806" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="228" key="GridCell.Tab.0.center" timestamp="1589298136249">
+    <state width="1557" height="215" key="GridCell.Tab.0.center" timestamp="1589307876806">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="228" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589298136249" />
+    <state width="1557" height="215" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589307876806" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="228" key="GridCell.Tab.0.left" timestamp="1589298136249">
+    <state width="1557" height="215" key="GridCell.Tab.0.left" timestamp="1589307876806">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="228" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589298136249" />
+    <state width="1557" height="215" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589307876806" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="228" key="GridCell.Tab.0.right" timestamp="1589298136249">
+    <state width="1557" height="215" key="GridCell.Tab.0.right" timestamp="1589307876806">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="228" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589298136249" />
+    <state width="1557" height="215" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589307876806" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="215" key="GridCell.Tab.1.bottom" timestamp="1589297009589">
+    <state width="1557" height="215" key="GridCell.Tab.1.bottom" timestamp="1589307876806">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="215" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589297009589" />
-    <state width="1557" height="215" key="GridCell.Tab.1.center" timestamp="1589297009588">
+    <state width="1557" height="215" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589307876806" />
+    <state width="1557" height="215" key="GridCell.Tab.1.center" timestamp="1589307876806">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="215" key="GridCell.Tab.1.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589297009588" />
-    <state width="1557" height="215" key="GridCell.Tab.1.left" timestamp="1589297009588">
+    <state width="1557" height="215" key="GridCell.Tab.1.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589307876806" />
+    <state width="1557" height="215" key="GridCell.Tab.1.left" timestamp="1589307876806">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="215" key="GridCell.Tab.1.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589297009588" />
-    <state width="1557" height="215" key="GridCell.Tab.1.right" timestamp="1589297009589">
+    <state width="1557" height="215" key="GridCell.Tab.1.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589307876806" />
+    <state width="1557" height="215" key="GridCell.Tab.1.right" timestamp="1589307876806">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="215" key="GridCell.Tab.1.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589297009589" />
+    <state width="1557" height="215" key="GridCell.Tab.1.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589307876806" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1589149519111">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -755,10 +799,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="456" y="195" key="run.anything.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589268739661" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1589302665861">
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1589303186632">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589302665861" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589303186632" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
