@@ -1,11 +1,14 @@
 package app;
 
+import db.DBHelper;
+
 import javax.swing.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.*;
+import java.sql.SQLException;
+import java.util.Scanner;
 
 public class Login {
     private String username;
@@ -92,23 +95,8 @@ public class Login {
         return duplicate;
     }
 
-    public static boolean sendLogin(String usernameField, String passwordField) {
-        // run through each line of text to see if account and password exists
-        try {
-            Scanner read = new Scanner(accounts);
-            read.useDelimiter("[:\n]");
-            while (read.hasNext()) {
-                String u = read.next();
-                String p = read.next();
-                if (u.trim().equals(usernameField) && p.trim().equals(passwordField)) {
-                    success = true;
-                }
-            }
-            read.close();
-        } catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "accountsystem.txt not found.");
-        }
-        return success;
+    public static boolean sendLogin(String usernameField, String passwordField, DBHelper db) throws SQLException {
+        return true;
     }
 
     public static String sendRegistration(String registerUser, String registerPass, String registerType) {

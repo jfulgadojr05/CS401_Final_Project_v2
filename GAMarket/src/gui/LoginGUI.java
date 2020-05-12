@@ -50,15 +50,21 @@ public class LoginGUI extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                boolean success = app.Login.sendLogin(usernameField.getText().trim(), passwordField.getText().trim());
-                if (success) {
-                    // if login successful, open GAMarket
-                    dispose();
-                    gm.setVisible(true);
-                } else {
-                    // invalid username/password if unsuccessful
-                    JOptionPane.showMessageDialog(null, "Invalid Username or Password.");
+                boolean success = false;
+                try {
+                    success = app.Login.sendLogin(usernameField.getText().trim(), passwordField.getText().trim(), dbh);
+                    if (success) {
+                        // if login successful, open GAMarket
+                        dispose();
+                        gm.setVisible(true);
+                    } else {
+                        // invalid username/password if unsuccessful
+                        JOptionPane.showMessageDialog(null, "Invalid Username or Password.");
+                    }
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
                 }
+
             }
         });
 
@@ -150,13 +156,13 @@ public class LoginGUI extends JFrame {
     }
 
 
-    public static void main(String[] args) throws SQLException {
-        LoginGUI loginUser = new LoginGUI();
-        loginUser.setVisible(true);
-        loginUser.setTitle("GAMarket Login");
-        loginUser.setBounds(10, 10, 370, 600);
-        loginUser.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        loginUser.setResizable(false);
-        loginUser.setLocationRelativeTo(null);
-    }
+//    public static void main(String[] args) throws SQLException {
+//        LoginGUI loginUser = new LoginGUI();
+//        loginUser.setVisible(true);
+//        loginUser.setTitle("GAMarket Login");
+//        loginUser.setBounds(10, 10, 370, 600);
+//        loginUser.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        loginUser.setResizable(false);
+//        loginUser.setLocationRelativeTo(null);
+//    }
 }

@@ -9,6 +9,6 @@ import org.junit.runners.Suite;
         StoreTest.class
 })
 
-public class StoreTesSuite {
+public class StoreTestSuite {
     // Code goes here
 }

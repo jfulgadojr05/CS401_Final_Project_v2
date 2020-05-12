@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e360fdca-503d-462f-9e87-384157fade45.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e360fdca-503d-462f-9e87-384157fade45.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/LoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/LoginGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/test/StoreTesSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/test/StoreTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountsystem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/accountsystem.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +58,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -56,7 +66,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/GAMarket/src/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -183,6 +193,7 @@
       <workItem from="1589065885236" duration="7991000" />
       <workItem from="1589091674472" duration="17353000" />
       <workItem from="1589209926945" duration="11918000" />
+      <workItem from="1589228250434" duration="19602000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -514,50 +525,50 @@
     </state>
     <state x="555" y="218" key="FileChooserDialogImpl/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589220060997" />
     <state x="666" y="266" key="FileChooserDialogImpl/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498875269" />
-    <state width="314" height="284" key="Git.Branch.Popup" timestamp="1589227957552">
+    <state width="318" height="288" key="Git.Branch.Popup" timestamp="1589243808876">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="314" height="284" key="Git.Branch.Popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589227957552" />
-    <state width="1557" height="233" key="GridCell.Tab.0.bottom" timestamp="1589223408833">
+    <state width="318" height="288" key="Git.Branch.Popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589243808876" />
+    <state width="1557" height="275" key="GridCell.Tab.0.bottom" timestamp="1589258799386">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589223408833" />
+    <state width="1557" height="275" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258799386" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="233" key="GridCell.Tab.0.center" timestamp="1589223408833">
+    <state width="1557" height="275" key="GridCell.Tab.0.center" timestamp="1589258799385">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589223408833" />
+    <state width="1557" height="275" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258799385" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="233" key="GridCell.Tab.0.left" timestamp="1589223408832">
+    <state width="1557" height="275" key="GridCell.Tab.0.left" timestamp="1589258799384">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589223408832" />
+    <state width="1557" height="275" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258799384" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="233" key="GridCell.Tab.0.right" timestamp="1589223408833">
+    <state width="1557" height="275" key="GridCell.Tab.0.right" timestamp="1589258799386">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589223408833" />
+    <state width="1557" height="275" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258799386" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1589214544226">
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1589258802961">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589214544226" />
-    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1589214544226">
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258802961" />
+    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1589258802961">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589214544226" />
-    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1589214544226">
+    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258802961" />
+    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1589258802961">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589214544226" />
-    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1589214544226">
+    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258802961" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1589258802961">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589214544226" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258802961" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1589149519111">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -570,28 +581,36 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="512" y="147" key="MultipleFileMergeDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768455810" />
-    <state x="367" y="9" key="SettingsEditor" timestamp="1589152132568">
+    <state x="367" y="9" key="SettingsEditor" timestamp="1589244238296">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="367" y="9" key="SettingsEditor/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589152132568" />
+    <state x="367" y="9" key="SettingsEditor/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589244238296" />
     <state x="1913" y="127" key="SettingsEditor/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596455756" />
     <state x="440" y="99" key="SettingsEditor/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498877709" />
     <state x="390" y="78" key="VCS.ChangeListViewerDialog" timestamp="1587768014242">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="390" y="78" key="VCS.ChangeListViewerDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768014242" />
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1589180779853">
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1589243812547">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589180779853" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589243812547" />
     <state width="808" height="438" key="XDebugger.FullValuePopup" timestamp="1589214112310">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="808" height="438" key="XDebugger.FullValuePopup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589214112310" />
-    <state x="462" y="171" width="632" height="469" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1589216324815">
+    <state x="644" y="320" width="316" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1589249655933">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="462" y="171" width="632" height="469" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589216324815" />
+    <state x="644" y="320" width="316" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589249655933" />
+    <state x="596" y="252" width="610" height="489" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1589258330213">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="596" y="252" width="610" height="489" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258330213" />
+    <state x="462" y="171" width="632" height="585" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1589257963203">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="462" y="171" width="632" height="585" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589257963203" />
     <state x="504" y="322" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1589221641461">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -632,10 +651,24 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="456" y="195" key="run.anything.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1588906646735" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1589221928879">
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1589237462501">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589221928879" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589237462501" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/GAMarket/src/db/DBHelper.java</url>
+          <line>282</line>
+          <properties class="db.DBHelper" method="getUserLibrary">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS401_GAMarket_Final$GAManager.ic" NAME="GAManager Coverage Results" MODIFIED="1589176402406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

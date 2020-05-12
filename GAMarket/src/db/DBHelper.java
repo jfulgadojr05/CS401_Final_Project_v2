@@ -47,18 +47,52 @@ public class DBHelper {
                 + ")";
         stmt.execute(sql);
 
-        // create all other tables here
+        sql = "create table if not exists game_collection_user" +
+                "(" +
+                "    collection_id integer" +
+                "        constraint game_collection_pk" +
+                "            primary key autoincrement," +
+                "    fk_user       int," +
+                "    fk_game       int" +
+                ")";
+        
+        stmt.execute(sql);
+
         // this creates games table
-        sql = "create table if not exists game ("
-                + "id integer primary key,"
-                + "game_id int not null,"
-                + "game_name varchar(500) not null,"
-                + "game_genre varchar(20),"
-                + "game_rating double,"
-                + "fk_collection int"
-                + ")";
+        sql = "create table if not exists game" +
+                "(" +
+                "    game_id      int          not null" +
+                "        constraint game_pk" +
+                "            primary key," +
+                "    game_name    varchar(500) not null," +
+                "    game_genre   varchar(20)," +
+                "    game_rating  double," +
+                "    fk_developer int" +
+                ");" +
+                "" +
+                "create unique index game_game_id_uindex" +
+                "    on game (game_id);";
+        stmt.execute(sql);
+
+
+
+         //create all other tables here
+        sql = "create table if not exists user" +
+                "(" +
+                "    id        integer" +
+                "        constraint user_pk" +
+                "            primary key autoincrement," +
+                "    username  varchar(255) not null," +
+                "    password  varchar(255) not null," +
+                "    user_type varchar(255)" +
+                ");" +
+                "" +
+                "create unique index user_username_uindex" +
+                "    on user (username);" +
+                "";
 
         stmt.execute(sql);
+
 
 
     }
@@ -245,6 +279,22 @@ public class DBHelper {
         filterItems = new JList<>(storeModel);
         return filterItems;
     }
+
+    public JList<String> getUserLibrary() throws SQLException {
+        DefaultListModel<String> libraryModel = new DefaultListModel<>();
+        JList<String> libraryItems;
+        String username = "sonic";
+        String sql = "select game.game_name, user_";
+        Connection conn = DriverManager.getConnection(url);
+        Statement stmt  = conn.createStatement();
+        ResultSet rs    = stmt.executeQuery(sql);
+        while (rs.next()){
+            libraryModel.addElement(rs.getString("game_name"));
+        }
+        libraryItems = new JList<>(libraryModel);
+        return libraryItems;
+    }
+
 
 
 }

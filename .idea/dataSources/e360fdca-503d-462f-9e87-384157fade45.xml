@@ -12,7 +12,7 @@
     <collation id="5" parent="1" name="RTRIM"/>
     <table id="6" parent="2" name="friends"/>
     <table id="7" parent="2" name="game"/>
-    <table id="8" parent="2" name="game_collection"/>
+    <table id="8" parent="2" name="game_collection_user"/>
     <table id="9" parent="2" name="sqlite_master">
       <System>1</System>
     </table>
@@ -20,127 +20,139 @@
       <System>1</System>
     </table>
     <table id="11" parent="2" name="threads"/>
-    <column id="12" parent="6" name="id">
+    <table id="12" parent="2" name="user"/>
+    <column id="13" parent="6" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
     </column>
-    <column id="13" parent="6" name="username">
+    <column id="14" parent="6" name="username">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="14" parent="6">
+    <key id="15" parent="6">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="15" parent="7" name="id">
-      <Position>1</Position>
-      <DataType>integer|0s</DataType>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
     <column id="16" parent="7" name="game_id">
-      <Position>2</Position>
+      <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="17" parent="7" name="game_name">
-      <Position>3</Position>
+      <Position>2</Position>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="18" parent="7" name="game_genre">
-      <Position>4</Position>
+      <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
     <column id="19" parent="7" name="game_rating">
-      <Position>5</Position>
+      <Position>4</Position>
       <DataType>double|0s</DataType>
     </column>
-    <column id="20" parent="7" name="fk_collection">
-      <Position>6</Position>
+    <column id="20" parent="7" name="fk_developer">
+      <Position>5</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="21" parent="7" name="fk_developer">
-      <Position>7</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <index id="22" parent="7" name="game_game_id_uindex">
+    <index id="21" parent="7" name="game_game_id_uindex">
+      <ColNames>game_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="22" parent="7" name="sqlite_autoindex_game_1">
+      <NameSurrogate>1</NameSurrogate>
       <ColNames>game_id</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="23" parent="7" name="game_pk">
-      <ColNames>id</ColNames>
+      <ColNames>game_id</ColNames>
       <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_game_1</UnderlyingIndexName>
     </key>
-    <foreign-key id="24" parent="7" name="game_game_collection_collection_id_fk">
-      <ColNames>fk_collection</ColNames>
-      <RefTableName>game_collection</RefTableName>
-      <RefColNames>collection_id</RefColNames>
-      <OnDelete>cascade</OnDelete>
-      <OnUpdate>cascade</OnUpdate>
-    </foreign-key>
-    <column id="25" parent="8" name="id">
+    <column id="24" parent="8" name="collection_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="26" parent="8" name="collection_id">
+    <column id="25" parent="8" name="fk_user">
       <Position>2</Position>
       <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="27" parent="8" name="fk_game">
+    <column id="26" parent="8" name="fk_game">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </column>
-    <key id="28" parent="8" name="game_collection_pk">
-      <ColNames>id</ColNames>
+    <key id="27" parent="8" name="game_collection_pk">
+      <ColNames>collection_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="29" parent="8" name="game_collection_game_game_id_fk">
-      <ColNames>fk_game</ColNames>
-      <RefTableName>game</RefTableName>
-      <RefColNames>game_id</RefColNames>
-      <OnDelete>cascade</OnDelete>
-      <OnUpdate>cascade</OnUpdate>
-    </foreign-key>
-    <column id="30" parent="9" name="type">
+    <column id="28" parent="9" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="31" parent="9" name="name">
+    <column id="29" parent="9" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="32" parent="9" name="tbl_name">
+    <column id="30" parent="9" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="33" parent="9" name="rootpage">
+    <column id="31" parent="9" name="rootpage">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="34" parent="9" name="sql">
+    <column id="32" parent="9" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="35" parent="10" name="name">
+    <column id="33" parent="10" name="name">
       <Position>1</Position>
     </column>
-    <column id="36" parent="10" name="seq">
+    <column id="34" parent="10" name="seq">
       <Position>2</Position>
     </column>
-    <column id="37" parent="11" name="id">
+    <column id="35" parent="11" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
     </column>
-    <column id="38" parent="11" name="username">
+    <column id="36" parent="11" name="username">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="39" parent="11">
+    <key id="37" parent="11">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="39" parent="12" name="username">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="12" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="12" name="user_type">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <index id="42" parent="12" name="user_username_uindex">
+      <ColNames>username</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="43" parent="12" name="user_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
