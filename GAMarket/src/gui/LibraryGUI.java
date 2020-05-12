@@ -1,6 +1,7 @@
 package gui;
 
 import app.Game;
+import app.GameCollection;
 import db.DBHelper;
 
 import javax.swing.*;
@@ -15,7 +16,7 @@ public class LibraryGUI extends JPanel {
 
     static JScrollPane libraryScroll;
 
-    public LibraryGUI(DBHelper dbh, String userID) throws SQLException {
+    public LibraryGUI(GameCollection libraryGC,DBHelper dbh, String userID) throws SQLException {
         JPanel userLibraryPanel = new JPanel();
         JLabel userLibraryLabel = new JLabel(dbh.getUsername(userID) + " Library");
         userLibraryLabel.setFont(new Font("Verdana", Font.PLAIN, 24));
@@ -24,7 +25,6 @@ public class LibraryGUI extends JPanel {
         userLibraryPanel.add(userLibraryLabel, BorderLayout.PAGE_START);
 
          refreshButton = new JButton("Refresh Library");
-
 
         userLibraryItems = dbh.getUserLibrary(userID);
         userLibraryItems.addMouseListener(new MouseAdapter() {
@@ -35,7 +35,7 @@ public class LibraryGUI extends JPanel {
                     String selectedItemStr = userLibraryItems.getSelectedValue();
                     try {
                         tempGame = dbh.getGameProfileName(selectedItemStr);
-                        String[] gameCommands = {"Play game", "Show Forum"};
+                        String[] gameCommands = {"Play game", "Delete game","Show Forum"};
                         int gameChoice;
                         gameChoice = JOptionPane.showOptionDialog(null,
                                 tempGame.toString(),
@@ -49,8 +49,11 @@ public class LibraryGUI extends JPanel {
                             case 0:
                                 JOptionPane.showMessageDialog(null,"Initializing " + selectedItemStr);
                                 break;
-                            case 1: System.out.println("Show Forum"); break;
-                            case 2: return;
+                            case 1:
+                                libraryGC.deleteGame(selectedItemStr, dbh, userID);
+                                break;
+                            case 2: System.out.println("Show Forum"); break;
+                            case 3: return;
                             default: // do nothing
                         }
                     } catch (SQLException throwables) {
@@ -75,7 +78,7 @@ public class LibraryGUI extends JPanel {
                             String selectedItemStr = userLibraryItems.getSelectedValue();
                             try {
                                 tempGame = dbh.getGameProfileName(selectedItemStr);
-                                String[] gameCommands = {"Play game", "Show Forum"};
+                                String[] gameCommands = {"Play game", "Delete game","Show Forum"};
                                 int gameChoice;
                                 gameChoice = JOptionPane.showOptionDialog(null,
                                         tempGame.toString(),
@@ -89,8 +92,11 @@ public class LibraryGUI extends JPanel {
                                     case 0:
                                         JOptionPane.showMessageDialog(null,"Initializing " + selectedItemStr);
                                         break;
-                                    case 1: System.out.println("Show Forum"); break;
-                                    case 2: return;
+                                    case 1:
+                                        libraryGC.deleteGame(selectedItemStr, dbh, userID);
+                                        break;
+                                    case 2: System.out.println("Show Forum"); break;
+                                    case 3: return;
                                     default: // do nothing
                                 }
                             } catch (SQLException throwables) {

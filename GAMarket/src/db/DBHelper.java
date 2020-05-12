@@ -94,6 +94,10 @@ public class DBHelper {
         stmt.execute(sql);
 
 
+        stmt.close();
+        conn.close();
+
+
 
     }
 
@@ -104,6 +108,8 @@ public class DBHelper {
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, username);
         pstmt.executeUpdate();
+        pstmt.close();
+        conn.close();
     }
     public void updateFriend(int id, String username) throws SQLException {
         String sql = "update friends set username = ? , where id = ?";
@@ -114,6 +120,8 @@ public class DBHelper {
         pstmt.setInt(2, id);
         // update
         pstmt.executeUpdate();
+        pstmt.close();
+        conn.close();
     }
     public void deleteFriend(String username) throws SQLException {
         String sql = "delete from friends where username = ?";
@@ -123,6 +131,8 @@ public class DBHelper {
         pstmt.setString(1, username);
         // execute the delete statement
         pstmt.executeUpdate();
+        pstmt.close();
+        conn.close();
     }
     public JList<String> getAllFriends() throws SQLException {
         DefaultListModel<String> model = new DefaultListModel<>();
@@ -135,6 +145,9 @@ public class DBHelper {
         while (rs.next()) {
             model.addElement(rs.getString("username"));
         }
+        rs.close();
+        stmt.close();
+        conn.close();
         return j_list;
     }
 
@@ -151,7 +164,11 @@ public class DBHelper {
         while (rs.next()) {
             model.addElement(rs.getString("username"));
         }
+        rs.close();
+        stmt.close();
+        conn.close();
         return j_list;
+
     }
 
     public JList<String> getAllGames() throws SQLException{
@@ -284,6 +301,34 @@ public class DBHelper {
         }
         else {
             JOptionPane.showMessageDialog(null, "Game already exists in Library");
+        }
+
+
+    }
+
+    public void deleteGame(String gameName, String userID) throws SQLException {
+        boolean isPresent = false;
+        JList<String> userLibrary = getUserLibrary(userID);
+        for (int i = 0; i < userLibrary.getModel().getSize(); i++){
+            if (userLibrary.getModel().getElementAt(i).equals(gameName)){
+                isPresent = true;
+                break;
+            }
+        }
+
+        if (isPresent){
+            Game tempGame  = getGameProfileName(gameName);
+            String collectSQL = "delete from game_collection_user where fk_user = ? and fk_game = ?";
+            Connection collect_conn = DriverManager.getConnection(url);
+            PreparedStatement collect_pstmt = collect_conn.prepareStatement(collectSQL);
+            collect_pstmt.setString(1, userID);
+            collect_pstmt.setString(2,Integer.toString(tempGame.getId()));
+            collect_pstmt.executeUpdate();
+            collect_pstmt.close();
+            collect_conn.close();
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Game does not exist");
         }
 
 

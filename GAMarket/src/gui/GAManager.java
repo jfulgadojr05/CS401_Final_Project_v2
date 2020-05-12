@@ -106,8 +106,9 @@ public class GAManager extends JFrame {
         config.addTab("Store", null, storeGUIPane, "Choose your games");
 
         // for library tab
-//        libraryList = new JList<>(libraryArr);
-        libraryGUIPane = new LibraryGUI(mydb, userID);
+        //        libraryList = new JList<>(libraryArr);
+        GameCollection libraryGC = new GameCollection();
+        libraryGUIPane = new LibraryGUI(libraryGC, mydb, userID);
         config.addTab("Library", null, libraryGUIPane, "See your library");
 
         // for forum tab

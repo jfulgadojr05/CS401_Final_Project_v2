@@ -36,24 +36,11 @@ public class GameCollection {
         this.numberOfGames = numberOfGames;
     }
 
-    public void addGame(Game aGame){
-        int counter = 0;
-        if (numberOfGames == gameArray.length) {
-            Game[] tempArray = new Game[numberOfGames*2];
-            System.arraycopy(gameArray, 0, tempArray, 0, gameArray.length);
-            gameArray = tempArray;
-        }
-
-        if(gameArray[0] == null){
-            gameArray[0] = aGame;
-            numberOfGames++;
-        }
-        else{
-            while (gameArray[counter] != null){
-                counter++;
-            }
-            gameArray[counter] = aGame;
-            numberOfGames++;
+    public void deleteGame(String gameName, DBHelper dbh, String userID) throws SQLException {
+        String confirmMessage = "Delete " + gameName + " from library?";
+        int confirmOption = JOptionPane.showConfirmDialog(null, confirmMessage);
+        if (confirmOption == JOptionPane.YES_OPTION){
+            dbh.deleteGame(gameName, userID);
         }
     }
 
