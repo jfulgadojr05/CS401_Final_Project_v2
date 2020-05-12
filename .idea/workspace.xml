@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="Modified LibraryGUI pane">
+    <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/LibraryGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/LibraryGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/StoreGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/StoreGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/test/StoreGUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreGUITest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +90,7 @@
       <recent name="C:\Users\jerom\Java_Projects\CS401_GAMarket_Final\GAMarket\src\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GAMarketRun">
+  <component name="RunManager" selected="JUnit.StoreGUITest.getAllGameTest">
     <configuration name="GAManager" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.GAManager" />
       <module name="CS401_GAMarket_Final" />
@@ -152,8 +150,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StoreGUITest.getAllGameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS401_GAMarket_Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.StoreGUITest" />
+      <option name="METHOD_NAME" value="getAllGameTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StoreGUITest.getAllGameTest" />
         <item itemvalue="Application.GAMarketRun" />
         <item itemvalue="Application.LoginGUI" />
         <item itemvalue="Application.GAManager" />
@@ -188,7 +203,7 @@
       <workItem from="1589091674472" duration="17353000" />
       <workItem from="1589209926945" duration="11918000" />
       <workItem from="1589228250434" duration="27480000" />
-      <workItem from="1589267507547" duration="2999000" />
+      <workItem from="1589267507547" duration="4287000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -477,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589269528828</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Implemented refresh button for LibraryGUI">
+      <created>1589270728033</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1589270728033</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +519,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created game profile for searching games" />
     <MESSAGE value="Implemented search feature" />
     <MESSAGE value="Learned how to filter the games based off of Genre and Rating" />
     <MESSAGE value="Made validation for game genre" />
@@ -522,7 +543,8 @@
     <MESSAGE value="Created a prototyped purchaseGame function" />
     <MESSAGE value="Created LibraryGUI Pane" />
     <MESSAGE value="Modified LibraryGUI pane" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified LibraryGUI pane" />
+    <MESSAGE value="Implemented refresh button for LibraryGUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented refresh button for LibraryGUI" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="101" key="#GAManager" timestamp="1587671854647">
@@ -563,10 +585,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="624" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589267982043" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589270123042">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589270720478">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589270123042" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589270720478" />
     <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
     <state x="112" y="48" key="DiffContextDialog" timestamp="1587621001174">
       <screen x="0" y="0" width="1600" height="860" />
@@ -581,28 +603,28 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="318" height="288" key="Git.Branch.Popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589243808876" />
-    <state width="1557" height="228" key="GridCell.Tab.0.bottom" timestamp="1589270395037">
+    <state width="1557" height="228" key="GridCell.Tab.0.bottom" timestamp="1589271221025">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="228" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589270395037" />
+    <state width="1557" height="228" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589271221025" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="228" key="GridCell.Tab.0.center" timestamp="1589270395037">
+    <state width="1557" height="228" key="GridCell.Tab.0.center" timestamp="1589271221025">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="228" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589270395037" />
+    <state width="1557" height="228" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589271221025" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="228" key="GridCell.Tab.0.left" timestamp="1589270395036">
+    <state width="1557" height="228" key="GridCell.Tab.0.left" timestamp="1589271221025">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="228" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589270395036" />
+    <state width="1557" height="228" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589271221025" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="228" key="GridCell.Tab.0.right" timestamp="1589270395037">
+    <state width="1557" height="228" key="GridCell.Tab.0.right" timestamp="1589271221025">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="228" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589270395037" />
+    <state width="1557" height="228" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589271221025" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
     <state width="1557" height="215" key="GridCell.Tab.1.bottom" timestamp="1589265960397">
@@ -643,10 +665,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="390" y="78" key="VCS.ChangeListViewerDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768014242" />
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1589259286798">
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1589270732217">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589259286798" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589270732217" />
     <state width="808" height="438" key="XDebugger.FullValuePopup" timestamp="1589214112310">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
