@@ -1,9 +1,12 @@
 package gui;
 
+import db.DBHelper;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class LoginGUI extends JFrame {
     private final GAManager gm;
@@ -17,8 +20,11 @@ public class LoginGUI extends JFrame {
     JButton registerButton = new JButton("Register");
     JButton recoveryButton = new JButton("Account Recovery");
 
-    public LoginGUI() {
-        this.gm = new GAManager();
+    public LoginGUI() throws SQLException {
+        DBHelper dbh = new DBHelper();
+        dbh.createNewDatabase();
+        dbh.createAllTables();
+        this.gm = new GAManager(dbh);
 
         // setting up gui bounds
         container.setLayout(null);
@@ -44,15 +50,22 @@ public class LoginGUI extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                boolean success = app.Login.sendLogin(usernameField.getText().trim(), passwordField.getText().trim());
-                if (success) {
-                    // if login successful, open GAMarket
-                    dispose();
-                    gm.setVisible(true);
-                } else {
-                    // invalid username/password if unsuccessful
-                    JOptionPane.showMessageDialog(null, "Invalid Username or Password.");
+                boolean success = false;
+                try {
+                    success = app.Login.sendLogin(usernameField.getText().trim(), passwordField.getText().trim(), dbh);
+                    if (success) {
+                        // if login successful, open GAMarket
+                        dispose();
+                        gm.setVisible(true);
+                    } else {
+                        // invalid username/password if unsuccessful
+                        JOptionPane.showMessageDialog(null, "Invalid Username or Password.");
+                    }
+
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
                 }
+
             }
         });
 
@@ -64,44 +77,50 @@ public class LoginGUI extends JFrame {
                 String registerUser = JOptionPane.showInputDialog("Please enter your desired username:");
 
                 // look if duplicate username exists
-                boolean duplicate = app.Login.isDuplicate(registerUser);
-                if (duplicate) {
-                    JOptionPane.showMessageDialog(null, "Username already exists. Please choose a different username.");
-                    // proceed with password creation if unique username
-                } else {
-                    String registerPass = JOptionPane.showInputDialog("Please enter your desired password:");
-                    String confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
-                    while (!registerPass.equals(confirmPass)) {
-                        registerPass = JOptionPane.showInputDialog("Invalid password. Please enter your desired password:");
-                        confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
-                    }
-
-                    // prompt player or dev
-                    String[] command = {"Player", "Developer"};
-                    int choice;
-                    do {
-                        choice = JOptionPane.showOptionDialog(null,
-                                "Are you a new player or new developer?",
-                                "Register",
-                                JOptionPane.YES_NO_CANCEL_OPTION,
-                                JOptionPane.QUESTION_MESSAGE,
-                                null,
-                                command,
-                                command[command.length - 1]);
-                        switch (choice) {
-                            case 0:
-                                String result1 = app.Login.sendRegistration(registerUser, confirmPass, "player" );
-                                JOptionPane.showMessageDialog(null, result1);
-                                break;
-                            case 1:
-                                String result2 = app.Login.sendRegistration(registerUser, confirmPass, "developer");
-                                JOptionPane.showMessageDialog(null, result2);
-                                break;
-                            default:
-                                break;
+                boolean duplicate = false;
+                try {
+                    duplicate = app.Login.isDuplicate(registerUser, dbh);
+                    if (duplicate) {
+                        JOptionPane.showMessageDialog(null, "Username already exists. Please choose a different username.");
+                        // proceed with password creation if unique username
+                    } else {
+                        String registerPass = JOptionPane.showInputDialog("Please enter your desired password:");
+                        String confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
+                        while (!registerPass.equals(confirmPass)) {
+                            registerPass = JOptionPane.showInputDialog("Invalid password. Please enter your desired password:");
+                            confirmPass = JOptionPane.showInputDialog("Please confirm your password:");
                         }
-                    } while (choice > 1);
+
+                        // prompt player or dev
+                        String[] command = {"Player", "Developer"};
+                        int choice;
+                        do {
+                            choice = JOptionPane.showOptionDialog(null,
+                                    "Are you a new player or new developer?",
+                                    "Register",
+                                    JOptionPane.YES_NO_CANCEL_OPTION,
+                                    JOptionPane.QUESTION_MESSAGE,
+                                    null,
+                                    command,
+                                    command[command.length - 1]);
+                            switch (choice) {
+                                case 0:
+                                    String result1 = app.Login.sendRegistration(registerUser, confirmPass, "player" , dbh);
+                                    JOptionPane.showMessageDialog(null, result1);
+                                    break;
+                                case 1:
+                                    String result2 = app.Login.sendRegistration(registerUser, confirmPass, "developer", dbh);
+                                    JOptionPane.showMessageDialog(null, result2);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        } while (choice > 1);
+                    }
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
                 }
+
             }
         });
 
@@ -111,18 +130,22 @@ public class LoginGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String username = JOptionPane.showInputDialog("Please enter your account's username:");
                 JOptionPane.showMessageDialog(null, "Verifying ownership...");
-                if (app.Login.isDuplicate(username) == true) {
-                    String password = JOptionPane.showInputDialog("Please enter a new password:");
-                    String confirm = JOptionPane.showInputDialog("Please confirm your new password:");
-                    while (!password.equals(confirm)) {
-                        password = JOptionPane.showInputDialog("Passwords did not match. Please enter a new password:");
-                        confirm = JOptionPane.showInputDialog("Please confirm your new password:");
-                    }
-                    app.Login.loginRecovery(username, confirm);
-                    JOptionPane.showMessageDialog(null, "Password successfully updated. Please log in.");
+                try {
+                    if (app.Login.isDuplicate(username, dbh) == true) {
+                        String password = JOptionPane.showInputDialog("Please enter a new password:");
+                        String confirm = JOptionPane.showInputDialog("Please confirm your new password:");
+                        while (!password.equals(confirm)) {
+                            password = JOptionPane.showInputDialog("Passwords did not match. Please enter a new password:");
+                            confirm = JOptionPane.showInputDialog("Please confirm your new password:");
+                        }
+                        app.Login.loginRecovery(username, confirm, dbh);
+                        JOptionPane.showMessageDialog(null, "Password successfully updated. Please log in.");
 
-                } else {
-                    JOptionPane.showMessageDialog(null, "No such account exists.");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "No such account exists.");
+                    }
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
                 }
 
             }
@@ -144,7 +167,7 @@ public class LoginGUI extends JFrame {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         LoginGUI loginUser = new LoginGUI();
         loginUser.setVisible(true);
         loginUser.setTitle("GAMarket Login");
