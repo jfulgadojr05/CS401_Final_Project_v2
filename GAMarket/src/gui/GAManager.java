@@ -1,7 +1,6 @@
 package gui;
 
 import app.GameCollection;
-import app.Store;
 import db.DBHelper;
 
 import javax.swing.*;
@@ -26,7 +25,8 @@ public class GAManager extends JFrame {
     JMenuItem viewFriends;
     JMenuItem menuItem;
     JTabbedPane config;
-    Store storePane;
+    StoreGUI storeGUIPane;
+    LibraryGUI libraryGUIPane;
     ForumGUI forumPane;
     JLabel libraryPane;
     JLabel friendsPane;
@@ -102,13 +102,13 @@ public class GAManager extends JFrame {
         // for store tab
         // Loading data
         GameCollection storeGC = new GameCollection();
-        storePane = new Store(storeGC, userID, mydb);
-        config.addTab("Store", null, storePane, "Choose your games");
+        storeGUIPane = new StoreGUI(storeGC, userID, mydb);
+        config.addTab("Store", null, storeGUIPane, "Choose your games");
 
         // for library tab
 //        libraryList = new JList<>(libraryArr);
-        libraryList = mydb.getUserLibrary(userID);
-        config.addTab("Library", null, libraryList, "See your library");
+        libraryGUIPane = new LibraryGUI(mydb, userID);
+        config.addTab("Library", null, libraryGUIPane, "See your library");
 
         // for forum tab
         forumPane = new ForumGUI();

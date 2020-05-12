@@ -262,15 +262,30 @@ public class DBHelper {
     }
 
     public void purchaseGame(String gameName, String userID) throws SQLException {
-        Game tempGame  = getGameProfileName(gameName);
-        String collectSQL = "insert into game_collection_user(fk_user, fk_game) values(?,?)";
-        Connection collect_conn = DriverManager.getConnection(url);
-        PreparedStatement collect_pstmt = collect_conn.prepareStatement(collectSQL);
-        collect_pstmt.setString(1, userID);
-        collect_pstmt.setString(2,Integer.toString(tempGame.getId()));
-        collect_pstmt.executeUpdate();
-        collect_pstmt.close();
-        collect_conn.close();
+        boolean isDuplicate = false;
+        JList<String> userLibrary = getUserLibrary(userID);
+        for (int i = 0; i < userLibrary.getModel().getSize(); i++){
+            if (userLibrary.getModel().getElementAt(i).equals(gameName)){
+                isDuplicate = true;
+                break;
+            }
+        }
+
+        if (!isDuplicate){
+            Game tempGame  = getGameProfileName(gameName);
+            String collectSQL = "insert into game_collection_user(fk_user, fk_game) values(?,?)";
+            Connection collect_conn = DriverManager.getConnection(url);
+            PreparedStatement collect_pstmt = collect_conn.prepareStatement(collectSQL);
+            collect_pstmt.setString(1, userID);
+            collect_pstmt.setString(2,Integer.toString(tempGame.getId()));
+            collect_pstmt.executeUpdate();
+            collect_pstmt.close();
+            collect_conn.close();
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Game already exists in Library");
+        }
+
 
     }
 

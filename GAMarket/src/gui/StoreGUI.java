@@ -1,5 +1,7 @@
-package app;
+package gui;
 
+import app.Game;
+import app.GameCollection;
 import db.DBHelper;
 
 import javax.swing.*;
@@ -8,16 +10,14 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.SQLException;
 
-public class Store extends JPanel {
+public class StoreGUI extends JPanel {
 
     static JList<String> storeMenuItems;
     static JButton filterGameButton, searchGameButton, unfilterGameButton;
     static JScrollPane storeMenuScroll;
     static JTextField searchTextField;
 
-
-
-    public Store(GameCollection storeCollection, String userID, DBHelper dbh) throws SQLException {
+    public StoreGUI(GameCollection storeCollection, String userID, DBHelper dbh) throws SQLException {
 
         JPanel menuPanel = new JPanel();
         JLabel gameItemLabel = new JLabel("List of Games");

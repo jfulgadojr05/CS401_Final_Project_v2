@@ -2,7 +2,7 @@ package test;
 
 import org.junit.Test;
 
-public class StoreTest {
+public class StoreGUITest {
 
     @Test
     public void getAllGameTest(){

@@ -6,9 +6,9 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        StoreTest.class
+        StoreGUITest.class
 })
 
-public class StoreTestSuite {
+public class StoreGUITestSuite {
     // Code goes here
 }

@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAMarket/src/gui/LibraryGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/StoreGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/test/StoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreGUITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/test/StoreTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/test/StoreTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreGUITestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +103,7 @@
       <module name="CS401_GAMarket_Final" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.*" />
+          <option name="PATTERN" value="gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -188,7 +192,8 @@
       <workItem from="1589065885236" duration="7991000" />
       <workItem from="1589091674472" duration="17353000" />
       <workItem from="1589209926945" duration="11918000" />
-      <workItem from="1589228250434" duration="26690000" />
+      <workItem from="1589228250434" duration="27480000" />
+      <workItem from="1589267507547" duration="1356000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -456,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589264476444</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Created a prototyped purchaseGame function">
+      <created>1589266377217</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1589266377217</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +488,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added filter button compatability" />
     <MESSAGE value="Added unfilter button" />
     <MESSAGE value="Created prototype search button" />
     <MESSAGE value="Created game profile for searching games" />
@@ -501,7 +512,8 @@
     <MESSAGE value="Created foreign key connection for user, game, and game collection" />
     <MESSAGE value="Implemented Christian A code with mine" />
     <MESSAGE value="Got library to work, prototyped" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got library to work, prototyped" />
+    <MESSAGE value="Created a prototyped purchaseGame function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a prototyped purchaseGame function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="101" key="#GAManager" timestamp="1587671854647">
@@ -538,10 +550,14 @@
     </state>
     <state x="673" y="338" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587595215856" />
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589264473608">
+    <state x="624" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589267982043">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589264473608" />
+    <state x="624" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589267982043" />
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589266370955">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589266370955" />
     <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
     <state x="112" y="48" key="DiffContextDialog" timestamp="1587621001174">
       <screen x="0" y="0" width="1600" height="860" />
@@ -556,28 +572,28 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="318" height="288" key="Git.Branch.Popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589243808876" />
-    <state width="1557" height="228" key="GridCell.Tab.0.bottom" timestamp="1589266043788">
+    <state width="1557" height="228" key="GridCell.Tab.0.bottom" timestamp="1589268038496">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="228" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589266043788" />
+    <state width="1557" height="228" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589268038496" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="228" key="GridCell.Tab.0.center" timestamp="1589266043787">
+    <state width="1557" height="228" key="GridCell.Tab.0.center" timestamp="1589268038495">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="228" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589266043787" />
+    <state width="1557" height="228" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589268038495" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="228" key="GridCell.Tab.0.left" timestamp="1589266043787">
+    <state width="1557" height="228" key="GridCell.Tab.0.left" timestamp="1589268038489">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="228" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589266043787" />
+    <state width="1557" height="228" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589268038489" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="228" key="GridCell.Tab.0.right" timestamp="1589266043788">
+    <state width="1557" height="228" key="GridCell.Tab.0.right" timestamp="1589268038495">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="228" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589266043788" />
+    <state width="1557" height="228" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589268038495" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
     <state width="1557" height="215" key="GridCell.Tab.1.bottom" timestamp="1589265960397">
@@ -642,10 +658,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="504" y="322" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589221641461" />
-    <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589156093215">
+    <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589266313024">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589156093215" />
+    <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589266313024" />
     <state x="571" y="243" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589221630868">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -674,28 +690,16 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="182" y="51" key="new project wizard/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587672208988" />
-    <state x="456" y="195" key="run.anything.popup" timestamp="1588906646735">
+    <state x="456" y="195" key="run.anything.popup" timestamp="1589268739661">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="456" y="195" key="run.anything.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1588906646735" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1589237462501">
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589268739661" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1589268303568">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589237462501" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589268303568" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/GAMarket/src/db/DBHelper.java</url>
-          <line>263</line>
-          <properties class="db.DBHelper" method="purchaseGame">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo typeName="org.sqlite.jdbc4.JDBC4ResultSet" fieldName="meta" />
