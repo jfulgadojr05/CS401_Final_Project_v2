@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/StoreGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/StoreGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/GameCollection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +202,7 @@
       <workItem from="1589209926945" duration="11918000" />
       <workItem from="1589228250434" duration="27480000" />
       <workItem from="1589267507547" duration="4427000" />
-      <workItem from="1589295915530" duration="2647000" />
+      <workItem from="1589295915530" duration="3007000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -514,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589297128841</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Adding store GUI comments">
+      <created>1589298590674</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1589298590674</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +539,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Made validation for game genre" />
     <MESSAGE value="Removed extra system outs" />
     <MESSAGE value="Created validation for filter" />
     <MESSAGE value="Created initialize game function" />
@@ -559,7 +563,8 @@
     <MESSAGE value="Implemented refresh button for LibraryGUI" />
     <MESSAGE value="Created getAllGameTest case" />
     <MESSAGE value="Implemented delete function for a player to delete a game from their collection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented delete function for a player to delete a game from their collection" />
+    <MESSAGE value="Adding store GUI comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding store GUI comments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="101" key="#GAManager" timestamp="1587671854647">
@@ -600,10 +605,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="624" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589267982043" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589297123942">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589298587795">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589297123942" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589298587795" />
     <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
     <state x="112" y="48" key="DiffContextDialog" timestamp="1587621001174">
       <screen x="0" y="0" width="1600" height="860" />
