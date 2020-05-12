@@ -15,28 +15,29 @@ public class GameCollection {
     private Game[] gameArray;
     private int numberOfGames;
 
+    /// Constructor
     public GameCollection() {
         gameArray = new Game[7];
         numberOfGames = 0;
     }
 
+    // Getters
     public Game[] getGameArray() {
         return gameArray;
     }
-
     public int getNumberOfGames() {
         return numberOfGames;
     }
 
+    // Setters
     public void setGameArray(Game[] gameArray) {
         this.gameArray = gameArray;
     }
-
     public void setNumberOfGames(int numberOfGames) {
         this.numberOfGames = numberOfGames;
     }
 
-
+    // Functions
     public void deleteGame(String gameName, DBHelper dbh, String userID) throws SQLException {
         // Delete a users game from their collection
         // from the database using gamename, dbhelper, and user id

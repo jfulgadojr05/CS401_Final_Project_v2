@@ -47,6 +47,7 @@ public class DBHelper {
                 + ")";
         stmt.execute(sql);
 
+        // creates game collection user table
         sql = "create table if not exists game_collection_user" +
                 "(" +
                 "    collection_id integer" +
@@ -76,7 +77,7 @@ public class DBHelper {
 
 
 
-         //create all other tables here
+         //create user tables
         sql = "create table if not exists user" +
                 "(" +
                 "    id        integer" +
@@ -93,10 +94,8 @@ public class DBHelper {
 
         stmt.execute(sql);
 
-
         stmt.close();
         conn.close();
-
 
 
     }
@@ -171,38 +170,30 @@ public class DBHelper {
 
     }
 
-    public JList<String> getAllGames() throws SQLException{
-        DefaultListModel<String> storeModel = new DefaultListModel<>();
-        JList<String> storeMenuItems;
-        String sql = "select game_id, game_name, game_genre, game_rating from game";
-        Connection conn = DriverManager.getConnection(url);
-        Statement stmt  = conn.createStatement();
-        ResultSet rs    = stmt.executeQuery(sql);
-        while (rs.next()){
-            String tempItem = rs.getString("game_id") + "," +
-                    rs.getString("game_name") + ", " +
-                    rs.getString("game_genre") + ", " +
-                    rs.getString("game_rating");
-            storeModel.addElement(tempItem);
-        }
-        rs.close();
-        stmt.close();
-        conn.close();
-        storeMenuItems = new JList<>(storeModel);
-        return storeMenuItems;
-    }
 
     public JList<String> getAllGameName() throws SQLException {
+        // Return JList for all game names
+        // local variables
         DefaultListModel<String> storeModel = new DefaultListModel<>();
         JList<String> storeMenuItems;
-        String sql = "select game_name from game";
+
+        // sql statement and collection
+        String sql = "select * from game";
         Connection conn = DriverManager.getConnection(url);
         Statement stmt  = conn.createStatement();
+
+        // Result set to query data
         ResultSet rs    = stmt.executeQuery(sql);
+
+        // Add the elements to game model
         while (rs.next()){
             storeModel.addElement(rs.getString("game_name"));
         }
+
+        // Adding model to jlist item
         storeMenuItems = new JList<>(storeModel);
+
+        // close statements and return jlist
         rs.close();
         stmt.close();
         conn.close();
@@ -210,21 +201,34 @@ public class DBHelper {
     }
 
     public Game[] getAllGameObjects() throws SQLException {
-        DefaultListModel<String> storeModel = new DefaultListModel<>();
-        JList<String> storeMenuItems;
+        // Return an array of all the game objects from database
+
+        // local variables
         int counter = 0;
         Game[] tempArray;
+
+        // sql statement and connection
         String sql = "select game_id, game_name, game_genre, game_rating from game";
         Connection conn = DriverManager.getConnection(url);
         Statement stmt  = conn.createStatement();
+
+        // Result set to query data
         ResultSet rs    = stmt.executeQuery(sql);
+
+        // while statement to get a count of record set
         while (rs.next()){
             counter++;
         }
 
+        // Creating game temp array and reset counter
         tempArray = new Game[counter];
         counter = 0;
+
+        // Result set to query the data
         rs = stmt.executeQuery(sql);
+
+        // While statement to go through each record in set, make a game object,
+        // and add to game array
         while(rs.next()){
             Game temp = new Game();
             temp.setId(Integer.parseInt(rs.getString("game_id")));
@@ -234,6 +238,8 @@ public class DBHelper {
             tempArray[counter] = temp;
             counter++;
         }
+
+        // Close database and return game array
         rs.close();
         stmt.close();
         conn.close();
@@ -241,18 +247,29 @@ public class DBHelper {
     }
 
     public Game getGameProfile(String gameID) throws SQLException {
+        // Return a single game object based off ID
+
+        // Local variable
         Game tempGame = new Game();
+
+        // sql statement and connection
         String sql = "select game_id, game_name, game_genre, game_rating from game where game_id = ?";
         Connection conn = DriverManager.getConnection(url);
         PreparedStatement pstmt = conn.prepareStatement(sql);
+
+        // Replacing prepared statement with parameter
         pstmt.setString(1,gameID);
+
+        // Result set to query data
         ResultSet rs = pstmt.executeQuery();
-        while (rs.next()){
-            tempGame.setId(Integer.parseInt(rs.getString(1)));
-            tempGame.setGameName(rs.getString(2));
-            tempGame.setGenre(rs.getString(3));
-            tempGame.setRating(Float.parseFloat(rs.getString(4)));
-        }
+
+        // Set the game variable with the result set columns
+        tempGame.setId(Integer.parseInt(rs.getString(1)));
+        tempGame.setGameName(rs.getString(2));
+        tempGame.setGenre(rs.getString(3));
+        tempGame.setRating(Float.parseFloat(rs.getString(4)));
+
+        // Closing statements and return game object
         rs.close();
         pstmt.close();
         conn.close();
@@ -260,18 +277,29 @@ public class DBHelper {
     }
 
     public Game getGameProfileName(String gameName) throws SQLException {
+        // Return a single game object based off ID
+
+        // Local variable
         Game tempGame = new Game();
+
+        // sql statement and connection
         String sql = "select game_id, game_name, game_genre, game_rating from game where game_name = ?";
         Connection conn = DriverManager.getConnection(url);
         PreparedStatement pstmt = conn.prepareStatement(sql);
+
+        // Replacing prepared statement with parameter
         pstmt.setString(1,gameName);
+
+        // Result set to query data
         ResultSet rs = pstmt.executeQuery();
-        while (rs.next()){
-            tempGame.setId(Integer.parseInt(rs.getString("game_id")));
-            tempGame.setGameName(rs.getString("game_name"));
-            tempGame.setGenre(rs.getString("game_genre"));
-            tempGame.setRating(Float.parseFloat(rs.getString("game_rating")));
-        }
+
+        // Set the game variable with the result set columns
+        tempGame.setId(Integer.parseInt(rs.getString("game_id")));
+        tempGame.setGameName(rs.getString("game_name"));
+        tempGame.setGenre(rs.getString("game_genre"));
+        tempGame.setRating(Float.parseFloat(rs.getString("game_rating")));
+
+        // Closing statements and return game object
         rs.close();
         pstmt.close();
         conn.close();
@@ -279,8 +307,13 @@ public class DBHelper {
     }
 
     public void purchaseGame(String gameName, String userID) throws SQLException {
+        // Insert game to game_collection_user table
+
+        // Local variables
         boolean isDuplicate = false;
         JList<String> userLibrary = getUserLibrary(userID);
+
+        // Check if the game is already in library from jlist
         for (int i = 0; i < userLibrary.getModel().getSize(); i++){
             if (userLibrary.getModel().getElementAt(i).equals(gameName)){
                 isDuplicate = true;
@@ -288,27 +321,41 @@ public class DBHelper {
             }
         }
 
+        // if-else if the game is already in library or not
         if (!isDuplicate){
+            // Setting up game variable
             Game tempGame  = getGameProfileName(gameName);
+
+            // Sql statement and connection
             String collectSQL = "insert into game_collection_user(fk_user, fk_game) values(?,?)";
             Connection collect_conn = DriverManager.getConnection(url);
             PreparedStatement collect_pstmt = collect_conn.prepareStatement(collectSQL);
+
+            // Adding parameters to prepared statement
             collect_pstmt.setString(1, userID);
             collect_pstmt.setString(2,Integer.toString(tempGame.getId()));
+
+            // Execute statement
             collect_pstmt.executeUpdate();
+
+            // Close database
             collect_pstmt.close();
             collect_conn.close();
         }
         else {
+            // JOptionMessage that game already exists
             JOptionPane.showMessageDialog(null, "Game already exists in Library");
         }
-
-
     }
 
     public void deleteGame(String gameName, String userID) throws SQLException {
+        // Deletes a record from game_collection_user from user collection
+
+        // local variable
         boolean isPresent = false;
         JList<String> userLibrary = getUserLibrary(userID);
+
+        // Check if the game is in library
         for (int i = 0; i < userLibrary.getModel().getSize(); i++){
             if (userLibrary.getModel().getElementAt(i).equals(gameName)){
                 isPresent = true;
@@ -316,18 +363,29 @@ public class DBHelper {
             }
         }
 
+        // if-else if the game is in library for deletion
         if (isPresent){
+            // Setting up game variable
             Game tempGame  = getGameProfileName(gameName);
+
+            // Sql statement and connection
             String collectSQL = "delete from game_collection_user where fk_user = ? and fk_game = ?";
             Connection collect_conn = DriverManager.getConnection(url);
             PreparedStatement collect_pstmt = collect_conn.prepareStatement(collectSQL);
+
+            // Adding parameters to prepared statement
             collect_pstmt.setString(1, userID);
             collect_pstmt.setString(2,Integer.toString(tempGame.getId()));
+
+            // Execute statement
             collect_pstmt.executeUpdate();
+
+            // Close database
             collect_pstmt.close();
             collect_conn.close();
         }
         else {
+            // joption message dialog to show game doesn't exist
             JOptionPane.showMessageDialog(null, "Game does not exist");
         }
 
@@ -335,44 +393,81 @@ public class DBHelper {
     }
 
     public JList<String> getFilterGameGenre(String aGenre) throws SQLException{
+        // Return jlist of all the games based off genre
+
+        // Local variables
         DefaultListModel<String> storeModel = new DefaultListModel<>();
         JList<String> filterItems;
+
+        // sql statements and connection
         String sql = "select game_id, game_name, game_genre, game_rating from game where game_genre = ?";
         Connection conn = DriverManager.getConnection(url);
         PreparedStatement pstmt = conn.prepareStatement(sql);
+
+        // Adding parameters to prepared statement
         pstmt.setString(1,aGenre);
+
+        // Result set to query data
         ResultSet rs = pstmt.executeQuery();
+
+        // while statement to loop through dataset
+        // add strings to list model
         while (rs.next()){
             storeModel.addElement(rs.getString("game_name"));
         }
+
+        // close database
         rs.close();
         pstmt.close();
         conn.close();
+
+        // set model to jlist items and return jlist
         filterItems = new JList<>(storeModel);
         return filterItems;
     }
 
     public JList<String> getFilterGameRating(String aRating) throws SQLException {
+        // Return jlist of all the games based off rating
+
+        // Local variables
         DefaultListModel<String> storeModel = new DefaultListModel<>();
         JList<String> filterItems;
+
+        // sql statements and connection
         String sql = "select game_id, game_name, game_genre, game_rating from game where game_rating = ?";
         Connection conn = DriverManager.getConnection(url);
         PreparedStatement pstmt = conn.prepareStatement(sql);
+
+        // Adding parameters to prepared statement
         pstmt.setString(1,aRating);
+
+        // Result set to query data
         ResultSet rs = pstmt.executeQuery();
+
+        // while statement to loop through dataset
+        // add strings to list model
         while (rs.next()){
             storeModel.addElement(rs.getString("game_name"));
         }
+
+        // close database
         rs.close();
         pstmt.close();
         conn.close();
+
+        // set model to jlist items and return jlist
         filterItems = new JList<>(storeModel);
         return filterItems;
     }
 
     public JList<String> getUserLibrary(String userID) throws SQLException {
+        // Return jlist of user own collection library
+
+        // Local variables
         DefaultListModel<String> libraryModel = new DefaultListModel<>();
         JList<String> libraryItems;
+
+        // sql statements and connection
         String sql = "select user.id, game.game_name from ((game_collection_user " +
                 "inner join game " +
                 "on game_collection_user.fk_game = game.game_id)" +
@@ -381,14 +476,25 @@ public class DBHelper {
                 "where game_collection_user.fk_user = ?";
         Connection conn = DriverManager.getConnection(url);
         PreparedStatement pstmt  = conn.prepareStatement(sql);
+
+        // Adding parameters to prepared statement
         pstmt.setString(1, userID);
+
+        // Result set to query data
         ResultSet rs    = pstmt.executeQuery();
+
+        // while statement to loop through dataset
+        // add strings to list model
         while (rs.next()){
             libraryModel.addElement(rs.getString("game_name"));
         }
+
+        // close database
         rs.close();
         pstmt.close();
         conn.close();
+
+        // set model to jlist items and return jlist
         libraryItems = new JList<>(libraryModel);
         return libraryItems;
     }

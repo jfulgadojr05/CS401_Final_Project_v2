@@ -1,7 +1,5 @@
 package app;
 
-import javax.swing.*;
-
 public class Game {
     private String name;
     private Thread[] discussions;
@@ -31,39 +29,30 @@ public class Game {
     public void setGameName (String gameName) {
         this.name = gameName;
     }
-
     public void setDeveloper (String developer) {
         this.developerName = developer;
     }
-
     public void setRating (float aRating) {
         this.averageRating = aRating;
     }
-
     public void setDiscussions(Thread[] discussions) {
         this.discussions = discussions;
     }
-
     public void setReviews(Message[] reviews) {
         this.reviews = reviews;
     }
-
     public void setId(int id) {
         this.id = id;
     }
-
     public void setGenre(String genre) {
         this.genre = genre;
     }
-
     public void setGamePath(String gamePath) {
         this.gamePath = gamePath;
     }
-
     public void setMetaTags(String metaTags) {
         this.metaTags = metaTags;
     }
-
     public void setImgPath(String imgPath) {
         this.imgPath = imgPath;
     }
@@ -72,60 +61,43 @@ public class Game {
     public String getName() {
         return name;
     }
-
     public Thread[] getDiscussions() {
         return discussions;
     }
-
     public Message[] getReviews() {
         return reviews;
     }
-
     public int getId() {
         return id;
     }
-
     public String getGenre() {
         return genre;
     }
-
     public String getGamePath() {
         return gamePath;
     }
-
     public String getMetaTags() {
         return metaTags;
     }
-
     public String getImgPath() {
         return imgPath;
     }
-
     public String getDeveloperName() {
         return developerName;
     }
-
     public float getAverageRating() {
         return averageRating;
     }
 
-
-
+    // Functions
     public String toString(){
+        // To String function for formatted string
         String gameIdString = Integer.toString(id);
         String averageRatingString = Float.toString(averageRating);
         String temp =  "ID: " + gameIdString + "\nTitle: " + name + "\nGenre: " + genre + "\nAverage Rating: " + averageRatingString;
         return temp;
     }
 
-    public void initializeGame() {
-        String initializeStr = "Initializing "+ this.name + "...";
-        JOptionPane.showMessageDialog(null, initializeStr);
-    }
-
-    public void showInfo(Game aGame) {
-        // Null
-    }
 
     //TODO WRITE DOC
     public void reviewGame () {
