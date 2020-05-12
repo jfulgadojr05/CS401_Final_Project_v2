@@ -49,7 +49,7 @@ public class GAManager extends JFrame {
      * GAManager constructor set title set size set close operation create menubar
      * GAMarket menu friends menu settings menu create tabs store library forum
      */
-    public GAManager(DBHelper mydb) throws SQLException {
+    public GAManager(DBHelper mydb, String userID) throws SQLException {
 
         super("GAMarket"); // app title
         setSize(800, 700); // defalut size
@@ -107,7 +107,7 @@ public class GAManager extends JFrame {
 
         // for library tab
 //        libraryList = new JList<>(libraryArr);
-        libraryList = mydb.getUserLibrary();
+        libraryList = mydb.getUserLibrary(userID);
         config.addTab("Library", null, libraryList, "See your library");
 
         // for forum tab
@@ -138,11 +138,11 @@ public class GAManager extends JFrame {
     }
 
     //run store
-    public static void main(String args[]) throws SQLException {
-        DBHelper dbh = new DBHelper();
-        dbh.createNewDatabase();
-        dbh.createAllTables();
-        GAManager gm = new GAManager(dbh);
-        gm.setVisible(true);
-    }
+//    public static void main(String args[]) throws SQLException {
+//        DBHelper dbh = new DBHelper();
+//        dbh.createNewDatabase();
+//        dbh.createAllTables();
+//        GAManager gm = new GAManager(dbh);
+//        gm.setVisible(true);
+//    }
 }

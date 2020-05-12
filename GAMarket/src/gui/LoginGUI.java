@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
 public class LoginGUI extends JFrame {
-    private final GAManager gm;
+//    private GAManager gm;
     Container container = getContentPane();
     JLabel usernameLabel = new JLabel("Username:");
     JLabel passwordLabel = new JLabel("Password:");
@@ -24,7 +24,6 @@ public class LoginGUI extends JFrame {
         DBHelper dbh = new DBHelper();
         dbh.createNewDatabase();
         dbh.createAllTables();
-        this.gm = new GAManager(dbh);
 
         // setting up gui bounds
         container.setLayout(null);
@@ -48,14 +47,18 @@ public class LoginGUI extends JFrame {
 
         // login button functionality
         loginButton.addActionListener(new ActionListener() {
+            private GAManager gm;
             @Override
             public void actionPerformed(ActionEvent e) {
                 boolean success = false;
                 try {
-                    success = app.Login.sendLogin(usernameField.getText().trim(), passwordField.getText().trim(), dbh);
+                    String aUsername = usernameField.getText().trim();
+                    String aPassword = passwordField.getText().trim();
+                    success = app.Login.sendLogin(aUsername, aPassword, dbh);
                     if (success) {
                         // if login successful, open GAMarket
                         dispose();
+                        this.gm = new GAManager(dbh, dbh.getUserID(aUsername, aPassword));
                         gm.setVisible(true);
                     } else {
                         // invalid username/password if unsuccessful
@@ -167,13 +170,13 @@ public class LoginGUI extends JFrame {
     }
 
 
-    public static void main(String[] args) throws SQLException {
-        LoginGUI loginUser = new LoginGUI();
-        loginUser.setVisible(true);
-        loginUser.setTitle("GAMarket Login");
-        loginUser.setBounds(10, 10, 370, 600);
-        loginUser.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        loginUser.setResizable(false);
-        loginUser.setLocationRelativeTo(null);
-    }
+//    public static void main(String[] args) throws SQLException {
+//        LoginGUI loginUser = new LoginGUI();
+//        loginUser.setVisible(true);
+//        loginUser.setTitle("GAMarket Login");
+//        loginUser.setBounds(10, 10, 370, 600);
+//        loginUser.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        loginUser.setResizable(false);
+//        loginUser.setLocationRelativeTo(null);
+//    }
 }
