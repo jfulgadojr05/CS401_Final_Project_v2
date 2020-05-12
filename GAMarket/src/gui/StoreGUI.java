@@ -30,15 +30,6 @@ public class StoreGUI extends JPanel {
         menuPanel.setLayout(new BorderLayout());
         menuPanel.add(gameItemLabel, BorderLayout.PAGE_START);
 
-//        DefaultListModel<String> storeModel = new DefaultListModel<>();
-//        for(int i = 0; i < storeCollection.getNumberOfGames(); i++){
-//            String gameIDstr = Integer.toString(storeCollection.getGameArray()[i].getId());
-//            String tempItem = gameIDstr + "," +
-//                    storeCollection.getGameArray()[i].getName() + ", " +
-//                    storeCollection.getGameArray()[i].getGenre() + ", " +
-//                    storeCollection.getGameArray()[i].getAverageRating();
-//            storeModel.addElement(storeCollection.get);
-//        }
         storeMenuItems = dbh.getAllGameName();
         storeMenuItems.addMouseListener(new MouseAdapter() {
             @Override
