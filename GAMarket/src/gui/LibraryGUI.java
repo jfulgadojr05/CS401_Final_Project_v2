@@ -15,8 +15,12 @@ public class LibraryGUI extends JPanel {
 
     public LibraryGUI(DBHelper dbh, String userID) throws SQLException {
         JPanel userLibraryPanel = new JPanel();
-        JLabel gameItemLabel = new JLabel(userID + " Library");
-        gameItemLabel.setFont(new Font("Verdana", Font.PLAIN, 24));
+        JLabel userLibraryLabel = new JLabel(dbh.getUsername(userID) + " Library");
+        userLibraryLabel.setFont(new Font("Verdana", Font.PLAIN, 24));
+
+        userLibraryPanel.setLayout(new BorderLayout());
+        userLibraryPanel.add(userLibraryLabel, BorderLayout.PAGE_START);
+
         userLibraryItems = dbh.getUserLibrary(userID);
         userLibraryItems.addMouseListener(new MouseAdapter() {
             @Override
@@ -55,10 +59,7 @@ public class LibraryGUI extends JPanel {
         userLibraryPanel.add(libraryMenuPane, BorderLayout.CENTER);
         this.setLayout(new BorderLayout());
         this.add(userLibraryPanel, BorderLayout.CENTER);
-        this.add(userLibraryPanel, BorderLayout.CENTER);
-
-
-
+        this.setVisible(true);
 
     }
 

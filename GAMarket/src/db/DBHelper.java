@@ -428,5 +428,20 @@ public class DBHelper {
 
     }
 
+    public String getUsername(String userID) throws SQLException {
+        String username;
+        String sql = "select * from user where id = ?";
+        Connection conn = DriverManager.getConnection(url);
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, userID);
+        ResultSet rs = pstmt.executeQuery();
+        username = rs.getString("username");
+        rs.close();
+        pstmt.close();
+        conn.close();
+        return username;
+
+    }
+
 
 }
