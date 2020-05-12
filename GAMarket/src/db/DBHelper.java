@@ -55,7 +55,7 @@ public class DBHelper {
                 "    fk_user       int," +
                 "    fk_game       int" +
                 ")";
-        
+
         stmt.execute(sql);
 
         // this creates games table
@@ -284,7 +284,12 @@ public class DBHelper {
         DefaultListModel<String> libraryModel = new DefaultListModel<>();
         JList<String> libraryItems;
         String username = "sonic";
-        String sql = "select game.game_name, user_";
+        String sql = "select user.id, game.game_name from ((game_collection_user " +
+                "inner join game " +
+                "on game_collection_user.fk_game = game.game_id)" +
+                "inner join user " +
+                "on game_collection_user.fk_user = user.id)" +
+                "where game_collection_user.fk_user = 3";
         Connection conn = DriverManager.getConnection(url);
         Statement stmt  = conn.createStatement();
         ResultSet rs    = stmt.executeQuery(sql);

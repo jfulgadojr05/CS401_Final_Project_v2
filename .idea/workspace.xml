@@ -4,14 +4,8 @@
     <list default="true" id="270f3350-275b-466d-9f66-1c45a332424c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e360fdca-503d-462f-9e87-384157fade45.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e360fdca-503d-462f-9e87-384157fade45.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/app/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/app/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/db/DBHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/db/GAMarket.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/GAManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/gui/LoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/gui/LoginGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/test/StoreTesSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreTestSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GAMarket/src/test/StoreTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/GAMarket/src/test/StoreTestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accountsystem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/accountsystem.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS401_GAMarket_Final/db/GAMarket.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +187,7 @@
       <workItem from="1589065885236" duration="7991000" />
       <workItem from="1589091674472" duration="17353000" />
       <workItem from="1589209926945" duration="11918000" />
-      <workItem from="1589228250434" duration="19602000" />
+      <workItem from="1589228250434" duration="22955000" />
     </task>
     <task id="LOCAL-00001" summary="Added admin and devUser class skeletons (both extends User class)">
       <created>1586499690575</created>
@@ -433,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589223148755</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Pushing for Taro">
+      <created>1589259283332</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1589259283371</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +454,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added scroll pane to GameList" />
     <MESSAGE value="IntelliJ force commit" />
     <MESSAGE value="Added constructor to Game class" />
     <MESSAGE value="Fixed GUI to include unfilter button for games" />
@@ -478,7 +478,8 @@
     <MESSAGE value="Modified list for names only" />
     <MESSAGE value="Alter filter to display only names" />
     <MESSAGE value="Created test suites and prototype purchase function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created test suites and prototype purchase function" />
+    <MESSAGE value="Pushing for Taro" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pushing for Taro" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="101" key="#GAManager" timestamp="1587671854647">
@@ -511,10 +512,10 @@
     </state>
     <state x="673" y="338" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587595215856" />
     <state x="808" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586498824781" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589223145726">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589259277915">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589223145726" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589259277915" />
     <state x="411" y="119" key="CommitChangelistDialog2/1920.9.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586504656672" />
     <state x="112" y="48" key="DiffContextDialog" timestamp="1587621001174">
       <screen x="0" y="0" width="1600" height="860" />
@@ -529,46 +530,46 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="318" height="288" key="Git.Branch.Popup/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589243808876" />
-    <state width="1557" height="275" key="GridCell.Tab.0.bottom" timestamp="1589258799386">
+    <state width="1557" height="275" key="GridCell.Tab.0.bottom" timestamp="1589262069038">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258799386" />
+    <state width="1557" height="275" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589262069038" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="275" key="GridCell.Tab.0.center" timestamp="1589258799385">
+    <state width="1557" height="275" key="GridCell.Tab.0.center" timestamp="1589262069038">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258799385" />
+    <state width="1557" height="275" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589262069038" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="275" key="GridCell.Tab.0.left" timestamp="1589258799384">
+    <state width="1557" height="275" key="GridCell.Tab.0.left" timestamp="1589262069038">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258799384" />
+    <state width="1557" height="275" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589262069038" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="275" key="GridCell.Tab.0.right" timestamp="1589258799386">
+    <state width="1557" height="275" key="GridCell.Tab.0.right" timestamp="1589262069038">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258799386" />
+    <state width="1557" height="275" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589262069038" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1600.860/1600.127.1366.728@1600.127.1366.728" timestamp="1587596566769" />
     <state width="1557" height="142" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1588349919355" />
-    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1589258802961">
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1589262072240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258802961" />
-    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1589258802961">
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589262072240" />
+    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1589262072239">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258802961" />
-    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1589258802961">
+    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589262072239" />
+    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1589262072239">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258802961" />
-    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1589258802961">
+    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589262072239" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1589262072240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258802961" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589262072240" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1589149519111">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -591,10 +592,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="390" y="78" key="VCS.ChangeListViewerDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1587768014242" />
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1589243812547">
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1589259286798">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589243812547" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589259286798" />
     <state width="808" height="438" key="XDebugger.FullValuePopup" timestamp="1589214112310">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -603,14 +604,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="644" y="320" width="316" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589249655933" />
-    <state x="596" y="252" width="610" height="489" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1589258330213">
+    <state x="596" y="252" width="610" height="481" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1589261510788">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="596" y="252" width="610" height="489" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589258330213" />
-    <state x="462" y="171" width="632" height="585" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1589257963203">
+    <state x="596" y="252" width="610" height="481" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589261510788" />
+    <state x="462" y="171" width="632" height="585" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1589261589332">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="462" y="171" width="632" height="585" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589257963203" />
+    <state x="462" y="171" width="632" height="585" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1600.860/1600.127.1366.728@0.0.1600.860" timestamp="1589261589332" />
     <state x="504" y="322" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1589221641461">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -669,6 +670,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="org.sqlite.jdbc4.JDBC4ResultSet" fieldName="meta" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS401_GAMarket_Final$GAManager.ic" NAME="GAManager Coverage Results" MODIFIED="1589176402406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
