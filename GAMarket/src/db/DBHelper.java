@@ -168,6 +168,9 @@ public class DBHelper {
                     rs.getString("game_rating");
             storeModel.addElement(tempItem);
         }
+        rs.close();
+        stmt.close();
+        conn.close();
         storeMenuItems = new JList<>(storeModel);
         return storeMenuItems;
     }
@@ -183,6 +186,9 @@ public class DBHelper {
             storeModel.addElement(rs.getString("game_name"));
         }
         storeMenuItems = new JList<>(storeModel);
+        rs.close();
+        stmt.close();
+        conn.close();
         return storeMenuItems;
     }
 
@@ -211,6 +217,9 @@ public class DBHelper {
             tempArray[counter] = temp;
             counter++;
         }
+        rs.close();
+        stmt.close();
+        conn.close();
         return tempArray;
     }
 
@@ -228,7 +237,8 @@ public class DBHelper {
             tempGame.setRating(Float.parseFloat(rs.getString(4)));
         }
         rs.close();
-
+        pstmt.close();
+        conn.close();
         return tempGame;
     }
 
@@ -246,8 +256,22 @@ public class DBHelper {
             tempGame.setRating(Float.parseFloat(rs.getString("game_rating")));
         }
         rs.close();
-
+        pstmt.close();
+        conn.close();
         return tempGame;
+    }
+
+    public void purchaseGame(String gameName, String userID) throws SQLException {
+        Game tempGame  = getGameProfileName(gameName);
+        String collectSQL = "insert into game_collection_user(fk_user, fk_game) values(?,?)";
+        Connection collect_conn = DriverManager.getConnection(url);
+        PreparedStatement collect_pstmt = collect_conn.prepareStatement(collectSQL);
+        collect_pstmt.setString(1, userID);
+        collect_pstmt.setString(2,Integer.toString(tempGame.getId()));
+        collect_pstmt.executeUpdate();
+        collect_pstmt.close();
+        collect_conn.close();
+
     }
 
     public JList<String> getFilterGameGenre(String aGenre) throws SQLException{
@@ -261,6 +285,9 @@ public class DBHelper {
         while (rs.next()){
             storeModel.addElement(rs.getString("game_name"));
         }
+        rs.close();
+        pstmt.close();
+        conn.close();
         filterItems = new JList<>(storeModel);
         return filterItems;
     }
@@ -276,6 +303,9 @@ public class DBHelper {
         while (rs.next()){
             storeModel.addElement(rs.getString("game_name"));
         }
+        rs.close();
+        pstmt.close();
+        conn.close();
         filterItems = new JList<>(storeModel);
         return filterItems;
     }
@@ -296,6 +326,9 @@ public class DBHelper {
         while (rs.next()){
             libraryModel.addElement(rs.getString("game_name"));
         }
+        rs.close();
+        pstmt.close();
+        conn.close();
         libraryItems = new JList<>(libraryModel);
         return libraryItems;
     }
@@ -313,6 +346,8 @@ public class DBHelper {
             duplicate = true;
         }
         rs.close();
+        pstmt.close();
+        conn.close();
         return duplicate;
     }
 
@@ -328,6 +363,8 @@ public class DBHelper {
             success = true;
         }
         rs.close();
+        pstmt.close();
+        conn.close();
         return success;
     }
 
@@ -339,7 +376,8 @@ public class DBHelper {
         pstmt.setString(2, registerPass);
         pstmt.setString(3, registerType);
         pstmt.executeUpdate();
-
+        pstmt.close();
+        conn.close();
         return "Account creation successful with the following fields:\n"
                 + "Username: " + registerUser
                 + "\nPassword: " + registerPass
@@ -354,6 +392,8 @@ public class DBHelper {
         pstmt.setString(1, password);
         pstmt.setString(2, username);
         pstmt.executeUpdate();
+        pstmt.close();
+        conn.close();
     }
 
     // Getting user ID
@@ -366,6 +406,9 @@ public class DBHelper {
         pstmt.setString(2, password);
         ResultSet rs = pstmt.executeQuery();
         userID = rs.getString("id");
+        rs.close();
+        pstmt.close();
+        conn.close();
         return userID;
 
     }

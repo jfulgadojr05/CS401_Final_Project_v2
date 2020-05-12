@@ -17,7 +17,7 @@ public class Store extends JPanel {
 
 
 
-    public Store(GameCollection storeCollection, DBHelper dbh) throws SQLException {
+    public Store(GameCollection storeCollection, String userID, DBHelper dbh) throws SQLException {
 
         JPanel menuPanel = new JPanel();
         JLabel gameItemLabel = new JLabel("List of Games");
@@ -59,7 +59,7 @@ public class Store extends JPanel {
                                 gameCommands,
                                 gameCommands[gameCommands.length - 1]);
                         switch(gameChoice) {
-                            case 0: storeCollection.purchaseGame(selectedItemStr); break;
+                            case 0: storeCollection.purchaseGame(selectedItemStr, userID, dbh); break;
                             case 1: System.out.println("Show Forum"); break;
                             case 2: return;
                             default: // do nothing
@@ -113,7 +113,7 @@ public class Store extends JPanel {
                                                 gameCommands,
                                                 gameCommands[gameCommands.length - 1]);
                                         switch(gameChoice) {
-                                            case 0: storeCollection.purchaseGame(selectedItemStr); break;
+                                            case 0: storeCollection.purchaseGame(selectedItemStr, userID, dbh); break;
                                             case 1: System.out.println("Show Forum"); break;
                                             case 2: return;
                                             default: // do nothing
@@ -159,7 +159,7 @@ public class Store extends JPanel {
                                                 gameCommands,
                                                 gameCommands[gameCommands.length - 1]);
                                         switch(gameChoice) {
-                                            case 0: storeCollection.purchaseGame(selectedItemStr); break;
+                                            case 0: storeCollection.purchaseGame(selectedItemStr, userID, dbh); break;
                                             case 1: System.out.println("Show Forum"); break;
                                             case 2: return;
                                             default: // do nothing
@@ -223,7 +223,7 @@ public class Store extends JPanel {
                                 gameCommands,
                                 gameCommands[gameCommands.length - 1]);
                         switch(gameChoice) {
-                            case 0: storeCollection.purchaseGame(result); break;
+                            case 0: storeCollection.purchaseGame(result, userID, dbh); break;
                             case 1: System.out.println("Show Forum"); break;
                             case 2: return;
                             default: // do nothing

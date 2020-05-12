@@ -60,7 +60,6 @@ public class GameCollection {
     public String searchForGame(String gameTitle, DBHelper dbh) throws SQLException {
         String temp = null;
         Game[] tempGameArray = dbh.getAllGameObjects();
-
         for (Game game : tempGameArray) {
             if (game.getName().toUpperCase().equals(gameTitle.toUpperCase())) {
                 temp = Integer.toString(game.getId());
@@ -72,12 +71,12 @@ public class GameCollection {
         }
         return temp;
     }
-    public void purchaseGame(String gameName) {
+    public void purchaseGame(String gameName, String userID, DBHelper dbh) throws SQLException {
         // Function to purchase game, which adds to store
         String confirmMessage = "Purchase " + gameName + "?";
         int confirmOption = JOptionPane.showConfirmDialog(null, confirmMessage);
         if (confirmOption == JOptionPane.YES_OPTION){
-
+            dbh.purchaseGame(gameName, userID);
         }
 
     }

@@ -102,7 +102,7 @@ public class GAManager extends JFrame {
         // for store tab
         // Loading data
         GameCollection storeGC = new GameCollection();
-        storePane = new Store(storeGC, mydb);
+        storePane = new Store(storeGC, userID, mydb);
         config.addTab("Store", null, storePane, "Choose your games");
 
         // for library tab
