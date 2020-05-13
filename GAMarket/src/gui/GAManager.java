@@ -1,8 +1,7 @@
 package gui;
 
-import db.DBHelper;
 import app.GameCollection;
-import app.Store;
+import db.DBHelper;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,7 +25,8 @@ public class GAManager extends JFrame {
     JMenuItem viewFriends;
     JMenuItem menuItem;
     JTabbedPane config;
-    Store storePane;
+    StoreGUI storeGUIPane;
+    LibraryGUI libraryGUIPane;
     ForumGUI forumPane;
     JLabel libraryPane;
     JLabel friendsPane;
@@ -34,23 +34,16 @@ public class GAManager extends JFrame {
     JPanel configPane;
     JTextArea question;
     ActionListener openFriendsList;
-    private GameCollection storeGC;
     JList<String> storeList;
     JList<String> gamesList;
     JList<String> libraryList;
 
-    String[] gamesArr = { "Most Popular Disccussions:", "", "Valorant", "Grand Theft Auto V", "Counter-Strike",
-            "Fornite", "League of Legends", "Call of Duty: Modern Warfare", "MineCraft", "Dota 2", "Monopoly Plus",
-            "World of Warcraft", "Teamfight Tactics", "Apex Legends" };
-    String[] libraryArr = { "Your library: \n", "", "Alan Wake", "Counter-Strike: Global Offensive",
-            "Dead By Deadlight", "Dead Space 2", "The Escapists 2", "Left 4 Dead 2", "Portal", "Resident Evil 3",
-            "Resident Evil 3: Raccoon City Demo", "Resident Evil Resistance", "The Witcher 3: Wild Hunt" };
 
     /*
      * GAManager constructor set title set size set close operation create menubar
      * GAMarket menu friends menu settings menu create tabs store library forum
      */
-    public GAManager(DBHelper mydb) {
+    public GAManager(DBHelper mydb, String userID) throws SQLException {
 
         super("GAMarket"); // app title
         setSize(800, 700); // defalut size
@@ -101,18 +94,20 @@ public class GAManager extends JFrame {
         config = new JTabbedPane();
 
         // for store tab
+
         // Loading data
-        storeGC = new GameCollection();
-        storeGC.loadGameData("gameData.txt");
-        storePane = new Store(storeGC);
-        config.addTab("Store", null, storePane, "Choose your games");
+        GameCollection storeGC = new GameCollection();
+        storeGUIPane = new StoreGUI(storeGC, userID, mydb);
+        config.addTab("Store", null, storeGUIPane, "Choose your games");
 
         // for library tab
-        libraryList = new JList<String>(libraryArr);
-        config.addTab("Library", null, libraryList, "See your library");
+        //        libraryList = new JList<>(libraryArr);
+        GameCollection libraryGC = new GameCollection();
+        libraryGUIPane = new LibraryGUI(libraryGC, mydb, userID);
+        config.addTab("Library", null, libraryGUIPane, "See your library");
 
         // for forum tab
-        forumPane = new ForumGUI();
+        forumPane = new ForumGUI(mydb);
         config.addTab("Forum", null, forumPane, "Talk about your favorite games");
 
         // final adds to create
@@ -138,12 +133,4 @@ public class GAManager extends JFrame {
         }
     }
 
-    // run main here
-    public static void main(String args[]) throws SQLException {
-        DBHelper dbh = new DBHelper();
-        dbh.createNewDatabase();
-        dbh.createAllTables();
-        GAManager gm = new GAManager(dbh);
-        gm.setVisible(true);
-    }
 }

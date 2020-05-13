@@ -1,11 +1,9 @@
 package app;
 
+import db.DBHelper;
+
 import javax.swing.*;
-import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.sql.SQLException;
 
 // GUI that will provide a display of all games in a collection
 // This will required a database file that will host the games
@@ -17,97 +15,98 @@ public class GameCollection {
     private Game[] gameArray;
     private int numberOfGames;
 
+    /// Constructor
     public GameCollection() {
         gameArray = new Game[7];
         numberOfGames = 0;
     }
 
+    // Getters
     public Game[] getGameArray() {
         return gameArray;
     }
-
     public int getNumberOfGames() {
         return numberOfGames;
     }
 
-    public void addGame(Game aGame){
-        int counter = 0;
-        if (numberOfGames == gameArray.length) {
-            Game[] tempArray = new Game[numberOfGames*2];
-            System.arraycopy(gameArray, 0, tempArray, 0, gameArray.length);
-            gameArray = tempArray;
-        }
+    // Setters
+    public void setGameArray(Game[] gameArray) {
+        this.gameArray = gameArray;
+    }
+    public void setNumberOfGames(int numberOfGames) {
+        this.numberOfGames = numberOfGames;
+    }
 
-        if(gameArray[0] == null){
-            gameArray[0] = aGame;
-            numberOfGames++;
-        }
-        else{
-            while (gameArray[counter] != null){
-                counter++;
-            }
-            gameArray[counter] = aGame;
-            numberOfGames++;
+    // Functions
+    public void deleteGame(String gameName, DBHelper dbh, String userID) throws SQLException {
+        // Delete a users game from their collection
+        // from the database using gamename, dbhelper, and user id
+
+        // Confirm message
+        String confirmMessage = "Delete " + gameName + " from library?";
+
+        // joptionpane to delete game from user collection
+        int confirmOption = JOptionPane.showConfirmDialog(null, confirmMessage);
+        if (confirmOption == JOptionPane.YES_OPTION){
+
+            // dbh delete game function
+            dbh.deleteGame(gameName, userID);
         }
     }
 
+    public String searchForGame(String gameTitle, DBHelper dbh) throws SQLException {
+        // Return a string if the game was found or not
 
+        // Creating local variables
+        String temp = null;
 
-    public Game searchForGame(String title) {
-        // Can be used to search for a game in a collection
-        // Will return a specific game object with its game fields
-        Game temp = new Game();
+        // Getting game object array from database
+        Game[] tempGameArray = dbh.getAllGameObjects();
+
+        // for loop to see if the game is present in game table
+        for (Game game : tempGameArray) {
+
+            // if yes
+            if (game.getName().toUpperCase().equals(gameTitle.toUpperCase())) {
+
+                // Set temp string to game id
+                temp = Integer.toString(game.getId());
+                break;
+            }
+        }
+
+        // if no game was found
+        if(temp == null){
+            temp = "Not found";
+        }
+
+        // return temp
         return temp;
     }
-    public void intitializeGame(String gameName) {
-        // Function to initialize a game as if
-        // a game is being played from start up
-        // will required the game title to search for
-        // game and initialize it
+    public void purchaseGame(String gameName, String userID, DBHelper dbh) throws SQLException {
+        // Function to purchase game, which adds to users game collection after purchase
 
-    }
-    public void loadGameData(String filename){
-        // Declaring temp variables
-        String gameID;
-        String gameName;
-        String gameRating;
-        String gameImagePath;
-        String gameMetaTag;
-        String gamePath;
+        // Local variables
+        String confirmMessage = "Purchase " + gameName + "?";
 
-        // Try-Catch for reading file
-        try (Scanner gameFile = new Scanner(Paths.get(filename))) {
-//            JOptionPane.showMessageDialog(null,"The file successfully loaded");
-            // Checking file
-            while (gameFile.hasNextLine()) {
-                // Loops reads line and splits the comma for individual substrings
-                StringTokenizer st = new StringTokenizer(gameFile.nextLine(), ",");
-                // Putting values in temp variables
-                gameID = st.nextToken();
-                gameName = st.nextToken();
-                gameRating = st.nextToken();
-                gameImagePath = st.nextToken();
-                gameMetaTag = st.nextToken();
-                gamePath = st.nextToken();
+        // joption pane to confirm game purchase
+        int confirmOption = JOptionPane.showConfirmDialog(null, confirmMessage);
+        if (confirmOption == JOptionPane.YES_OPTION){
 
-                Game tempGame = new Game();
-
-                tempGame.setId(Integer.parseInt(gameID));
-                tempGame.setGameName(gameName);
-                tempGame.setRating(Float.parseFloat(gameRating));
-                tempGame.setImgPath(gameImagePath);
-                tempGame.setMetaTags(gameMetaTag);
-                tempGame.setGamePath(gamePath);
-
-                addGame(tempGame);
-                // Add function to the array.
-            }//while
+            // add game to users game collection
+            dbh.purchaseGame(gameName, userID);
         }
-        catch (IOException | NoSuchElementException | IllegalStateException e) {
-            JPanel errorPanel = new JPanel();
-            JLabel errorMessage = new JLabel("File not found.\nCreating blank game store...");
-            errorPanel.add(errorMessage);
-            errorPanel.setVisible(true);
-        }//catch()
+
     }
+    public JList<String> filterGameGenre(String aGenre, DBHelper dbh) throws SQLException {
+        // Return a filtered JList by genre
+        return dbh.getFilterGameGenre(aGenre);
+
+    }
+
+    public JList<String> filterGameRating(String aRating, DBHelper dbh) throws SQLException {
+        // Return a filtered JList by rating
+        return dbh.getFilterGameRating(aRating);
+    }
+
 }

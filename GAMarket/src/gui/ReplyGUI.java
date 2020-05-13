@@ -6,72 +6,70 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.SQLException;
 import db.DBHelper;
-/* Message GUI class
+
+/* Reply GUI class
 	CS 401 - Final Project
-	MessageGUI.java
+	ReplyGUI.java
   By: Christian Magpantay
   Code/Book Reference -
   https://www.youtube.com/watch?v=CqWorn8dR_A&list=PLdmXYkPMWIgCocLY-B4SvpQshQWC7Nc0C&index=5
   https://docs.oracle.com/javase/7/docs/api/javax/swing/JList.html
-   https://docs.oracle.com/javase/7/docs/api/javax/swing/JList.html#renderer
+  https://docs.oracle.com/javase/7/docs/api/javax/swing/JList.html#renderer
 */
 
-public class MessageGUI extends JPanel {
+public class ReplyGUI extends JPanel {
+
+    /**
+     *
+     */
     private static final long serialVersionUID = 1L;
-    JPanel messagePanel = new JPanel();
+    JPanel replyPanel = new JPanel();
     JScrollPane scroll;
     JTextField input = new JTextField();
-    JList<String> mList;
+    JList<String> rList;
 
-    public MessageGUI(DBHelper dbh, String friend) throws SQLException {
+    public ReplyGUI(DBHelper dbh, String threadTitle) throws SQLException {
         String sender = "chrisTaro";
-        messagePanel.setLayout(new BoxLayout(messagePanel, BoxLayout.Y_AXIS));
+        replyPanel.setLayout(new BoxLayout(replyPanel, BoxLayout.Y_AXIS));
 
         input.setMaximumSize(new Dimension(input.getMaximumSize().width, 50));
         input.setPreferredSize(new Dimension(input.getMaximumSize().width, 25));
-        mList = new JList<>();
-        mList = dbh.getAllMessages(sender, friend);
+        rList = new JList<>();
+        //rList = dbh.getAllReplies(threadTitle);
 
         input.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                messagePanel.removeAll();
-                messagePanel.revalidate();
-                messagePanel.repaint();
+                replyPanel.removeAll();
+                replyPanel.revalidate();
+                replyPanel.repaint();
 
                 String text = input.getText();
-                String newInput = sender + ": " + text;
+                String newInput = text + "\t\t\t\t from" + sender ;
                 try {
-                    dbh.sendMessage(sender, friend, newInput);
-                } catch (SQLException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-                try {
-                    mList = dbh.getAllMessages(sender, friend);
+                    dbh.sendReply(sender, newInput);
                 } catch (SQLException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
                 input.setText("");
-                mList.setCellRenderer(new MyCellRenderer());
-                scroll = new JScrollPane(mList);
-                messagePanel.add(scroll);
-                messagePanel.add(input);
-                messagePanel.revalidate();
-                messagePanel.repaint();
+                rList.setCellRenderer(new MyCellRenderer());
+                scroll = new JScrollPane(rList);
+                replyPanel.add(scroll);
+                replyPanel.add(input);
+                replyPanel.revalidate();
+                replyPanel.repaint();
             }
         });
 
-        mList.setCellRenderer(new MyCellRenderer());
-        scroll = new JScrollPane(mList);
-        messagePanel.add(scroll);
-        messagePanel.add(input);
+        rList.setCellRenderer(new MyCellRenderer());
+        scroll = new JScrollPane(rList);
+        replyPanel.add(scroll);
+        replyPanel.add(input);
         this.setLayout(new BorderLayout());
-        this.add(messagePanel, BorderLayout.CENTER);
+        this.add(replyPanel, BorderLayout.CENTER);
         this.setVisible(true);
     }
-
 
     class MyCellRenderer extends JLabel implements ListCellRenderer<Object> {
         /**
@@ -108,5 +106,4 @@ public class MessageGUI extends JPanel {
         }
     }
    
-    
 }

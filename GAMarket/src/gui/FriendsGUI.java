@@ -1,4 +1,10 @@
 package gui;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.sql.SQLException;
+import db.DBHelper;
+
 /* Friends List GUI class
 	CS 401 - Final Project
 	FriendsGUI.java
@@ -6,12 +12,6 @@ package gui;
   Code/Book Reference -
   https://www.youtube.com/watch?v=CqWorn8dR_A&list=PLdmXYkPMWIgCocLY-B4SvpQshQWC7Nc0C&index=5
 */
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.sql.SQLException;
-import db.DBHelper;
 
 public class FriendsGUI extends JFrame {
 
@@ -44,7 +44,6 @@ public class FriendsGUI extends JFrame {
         // create menu for chat
         createFriendsGUI(mydb);
         // settings
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public void createFriendsGUI(DBHelper mydb) throws SQLException {
@@ -152,13 +151,19 @@ public class FriendsGUI extends JFrame {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
                 if(mouseEvent.getClickCount() == 2) {
-                    String user = online.getSelectedValue();
-                    MessageGUI messageGUI = new MessageGUI();
-                    JFrame messageFrame = new JFrame("Messaging " + user);
-                    messageFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                    messageFrame.setSize(400,400);
-                    messageFrame.getContentPane().add(messageGUI, BorderLayout.CENTER);
-                    messageFrame.setVisible(true);
+                    String user = online.getSelectedValue().toString();
+                    MessageGUI messageGUI;
+                    try {
+                        messageGUI = new MessageGUI(mydb, user);
+                        JFrame messageFrame = new JFrame("Messaging " + user);
+                        messageFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                        messageFrame.setSize(400,400);
+                        messageFrame.getContentPane().add(messageGUI, BorderLayout.CENTER);
+                        messageFrame.setVisible(true);
+                    } catch (SQLException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
                 }
             }
         });

@@ -3,6 +3,13 @@ package app;
 import java.util.*;
 import java.text.SimpleDateFormat;
 
+
+/* Message class
+	CS 401 - Final Project
+	Message.java
+  By: Christian Magpantay
+  Code/Book Reference -
+*/
 public class Message {
 
     private Date timeStamp;
